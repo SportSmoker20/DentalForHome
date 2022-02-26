@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,100&display=swap');
+
+
+/* MAIN */
+.home-container {
+    font-family: 'Poppins' sans-serif;
+
+    background: rgb(243, 246,250);
+}
+
+
+/* NAVBAR */
+
+
+.home-navbar-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+.home-navbar{
+    width: 100%;
+    position: fixed;
+    background: rgb(243, 246,250);
+    z-index: 2;
+}
+.navbar-left {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+.navbar-right {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 33%;
+}
+.nav-center-blue {
+    color: rgb(60,100,177) ;
+}
+.navbar-right-text {
+    background-color: rgb(60,100,177);
+    padding-left: 20px;
+    padding-right: 20px;   
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    
+}
+.navbar-left-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(60,100,177);
+}
+
+
+
+/* BANNER */
+
+
+
+
+.home-banner-container {
+    height: 90vh;
+    width: 100%;
+    /* background: rgb(170, 162, 162); */
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+}
+.home-banner-center {
+    margin-left: 10vw;
+}
+.home-banner-title{
+    /* width: 40%; */
+    font-size: 40px;
+    font-weight: 600;
+}
+.home-banner-content {
+    width: 25vw;
+    color: rgb(179, 185, 188);
+}
+.home-banner-book {
+    color: white;
+    background-color: rgb(60,100,177);
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+
+
+/* OUR FEATURES */
+
+
+
+.home-features-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.features-content {
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+.feature-card-container {
+    display: flex;
+    border-radius: 10px;
+
+    flex-direction: column;
+    box-shadow: 0px 3px 10px rgb(0 0 0 / 0.6);
+    width: 15%;
+    height: 300px;
+    
+}
+.features-title {
+    color: rgb(55, 63, 65);
+    margin: 10px;
+    font-size: 28px;
+    font-weight: 600;
+}
+.feature-card-img {
+    background-color: rgb(60,100,177);
+    height: 250px;
+    border-radius: 10px;
+}
+.feature-card-bottom {
+    color: rgb(38, 42, 43);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;   
+}
+.home-service-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    
+}
+.service-content {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.home-service-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 30px; */
+    font-weight: 600;
+}
+.service-title {
+    padding-top: 20px;
+    font-size: 30px;
+}
+.home-service-card-container {
+    width: 15%;
+    margin: 40px;
+}
+.home-service-content {
+    text-align: center;
+    font-size: 12px;
+}
+.home-service-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* MAP */
+
+
+
+.home-map-container{
+    height: 86.2vh;
+    width: 100%;
+    background: rgb(4,64,102);
+}
+.home-map-container{
+    display: flex;
+    flex-direction: row;
+}
+.map-left {
+    width: 32%;
+    margin: 150px;
+}
+.map-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+}
+.map-content {
+    color: white;
+}
+.map-explore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+}
+
+
+
+/* WHY DENTAL HOME */
+
+
+
+.home-why-container {
+    height: 86.2vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.why-left {
+    padding: 150px;
+    width: 26%;
+}
+.why-title {
+    color: rgb(55, 63, 65);
+    font-size: 30px;
+    font-weight: 600;
+}
+.why-content {
+    color: rgb(153, 160, 161);
+}
+.why-right {
+    width: 50%;
+    display: inline-flex;
+    /* flex-direction: row;
+    align-items: center;
+    justify-content: center; */
+    flex-wrap: wrap;
+    padding-top: 55px;
+}
+.why-card-container {
+    padding: 25px;
+    width: 32%;
+    height: 200px;
+
+}
+.why-card-bottom {
+    color: rgb(153, 160, 161);
+}
+
+
+
+/* ACHIEVEMENTS */
+
+
+
+
+.home-achievements-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(66, 144, 194);
+    height: 60vh;
+    width: 100%;
+}
+.achievements-title{
+    margin: 30px;
+    margin-left: 200px;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+.achievements-row {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+}
+.achievements-content{
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+
+/* COLLABORATION */
+
+
+.home-collaboration-contianer {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    height: 55vh;
+}
+.collaboration-left {
+    display: flex;
+    flex-direction: column;
+
+    padding: 150px;
+    padding-top: 100px;
+    width: 28%;
+}
+.collaboration-title {
+    color: rgb(55, 63, 65);
+    font-size: 30px;
+    font-weight: 600;
+}
+.collaboration-content{
+    color: rgb(153, 160, 161);
+}
+
+
+
+/* HAPPY SMILE */   
+
+
+.happy-smiles-main {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 100%;
+}
+.happy-smiles-title-main {
+    font-size: 30px;
+    margin-left: 150px;
+    font-weight: 600;
+    padding: 10px;
+    color: rgb(55, 63, 65);
+}
+.happy-smiles-container {
+    display: flex;
+    flex-direction: row;
+    margin-left:80px;
+    margin-right:80px;
+    justify-content: space-evenly;
+}
+.happy-smile-card-container {
+    border-radius: 12px;
+    width: 22%;
+    background-color: #fff;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0px 1px 5px rgb(0 0 0 / 0.2);
+}
+.smile-card-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.smile-top-text {
+    color: rgb(95, 99, 100);
+
+}
+.smile-bottom-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px;
+}
+.smile-bottom-text-top {
+    height: 30px;
+    font-weight: 600;
+    font-size: 17px;
+    color: rgb(42, 47, 48);
+}
+.smile-bottom-text-bottom  {
+    font-size: 14px;
+    color: rgb(120, 126, 128);
+    font-weight: 600;
+}
+
+
+
+/* FAQ */
+
+
+
+.faq-container {
+    width: 100%;
+    background-color: #fff;
+}
+.faq-title {
+   padding-top: 10px;
+    margin-left: 150px;
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(48, 49, 49);
+}
+.faq-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    color: rgb(48, 49, 49);
+    font-weight: 600;
+    font-size: 17px;
+    padding-bottom: 20px;
+}
+.faq-content-inner{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 45px;
+    box-shadow: 0px 1px 4px rgb(0 0 0 / 0.15);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    margin-right: 150px;
+}
+
+
+
+
+/* FOOTER */
+
+
+
+.home-footer-container {
+    height: 80vh;
+    background: rgb(4,64,102);
+    display: flex;
+    flex-direction: column;
+}
+.footer-top {
+    height: 75%;
+}
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.footer-bottom-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+}
+.footer-bottom-text >p{
+    margin-left: 20px;
+}
+.footer-bottom-copyright {
+    color: white;
+    font-size: 12px;
+}
