@@ -19,7 +19,7 @@ function Home() {
     
   return (
     <div className='home-container'>
-        <HomeNavbar />
+        <HomeNavbar tabName={'home'} />
         <HomeBanner />
         <HomeFeatures />
         <HomeService />

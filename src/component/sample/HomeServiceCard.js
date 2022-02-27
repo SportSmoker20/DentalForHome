@@ -5,7 +5,7 @@ function HomeServiceCard(props) {
   return (
     <div className='home-service-card-container'>
         <div className='home-service-img'>
-          <img src={img1} style={{width:`60px`,height:`60px`}}/>
+          <img src={img1} style={{width:`60px`,height:`60px`}} alt={"Couldn't Load"}/>
         </div>
         <div className='home-service-title'>
           <p>{props.data.title}</p>

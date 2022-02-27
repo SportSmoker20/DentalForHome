@@ -1,0 +1,132 @@
+.login-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(66, 144, 194);
+  height: 100vh;
+  width: 100vw;
+}
+.login-left {
+  width: 550px;
+  background-color: #fff;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+.login-left-main {
+  display: flex;
+  flex-direction: column;
+  margin: 100px;
+  margin-top: 150px;
+}
+.login-title-top {
+  font-size: 25px;
+  color: rgb(35, 88, 121);
+  height: 30px;
+}
+.login-title-bottom {
+  font-style: italic;
+  font-weight: 100;
+}
+.login-mobile {
+  padding: 10px;
+  border: 1px solid rgb(209, 221, 223);
+  box-shadow: 0px 1px 5px rgb(0 0 0 / 0.1);
+  border-radius: 5px;
+}
+.login-mobile > input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  width: 90%;
+}
+.login-get-otp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgb(0 0 0 / 0.5);
+  background: rgb(4, 64, 102);
+  height: 40px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.login-or {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(128, 128, 128);
+}
+.login-google-facebook {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid rgb(209, 221, 223);
+  box-shadow: 0px 1px 5px rgb(0 0 0 / 0.1);
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 15px;
+}
+
+.login-google-facebook > p {
+  margin-left: 20px;
+}
+.login-otp-left-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    margin-left: 10px;
+}
+.otp-container{
+    transform: scale(2.1);
+    
+margin: 14px;
+}
+.otp-title-top {
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(4, 64, 102);
+    height: 30px;
+}
+.otp-title-bottom {
+    width: 85%;
+    font-style: italic;
+    font-weight: 350;
+}
+.otp-container-main {
+    margin-left: -20px;
+}
+.otp-container > input {
+    border: 1px solid rgb(209, 221, 223);
+  box-shadow: 0px 1px 5px rgb(0 0 0 / 0.1);
+  border-radius: 2px;
+}
+.otp-container > input:hover {
+    border: 1px solid rgb(97, 100, 100);
+}
+.otp-resend {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    font-style: italic;
+    font-weight: 350;
+    margin-left: -80px;
+}
+
+.login-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(4, 64, 102);
+    width: 17vw;
+    margin-left: -20px;
+    height: 35px;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0px 2px 5px rgb(0 0 0 / 0.5);
+}

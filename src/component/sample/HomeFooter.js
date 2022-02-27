@@ -9,7 +9,7 @@ function HomeFooter() {
         </div>
         <div className='footer-bottom'>
             <div className='footer-bottom-text'>
-                <img src={img1} style={{height:`40px`,width:`40px`}} />
+                <img src={img1} style={{height:`40px`,width:`40px`}} alt={"Couldn't Load"}/>
                 <p>Dental For Home</p>
             </div>
             <div className='footer-bottom-copyright'>

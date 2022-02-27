@@ -14,7 +14,7 @@ function HappySmileCard(props) {
         </div>
         <div className='smile-card-bottom'>
             <div className='smile-bottom-img'>
-                <img src={props.data.img} style={{height:`40px`,width:`40px`}} />
+                <img src={props.data.img} style={{height:`40px`,width:`40px`}}  alt={"Couldn't Load"} />
             </div>
             <div className='smile-bottom-text'>
                 <div className='smile-bottom-text-top'>

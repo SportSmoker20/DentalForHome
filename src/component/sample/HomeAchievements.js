@@ -10,7 +10,7 @@ function HomeAchievements() {
         <div className='achievements-row'>
             <div className='achievements-content'>
                 <div className='achievements-img'>
-                    <img src={img1} />
+                    <img src={img1} alt={"Couldn't Load"}/>
                 </div>
                 <div className='achievements-text'>
                     <p>10,000+ Smiles</p>
@@ -18,7 +18,7 @@ function HomeAchievements() {
             </div>
             <div className='achievements-content'>
                 <div className='achievements-img'>
-                    <img src={img1} />
+                    <img src={img1} alt={"Couldn't Load"}/>
                 </div>
                 <div className='achievements-text'>
                     <p>19+ Clinics</p>
@@ -26,7 +26,7 @@ function HomeAchievements() {
             </div>
             <div className='achievements-content'>
                 <div className='achievements-img'>
-                    <img src={img1} />
+                    <img src={img1} alt={"Couldn't Load"}/>
                 </div>
                 <div className='achievements-text'>
                     <p>50+ Dentistry Specialists</p>
@@ -34,7 +34,7 @@ function HomeAchievements() {
             </div>
             <div className='achievements-content'>
                 <div className='achievements-img'>
-                    <img src={img1} />
+                    <img src={img1} alt={"Couldn't Load"}/>
                 </div>
                 <div className='achievements-text'>
                     <p>5+ years of experience</p>

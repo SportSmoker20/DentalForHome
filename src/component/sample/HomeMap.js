@@ -1,4 +1,5 @@
 import React from 'react'
+import img1 from '../../images/images-removebg-preview.png'
 
 function HomeMap() {
   return (
@@ -17,7 +18,7 @@ function HomeMap() {
             </div>
         </div>
         <div className='map-right'>
-
+            <img src={img1} alt={"Couldn't Load"}/>
         </div>
     </div>
   )
