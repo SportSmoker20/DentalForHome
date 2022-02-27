@@ -28,31 +28,31 @@ function HomeFAQ() {
           "Yes, at dental for home your first video consultation with us is free.",
       },
       {
-        title: "Is digital/remote consultation as effective as when one physically visits a dentist?",
+        title:
+          "Is digital/remote consultation as effective as when one physically visits a dentist?",
         content: `Yes, absolutely, if your case is special or requires a visit we will do that for you. Though treatments will be given at your home only.`,
       },
       {
-        title: "Can I directly have dentist at my home without video consultation?",
+        title:
+          "Can I directly have dentist at my home without video consultation?",
         content: `No, video consultation will be the first step in the process. Depending on your problems our dental expert team will come and serve you.`,
-    },
-    {
+      },
+      {
         title: "Where can I express my opinions if I am not satisfied?",
         content:
-            "You can reach out to our dental office directly, call us on +91 0123456789, or WhatsApp us on +91 0123456789. \n Every customer is equally important for us and we will offer a quick resolution to your concern.",
-    },
-    {
+          "You can reach out to our dental office directly, call us on +91 0123456789, or WhatsApp us on +91 0123456789. \n Every customer is equally important for us and we will offer a quick resolution to your concern.",
+      },
+      {
         title: "Are there any things that I will get other than my treatments?",
         content: `Yes definitely, at dental for home we provide gifts and vouchers in the form of free medicines and dental aids depending on the service you applied for. As we want every customer to have big smile on their face after the treatment.`,
-    },
-    {
+      },
+      {
         title: "How can I save more cost in terms of dental services?",
-        content: `At dental for home, we provide a wide range of services at almost 50% off. We have special plan that will take care of your family needs and it has less cost. This is because we do not charge high referral commissions to get you the right specialist. Thus, Best quality treatment with cost optimization.`
-    }
-   
+        content: `At dental for home, we provide a wide range of services at almost 50% off. We have special plan that will take care of your family needs and it has less cost. This is because we do not charge high referral commissions to get you the right specialist. Thus, Best quality treatment with cost optimization.`,
+      },
     ],
   };
   const styles = {
-    // bgColor: 'white',
     titleTextColor: "grey",
     rowTitleColor: "rgb(81, 82, 82)",
     rowContentColor: "rgb(184, 177, 177)",
@@ -60,7 +60,6 @@ function HomeFAQ() {
   };
   const config = {
     animate: true,
-    // arrowIcon: "V",
     arrowColor: "rgb(4,64,102)",
     tabFocus: true,
   };

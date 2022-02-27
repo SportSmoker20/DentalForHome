@@ -6,31 +6,26 @@ import { Link } from "react-router-dom";
 import OtpInput from "react-otp-input";
 import axios from "axios";
 import PhoneInput from "react-phone-number-input";
-import { formatPhoneNumberIntl } from 'react-phone-number-input'
-
 
 function Login(props) {
   const [otpSent, setOtpSent] = useState(false);
   const [otp, setOtp] = useState();
   const [mobile, setMobile] = useState();
-  
 
-  console.log(mobile)
+  console.log(mobile);
 
-  const submitHandler = () => {
-    // event.preventDefault()
-    console.log(mobile);
-    axios
-      .get("http://localhost:5000/api/user/" + mobile + "/" + otp)
-      .then((res, err) => {
-        if (err) {
-          console.log(err);
-        } else {
-          props.setLoggedIn(true);
-          localStorage.setItem("testObject", JSON.stringify(res));
-        }
-      });
-  };
+  // const submitHandler = () => {
+  //   axios
+  //     .get("http://localhost:5000/api/user/" + mobile + "/" + otp)
+  //     .then((res, err) => {
+  //       if (err) {
+  //         console.log(err);
+  //       } else {
+  //         props.setLoggedIn(true);
+  //         localStorage.setItem("testObject", JSON.stringify(res));
+  //       }
+  //     });
+  // };
 
   if (otpSent) {
     return (
@@ -64,7 +59,7 @@ function Login(props) {
             </div>
             <br />
 
-            <div className="login-button" onClick={submitHandler}>
+            <div className="login-button">
               <p>LOG IN</p>
             </div>
           </div>
@@ -87,18 +82,15 @@ function Login(props) {
                 <p>Hello ! Welcome back</p>
               </div>
             </div>
-            {/* <div className="login-mobile"> */}
-              {/* <input placeholder="Mobile number" onChange={(e)=>{setMobile(e.target.value)}}/> */}
-              <PhoneInput
-                placeholder="Enter phone number"
-                international
-                value={mobile}
-                onChange={setMobile}
-                withCountryCallingCode
-                defaultCountry="IN"
-                useNationalFormatForDefaultCountryValue
-                
-                />
+            <PhoneInput
+              placeholder="Enter phone number"
+              international
+              value={mobile}
+              onChange={setMobile}
+              withCountryCallingCode
+              defaultCountry="IN"
+              useNationalFormatForDefaultCountryValue
+            />
             {/* </div> */}
             <br />
             <div
@@ -138,7 +130,24 @@ function Login(props) {
             </div>
           </div>
         </div>
-        <div className="login-right"></div>
+        <div className="login-right">
+          <div className="login-navbar-option">
+            <Link
+              to={`/about`}
+              style={{ textDecoration: `none`, color: `rgb(4,64,102)` }}
+            >
+              <p>About</p>
+            </Link>
+          </div>
+          <div className="login-navbar-option">
+            <Link
+              to={`/contactUs`}
+              style={{ textDecoration: `none`, color: `rgb(4,64,102)` }}
+            >
+              <p>Contact</p>
+            </Link>
+          </div>
+        </div>
       </div>
     );
   }

@@ -70,22 +70,29 @@ function ContactMain() {
         </div>
         <div className="contact-right">
           <div className="contact-right-icon">
-            <BsFacebook style={{ height: `27px`, width: `27px`,color:`white` }} />
+            <BsFacebook
+              style={{ height: `27px`, width: `27px`, color: `white` }}
+            />
           </div>
           <div className="contact-right-icon">
-            <RiInstagramFill style={{ height: `27px`, width: `27px`,color:`white` }} />
+            <RiInstagramFill
+              style={{ height: `27px`, width: `27px`, color: `white` }}
+            />
           </div>
           <div className="contact-right-icon">
-            <BsLinkedin style={{ height: `27px`, width: `27px`,color:`white` }} />
+            <BsLinkedin
+              style={{ height: `27px`, width: `27px`, color: `white` }}
+            />
           </div>
           <div className="contact-right-icon">
-            <BsTwitter style={{ height: `27px`, width: `27px`,color:`white` }} />
+            <BsTwitter
+              style={{ height: `27px`, width: `27px`, color: `white` }}
+            />
           </div>
         </div>
       </div>
     </div>
   );
-  
 }
 
 export default ContactMain;
