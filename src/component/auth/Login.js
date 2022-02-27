@@ -96,9 +96,11 @@ function Login(props) {
             <div
               className="login-get-otp"
               onClick={() => {
-                if (mobile.length === 14) {
+                if (mobile.length === 13) {
+                  
                   setOtpSent(true);
                 } else {
+                  console.log(mobile.length)
                   console.log("error");
                 }
               }}
