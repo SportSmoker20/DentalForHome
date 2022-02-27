@@ -11,12 +11,7 @@ function AboutBanner() {
           </div>
           <div className="about-bottom-left-content">
             <p>
-              Dental for home, bringing smiles at your doorstep, is the India's
-              first digital dental service platform providing dental services at
-              your doorstep. At dental for home, we help you look after your own
-              dental health effortlessly as well as take care of your loved ones
-              too. You can have best dental treatments and other services easily
-              at home with just a few clicks away!
+            Dental for home, bringing smiles at your doorstep, is the India’s first digital dental service platform providing dental services at your doorstep. At dental for home, we help you look after your own dental health effortlessly as well as take care of your loved ones too. You can have best dental treatments and other services easily at home- with just a few clicks away.!
             </p>
           </div>
         </div>

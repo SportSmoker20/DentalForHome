@@ -36,7 +36,10 @@ function HomeNavbar(props) {
           <div className="navbar-center-option">
             {/* <p onClick={() => scrollHome()}>Home</p> */}
 
-            <p style={props.tabName==='home' ? {color:`rgb(60,100,177)`,fontWeight:`600`}:{color:`rgb(55, 63, 65)`}}>Home</p>
+            <Link
+            to={`/`}
+            style={{ textDecoration: `none`}}
+          ><p style={props.tabName==='home' ? {color:`rgb(60,100,177)`,fontWeight:`600`}:{color:`rgb(55, 63, 65)`}}>Home</p></Link>
           </div>
           <div className="navbar-center-option">
             {/* <p onClick={() => scrollAbout()}>About</p> */}

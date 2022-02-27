@@ -1,11 +1,10 @@
 import React from 'react'
-import img1 from '../../images/bookingIcon.png'
 
 function HomeServiceCard(props) {
   return (
     <div className='home-service-card-container'>
         <div className='home-service-img'>
-          <img src={img1} style={{width:`60px`,height:`60px`}} alt={"Couldn't Load"}/>
+          <img src={props.data.img} style={{width:`150px`,height:`190px`}} alt={"Couldn't Load"}/>
         </div>
         <div className='home-service-title'>
           <p>{props.data.title}</p>

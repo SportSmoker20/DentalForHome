@@ -6,70 +6,56 @@ function HomeFAQ() {
     rows: [
       {
         title: "How do I contact Dental for Home for any queries?",
-        content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-                  ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
-                  In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
-                  Fusce sed commodo purus, at tempus turpis.`,
+        content: `To contact us, you can either complete the form in the Contact Us section or you can call at our toll-free number. It’s a free service!`,
       },
       {
-        title: "How do I contact Dental for Home for any queries?",
+        title: "What is your office address and phone number?",
         content:
-          "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+          "Currently our office is located in \n phone number: 0123456789",
       },
       {
-        title: "How do I contact Dental for Home for any queries?",
-        content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-                Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
-                Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
-                Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+        title: "In which location do Dental for Home serves?",
+        content: `We are already serving 19 locations in Delhi NCR and soon be expanding our facilities to other places as well.`,
       },
 
       {
-        title: "How do I contact Dental for Home for any queries?",
-        content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-                  ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
-                  In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
-                  Fusce sed commodo purus, at tempus turpis.`,
+        title: "What are your hours of operation?",
+        content: `Our website is open 24 hours a day, 7 days a week. Call Centre support is available from Monday to Saturday, 08:30 am to 09:00 pm IST and on Sunday's from 09:00 am - 05:00 pm IST.`,
       },
       {
-        title: "How do I contact Dental for Home for any queries?",
+        title: "Is the first consultation always free?",
         content:
-          "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+          "Yes, at dental for home your first video consultation with us is free.",
       },
       {
-        title: "How do I contact Dental for Home for any queries?",
-        content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-                Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
-                Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
-                Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+        title: "Is digital/remote consultation as effective as when one physically visits a dentist?",
+        content: `Yes, absolutely, if your case is special or requires a visit we will do that for you. Though treatments will be given at your home only.`,
       },
       {
-        title: "How do I contact Dental for Home for any queries?",
-        content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-          ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
-          In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
-          Fusce sed commodo purus, at tempus turpis.`,
+        title: "Can I directly have dentist at my home without video consultation?",
+        content: `No, video consultation will be the first step in the process. Depending on your problems our dental expert team will come and serve you.`,
     },
     {
-        title: "How do I contact Dental for Home for any queries?",
+        title: "Where can I express my opinions if I am not satisfied?",
         content:
-            "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+            "You can reach out to our dental office directly, call us on +91 0123456789, or WhatsApp us on +91 0123456789. \n Every customer is equally important for us and we will offer a quick resolution to your concern.",
     },
     {
-        title: "How do I contact Dental for Home for any queries?",
-        content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-        Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
-        Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
-        Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+        title: "Are there any things that I will get other than my treatments?",
+        content: `Yes definitely, at dental for home we provide gifts and vouchers in the form of free medicines and dental aids depending on the service you applied for. As we want every customer to have big smile on their face after the treatment.`,
     },
+    {
+        title: "How can I save more cost in terms of dental services?",
+        content: `At dental for home, we provide a wide range of services at almost 50% off. We have special plan that will take care of your family needs and it has less cost. This is because we do not charge high referral commissions to get you the right specialist. Thus, Best quality treatment with cost optimization.`
+    }
    
     ],
   };
   const styles = {
     // bgColor: 'white',
-    titleTextColor: "rgb(118, 224, 224)",
+    titleTextColor: "grey",
     rowTitleColor: "rgb(81, 82, 82)",
-    rowContentColor: "rgb(81, 82, 82)",
+    rowContentColor: "rgb(184, 177, 177)",
     arrowColor: "rgb(4,64,102)",
   };
   const config = {
