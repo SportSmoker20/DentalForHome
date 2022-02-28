@@ -1,13 +1,13 @@
 import React from "react";
 import HomeServiceCard from "./HomeServiceCard";
-import img1 from "../../images/sampleService1.png";
-import img2 from "../../images/sampleService2.png";
-import img3 from "../../images/sampleService3.png";
-import img4 from "../../images/sampleService4.png";
-import img5 from "../../images/sampleService5.png";
-import img6 from "../../images/sampleService6.png";
-import img7 from "../../images/sampleService7.png";
-import img8 from "../../images/sampleService8.png";
+import img1 from "../../images/sampleService11.png";
+import img2 from "../../images/sampleService21.png";
+import img3 from "../../images/sampleService31.png";
+import img4 from "../../images/sampleService41.png";
+import img5 from "../../images/sampleService51.png";
+import img6 from "../../images/sampleService61.png";
+import img7 from "../../images/sampleService71.png";
+import img8 from "../../images/sampleService81.png";
 
 function HomeService() {
   const serviceData = [
