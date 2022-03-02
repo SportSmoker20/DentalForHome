@@ -6,10 +6,13 @@
   margin: 0;
   padding: 0;
   background: rgb(243, 246, 250);
+  width: 100%;
+  overflow-x: hidden;
 }
 .contact-main-container {
   padding-top: 13.8vh;
   height: 86.2vh;
+  
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -24,8 +27,10 @@
 }
 .contact-left {
   background-color: #fff;
+  
   width: 95%;
   height: 100%;
+  height: max-content;
   display: flex;
   flex-direction: row;
 }
@@ -70,6 +75,7 @@
   padding: 13px;
   background-color: rgb(243, 246, 250);
 }
+
 
 /* CONTACT IMAGE SIDE */
 
@@ -120,3 +126,70 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+
+@media only screen and (max-width: 1100px) {
+  .contact-submain-container {
+    width: 94vw;
+  }
+}
+@media only screen and (max-width: 925px) {
+  
+  .contact-submain-container {
+    transform: scale(0.8);
+    width: 117vw;
+  }
+  .contact-main-container{
+    margin-left: -7vw;
+    
+    width: max-content;
+    height: max-content;
+  }
+}
+@media only screen and (min-width: 751px) {
+.contact-left-right-top-img{
+display: none;
+}
+}
+@media only screen and (max-width: 750px) {
+  .contact-main-container{
+    height: max-content;
+    margin-bottom: -70px;
+  }
+  .contact-left-right-top-img{
+  display:contents;
+  width: 100%;
+  transform: scale(0.95);
+  margin-left: -5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  }
+  .contact-left-right-top{
+    display: none;
+  }
+  .contact-submain-container{
+    height: max-content;
+  }
+  .contact-left{
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -125px;
+    /* width: 100%; */
+
+  }
+  .contact-right{
+    display: none;
+  }
+  .contact-left-left{
+    width: 90%;
+  }
+  .contact-left-right{
+    width: 85%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  }

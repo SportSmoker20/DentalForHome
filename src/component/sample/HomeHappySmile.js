@@ -28,6 +28,14 @@ function HomeHappySmile() {
       name: "Sanjeev Kumar",
       role: "Jobless at jobless",
     },
+    {
+      id: 3,
+      content:
+        "Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quoerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum.",
+      img: img1,
+      name: "Sanjeev Kumar",
+      role: "Jobless at jobless",
+    },
   ];
 
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import img from '../../images/logoMain.png'
 
 function HomeNavbar(props) {
   const scrollFaq = () => {
@@ -7,17 +8,18 @@ function HomeNavbar(props) {
     anchor.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
-  const scrollService = () => {
-    const anchor = document.querySelector("#home-service");
-    anchor.scrollIntoView({ behavior: "smooth", block: "center" });
-  };
+  // const scrollService = () => {
+  //   const anchor = document.querySelector("#home-service");
+  //   anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+  // };
 
   return (
     <div className="home-navbar">
       <div className="home-navbar-container">
         <div className="navbar-left">
           <div className="navbar-left-text">
-            <p>DENTAL FOR HOME</p>
+            {/* <p>DENTAL FOR HOME</p> */}
+            <img src={img}  style={{height:`100px`,width:`max-content`}}/>
           </div>
         </div>
         <div className="navbar-center">
@@ -48,7 +50,17 @@ function HomeNavbar(props) {
             </Link>
           </div>
           <div className="navbar-center-option">
-            <p onClick={() => scrollService()}>Services</p>
+            <Link to={`/pricing`} style={{ textDecoration: `none` }}>
+              <p
+                style={
+                  props.tabName === "pricing"
+                    ? { color: `rgb(60,100,177)`, fontWeight: `600` }
+                    : { color: `rgb(55, 63, 65)` }
+                }
+              >
+                Pricing
+              </p>
+            </Link>
           </div>
           <div className="navbar-center-option">
             {/* <p onClick={() => scrollContact()}>Contact</p> */}

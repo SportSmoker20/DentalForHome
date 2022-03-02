@@ -22,7 +22,7 @@ function HomeMap() {
         </div>
       </div>
       <div className="map-right">
-        <img src={img1} alt={"Couldn't Load"} />
+        <img className="map-right-img" src={img1} alt={"Couldn't Load"} />
       </div>
     </div>
   );

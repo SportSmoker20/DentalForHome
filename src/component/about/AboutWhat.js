@@ -1,9 +1,12 @@
 import React from "react";
+import img from "../../images/aboutWhoAre2.PNG";
 
 function AboutWhat() {
   return (
     <div className="about-what-container">
-      <div className="about-what-bottom-left"></div>
+      <div className="about-what-bottom-left">
+        <img src={img} />
+      </div>
       <div className="about-what-bottom-right">
         <div className="about-what-bottom-left-title">
           <p>What we do?</p>

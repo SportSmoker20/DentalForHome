@@ -1,0 +1,107 @@
+.pricing-container{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(243, 246, 250);
+}
+.pricing-main-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+.pricing-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 13.8vh;
+}
+.pricing-top-title{
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(37,44,56);
+}
+.pricing-top-content{
+    width: 60vw;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(132,132,132);
+}
+.pricing-bottom{
+    display: flex;
+    flex-direction: row;
+    /* background-color: aquamarine; */
+    width: 75vw
+}
+.pricing-bottom-offer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: nowrap; */
+    align-items: center;
+    justify-content: space-between;
+}
+.pbo{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+}
+.pricing-offer{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid white;
+}
+.pricing-offer-price{
+    font-size: 30px;
+    font-weight: 700;
+    height: 60px;
+}
+.pricing-offer-price-title{
+    font-size: 26px;
+    height: 65px;
+}
+.pricing-offer-price-text{
+    /* width: 28vw; */
+    font-size: 15px;
+}
+.pricing-offer-foot{
+    width: 100%;
+}
+.pricing-offer-foot-list{
+    width: 100%;
+    text-align: left;
+    margin-left: 3vw;
+}
+.pofl{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1px;
+}
+
+.pofl > p {
+    margin-left: 20px;
+}
+.pricing-foot{
+    background-color: rgb(243, 246, 250);
+    color: rgb(4,64,102);
+    width: 60%;
+    padding: 1px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}

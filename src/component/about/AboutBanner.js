@@ -1,9 +1,13 @@
 import React from "react";
+import img from "../../images/logoMain.png";
+import img1 from "../../images/aboutWhoAre.PNG";
 
 function AboutBanner() {
   return (
     <div className="about-banner-container">
-      <div className="about-top"></div>
+      <div className="about-top">
+        <img src={img} alt="Couldn't Load" />
+      </div>
       <div className="about-bottom">
         <div className="about-bottom-left">
           <div className="about-bottom-left-title">
@@ -20,7 +24,9 @@ function AboutBanner() {
             </p>
           </div>
         </div>
-        <div className="about-bottom-right"></div>
+        <div className="about-bottom-right">
+          <img src={img1} />
+        </div>
       </div>
     </div>
   );

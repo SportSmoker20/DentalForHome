@@ -1,13 +1,25 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import logo from "../../images/logoMain.png";
 
-function UserRegister() {
+
+function UserRegister(props) {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
+
+  const  handleSubmit = () => {
+    props.setSuperLoggedIn(true)
+  }
 
   return (
     <div className="login-container">
       <div className="login-left">
+      <div>
+            <img
+              src={logo}
+              style={{ height: `110px`, width: `220px`, paddingTop: `15vh`,marginBottom:`-150px` }}
+            />
+          </div>
         <div className="login-left-main">
           <div className="login-title">
             <div className="login-title-top">
@@ -38,7 +50,7 @@ function UserRegister() {
             />
           </div>
           <br />
-          <div className="login-get-otp">
+          <div className="login-get-otp" onClick={()=>handleSubmit()}>
             <p>Sign Up</p>
           </div>
         </div>
@@ -61,6 +73,7 @@ function UserRegister() {
           </Link>
         </div>
       </div>
+      {props.superLoggedIn ? <Navigate to="/home" /> : null}
     </div>
   );
 }

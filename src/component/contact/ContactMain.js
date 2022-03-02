@@ -11,6 +11,13 @@ function ContactMain() {
       <div className="contact-submain-container">
         <div className="contact-left">
           <div className="contact-left-left">
+            <div className="contact-left-right-top-img">
+              <img
+                src={img}
+                alt="Couldn't Load!"
+                style={{ height: `300px`, width: `375px` }}
+              />
+            </div>
             <div className="contact-left-title">
               <p>Contact Us</p>
             </div>
@@ -43,7 +50,7 @@ function ContactMain() {
                     color: `rgb(4,64,102)`,
                   }}
                 />
-                <p>Location</p>
+                <p>Delhi, India</p>
               </div>
               <div className="contact-access">
                 <IoIosCall
@@ -53,7 +60,7 @@ function ContactMain() {
                     color: `rgb(4,64,102)`,
                   }}
                 />
-                <p>Number</p>
+                <p>+91 12345 12345</p>
               </div>
               <div className="contact-access">
                 <IoMdMail
@@ -63,7 +70,7 @@ function ContactMain() {
                     color: `rgb(4,64,102)`,
                   }}
                 />
-                <p>Email</p>
+                <p>contact@dentalforhome.com</p>
               </div>
             </div>
           </div>

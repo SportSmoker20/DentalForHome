@@ -1,0 +1,112 @@
+.service-main {
+  margin-left: 300px;
+  margin-right: 35px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+.service-main-title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin-top: 30px;
+}
+.service-title-top {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid black;
+  width: 30vw;
+}
+.service-title-bottom {
+  padding: 15px;
+}
+
+.service-card-container {
+  background-image: url("../images/service2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  /* justify-content: center; */
+  margin: 10px 15px 10px 0;
+  width: 13.5vw;
+  min-width: 150px;
+  height: 300px;
+  box-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
+  /* min-width: 116px; */
+}
+.service-main-card {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-evenly;
+}
+.service-card-text {
+  position: relative;
+  padding: 15px;
+  padding-top: 8px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+  /* width: 10vw; */
+  width: 70%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service-card-text-inner {
+  font-weight: 700;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* di */
+}
+
+@media screen and (max-width: 1300px) {
+  .service-card-container {
+    transform: scale(0.9);
+    /* margin-left: 5px; */
+    width: 18vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .service-card-container {
+    transform: scale(0.8);
+    width: 27vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .service-main {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .service-card-container {
+    width: 40vw;
+    height: 450px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .service-card-container {
+    transform: scale(0.9);
+    width: 38vw;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 584px) {
+  .service-card-container {
+  transform: scale(0.8);
+    width: 65vw;
+  }
+}

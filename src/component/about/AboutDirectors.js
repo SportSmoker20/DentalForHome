@@ -8,7 +8,7 @@ function AboutDirectors() {
     {
       id: 0,
       img: img,
-      name: "Sanjeev Kumar",
+      name: "Manish Kumar",
       title: "Jobless at jobless",
       content:
         "Ea aperiri ponderum ullamcorper sit, verear offendit imperdiet nameu, liber delicato tractatos ad.",
@@ -17,7 +17,7 @@ function AboutDirectors() {
     {
       id: 1,
       img: img,
-      name: "Sanjeev Kumar",
+      name: "Sameer Kumar",
       title: "Jobless at jobless",
       content:
         "Ea aperiri ponderum ullamcorper sit, verear offendit imperdiet nameu, liber delicato tractatos ad.",

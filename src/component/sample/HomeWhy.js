@@ -1,5 +1,8 @@
 import React from "react";
-import img1 from "../../images/bookingIcon.png";
+import img1 from "../../images/why1.png";
+import img2 from "../../images/why2.png";
+import img3 from "../../images/why3.png";
+import img4 from "../../images/why4.png";
 import WhyCard from "./WhyCard";
 
 function HomeWhy() {
@@ -7,26 +10,30 @@ function HomeWhy() {
     {
       id: 0,
       img: img1,
+      title: "TRUST",
       content:
-        "Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quoerendum.",
+        "We build our patients trust in dental for home by providing best quality services from our expert dental team.",
     },
     {
       id: 1,
-      img: img1,
+      img: img2,
+      title: "SECURITY",
       content:
-        "Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quoerendum.",
+        "At dental for home, we stick to our core ethics and keep the patient’s data secure and private.",
     },
     {
       id: 2,
-      img: img1,
+      img: img3,
+      title: "AFFORDABLE",
       content:
-        "Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quoerendum.",
+        "At dental for home, we provide 50% discount on all services as compared to market price!!",
     },
     {
       id: 3,
-      img: img1,
+      img: img4,
+      title:"RESPECT",
       content:
-        "Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quoerendum.",
+        "It is the key value of dental for home to respect everyone. We respect patients’ feelings",
     },
   ];
 

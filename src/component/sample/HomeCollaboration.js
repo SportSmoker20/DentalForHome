@@ -6,13 +6,11 @@ function HomeCollaboration() {
     <div className="home-collaboration-contianer">
       <div className="collaboration-left">
         <div className="collaboration-title">
-          <p>Our Collaborations</p>
+          <p>In Joint-Venture  With</p>
         </div>
         <div className="collaboration-content">
           <p>
-            Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam
-            no suscipit quoerendum. At nam minimum ponderum. Est audiam animal
-            molestiae te. Ex duo eripuit mentitum.
+          Holistic Biocon Inc began operations as a importer and exporter of wholesale goods including Commodities, Covid supply (export / import), Finest market supply, API chemical supply, Commodities trading, Forex trade
           </p>
         </div>
       </div>

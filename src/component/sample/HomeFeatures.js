@@ -1,33 +1,46 @@
 import React from "react";
 import FeatureCard from "./FeatureCard";
+import img5 from '../../images/feature5.jpeg'
+import img1 from  '../../images/feature1.jpeg'
+import img2 from  '../../images/feature2.jpeg'
+import img3 from  '../../images/feature3.jpeg'
+import img4 from  '../../images/feature4.jpeg'
 
 function HomeFeatures() {
   const featureData = [
     {
       id: 0,
-      img: "abc",
+      img: img1,
       content: "Video Consultancy",
     },
     {
       id: 1,
-      img: "abc",
-      content: "Video Consultancy",
+      img: img2,
+      content: "Check Up",
+      
     },
     {
       id: 2,
-      img: "abc",
-      content: "Video Consultancy",
+      img: img3,
+      content: "Diagnosis",
+      
     },
     {
       id: 3,
-      img: "abc",
-      content: "Video Consultancy",
+      img: img4,
+      content: "Dental Aids",
+      
     },
     {
       id: 4,
-      img: "abc",
-      content: "Video Consultancy",
+      img: img5,
+      content: "Free Pick and Drop",
     },
+    // {
+    //   id: 5,
+    //   img: img,
+    //   content: "Video Consultancy",
+    // },
   ];
   console.log(featureData);
 
