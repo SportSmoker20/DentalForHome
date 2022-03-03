@@ -6,7 +6,7 @@ function AboutBanner() {
   return (
     <div className="about-banner-container">
       <div className="about-top">
-        <img src={img} alt="Couldn't Load" />
+        <img src='https://dentalforhome.s3.amazonaws.com/images/logoMain.png' alt="Couldn't Load" />
       </div>
       <div className="about-bottom">
         <div className="about-bottom-left">
