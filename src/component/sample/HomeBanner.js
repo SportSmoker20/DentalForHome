@@ -67,7 +67,7 @@ function HomeBanner() {
           <div
             className="home-silderimg-container"
             key={index}
-            style={{ borderRadius: `20px` }}
+            // style={{ borderRadius: `20px` }}
           >
             {/* <img className="home-sliderimg" src={slideImage.src} /> */}
             <div className="home-banner-center">

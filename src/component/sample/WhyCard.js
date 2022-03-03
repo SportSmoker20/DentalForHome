@@ -9,7 +9,7 @@ function WhyCard(props) {
           style={{ height: `120px`, width: `85px` }}
           alt={"Couldn't Load"}
         />
-        <p>{props.data.title}</p>
+        <p className="why-card-top-title">{props.data.title}</p>
       </div>
       <div className="why-card-bottom">
         <p>{props.data.content}</p>
