@@ -403,6 +403,11 @@
     padding-bottom: 0;
   }
 }
+@media only screen and (max-width: 700px){
+.about-top{
+  display: none;
+}
+}
 @media only screen and (max-width: 750px){
   .team-card{
     transform: scale(0.85);

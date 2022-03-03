@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     background-color: rgb(243, 246, 250);
+    width: 100%;
+    overflow-x: hidden;
 }
 .pricing-main-container{
     width: 100%;
@@ -32,11 +34,13 @@
 .pricing-bottom{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+
     /* background-color: aquamarine; */
-    width: 75vw
+    width: 100%
 }
 .pricing-bottom-offer{
-    width: 100%;
+    width: 90vw;
     display: flex;
     flex-direction: row;
     /* flex-wrap: nowrap; */
@@ -46,7 +50,7 @@
 .pbo{
     display: flex;
     flex-direction: column;
-
+width: 70vw;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -79,14 +83,15 @@
 .pricing-offer-foot-list{
     width: 100%;
     text-align: left;
-    margin-left: 3vw;
+    /* margin-left: 3vw;
+    margin-right: 3vw; */
 }
 .pofl{
     display: flex;
     flex-direction: row;
     /* justify-content: center; */
     align-items: center;
-    padding: 1px;
+    /* padding: 1px; */
 }
 
 .pofl > p {
@@ -104,4 +109,30 @@
     align-items: center;
     margin-top: 20px;
     border-radius: 10px;
+}
+@media only screen and (max-width: 1000px){
+    .pbo{
+        transform: scale(0.9);
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 850px){
+    .pbo{
+        transform: scale(0.8);
+        margin: -25px;
+    }
+}
+@media only screen and (max-width: 700px){
+    .pricing-bottom-offer{
+        flex-direction: column;
+    }
+    .pbo{
+        transform: scale(0.9);
+        width: 85vw;
+    }
+}
+@media only screen and (max-width: 580px){
+    .pbo{
+width: 90vw;        
+    }
 }
