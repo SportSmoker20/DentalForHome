@@ -9,7 +9,7 @@ import { Navigate } from 'react-router-dom';
 
 function DashBoard(props) {
   
-  if(props.superLoggedIn){
+  if(props.subscribedLoggedIn){
     return (
       <div>
       <Sidebar />

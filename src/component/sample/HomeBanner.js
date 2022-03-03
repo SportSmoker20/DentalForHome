@@ -1,21 +1,18 @@
 import React from "react";
-import logo from "../../images/sampleBannerLogo.PNG";
-import img1 from "../../images/benyamin-bohlouli-vVKh9xeLub4-unsplash.jpg";
-import img2 from "../../images/vivek-kumar-a-_1PPjnbUg-unsplash.jpg";
-import img3 from "../../images/portrait-family-reading-book-together-sitting-sofa.jpg";
+
 import { Slide } from "react-slideshow-image";
 import "../../css/DashBoard.css";
 
 function HomeBanner() {
   const slideImages = [
     {
-      src: img1,
+      src: 'https://dentalforhome.s3.amazonaws.com/images/benyamin-bohlouli-vVKh9xeLub4-unsplash.jpg',
     },
     {
-      src: img2,
+      src: 'https://dentalforhome.s3.amazonaws.com/images/vivek-kumar-a-_1PPjnbUg-unsplash.jpg',
     },
     {
-      src: img3,
+      src: 'https://dentalforhome.s3.amazonaws.com/images/portrait-family-reading-book-together-sitting-sofa.jpg',
     },
     // {
 

@@ -6,7 +6,6 @@ import { Link, Navigate } from "react-router-dom";
 import OtpInput from "react-otp-input";
 import axios from "axios";
 import PhoneInput from "react-phone-number-input";
-import logo from "../../images/logoMain.png";
 
 function Login(props) {
   const [otpSent, setOtpSent] = useState(false);
@@ -93,7 +92,7 @@ function Login(props) {
         <div className="login-left">
           <div style={{ width: `max-content` }}>
             <img
-              src={logo}
+              src='https://dentalforhome.s3.amazonaws.com/images/logoMain.png'
               style={{ height: `110px`, width: `220px`, paddingTop: `20vh` }}
             />
           </div>
@@ -144,7 +143,7 @@ function Login(props) {
         <div className="login-left">
           <div>
             <img
-              src={logo}
+              src='https://dentalforhome.s3.amazonaws.com/images/logoMain.png'
               style={{ height: `110px`, width: `220px`, paddingTop: `10vh` }}
             />
           </div>

@@ -17,9 +17,9 @@ import PricingMain from "./component/pricing/PricingMain";
 import Pricing from "./component/pricing/Pricing";
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [superLoggedIn, setSuperLoggedIn] = useState(false);
-  const [subscribedLoggedIn, setSubscribedLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
+  const [superLoggedIn, setSuperLoggedIn] = useState(true);
+  const [subscribedLoggedIn, setSubscribedLoggedIn] = useState(true);
 
   return (
     <div>

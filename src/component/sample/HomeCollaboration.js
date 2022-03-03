@@ -1,5 +1,4 @@
 import React from "react";
-import img1 from "../../images/biocoin.png";
 
 function HomeCollaboration() {
   return (
@@ -15,7 +14,7 @@ function HomeCollaboration() {
         </div>
       </div>
       <div className="collaboration-right">
-        <img src={img1} alt="Couldn't Load!" />
+        <img src='https://dentalforhome.s3.amazonaws.com/images/biocoin.png' alt="Couldn't Load!" />
       </div>
     </div>
   );

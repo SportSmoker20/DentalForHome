@@ -1,6 +1,4 @@
 import React from "react";
-import img from "../../images/logoMain.png";
-import img1 from "../../images/aboutWhoAre.PNG";
 
 function AboutBanner() {
   return (

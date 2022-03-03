@@ -2,7 +2,6 @@ import React from "react";
 import { CgArrowsV } from "react-icons/cg";
 import { BsThreeDots, BsClockFill } from "react-icons/bs";
 import { GrSort } from "react-icons/gr";
-import img1 from "../../images/character1.svg";
 
 function Appointments() {
   const arr = [
@@ -80,7 +79,7 @@ function Appointments() {
             <tr className="appointment-row">
               <td>
                 <div className="table-name">
-                  <img src={img1} className="table-image" />
+                  <img src='https://dentalforhome.s3.amazonaws.com/images/character1.svg' className="table-image" />
                   {data.name}
                 </div>
               </td>

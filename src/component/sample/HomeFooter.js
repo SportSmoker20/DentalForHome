@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import img1 from "../../images/logoMain1.PNG";
 import Faq from "react-faq-component";
 import { AiOutlinePlus } from "react-icons/ai";
 
@@ -199,7 +198,7 @@ function HomeFooter() {
         <div className="footer-bottom">
           <div className="footer-bottom-text">
             <img
-              src={img1}
+              src='https://dentalforhome.s3.amazonaws.com/images/logoMain1.PNG'
               style={{ height: `40px`, width: `40px`,borderRadius:`10px` }}
               alt={"Couldn't Load"}
             />

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { HiOutlineDotsCircleHorizontal } from "react-icons/hi";
 import "../../css/Edit.css";
-import charac from '../../images/character1.svg'
 
 function EditCard() {
   const [gender, setGender] = useState("Male");
@@ -12,7 +11,7 @@ function EditCard() {
   return (
     <div className="edit-card-main">
       <div className="edit-card-top">
-        <img src={charac} className="edit-card-image" />
+        <img src='https://dentalforhome.s3.amazonaws.com/images/character.svg' className="edit-card-image" />
         <div className="edit-top-container">
           <div className="edit-top-text">Jesson George</div>
           <HiOutlineDotsCircleHorizontal className="edit-top-icon"/>

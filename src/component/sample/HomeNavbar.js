@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img from '../../images/logoMain.png'
 
 function HomeNavbar(props) {
   const scrollFaq = () => {
@@ -19,7 +18,7 @@ function HomeNavbar(props) {
         <div className="navbar-left">
           <div className="navbar-left-text">
             {/* <p>DENTAL FOR HOME</p> */}
-            <img src={img}  style={{height:`100px`,width:`max-content`}}/>
+            <img src='https://dentalforhome.s3.amazonaws.com/images/logoMain.png'  style={{height:`100px`,width:`max-content`}}/>
           </div>
         </div>
         <div className="navbar-center">

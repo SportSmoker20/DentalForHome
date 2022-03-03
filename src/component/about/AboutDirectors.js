@@ -1,13 +1,11 @@
 import React from "react";
-import img from "../../images/character1.svg";
-import { BsLinkedin } from "react-icons/bs";
 import AboutCard from "./AboutCard";
 
 function AboutDirectors() {
   const directorData = [
     {
       id: 0,
-      img: img,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
       name: "Manish Kumar",
       title: "Jobless at jobless",
       content:
@@ -16,7 +14,7 @@ function AboutDirectors() {
     },
     {
       id: 1,
-      img: img,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
       name: "Sameer Kumar",
       title: "Jobless at jobless",
       content:

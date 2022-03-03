@@ -2,7 +2,6 @@ import React from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
-import  floss from '../../images/floss.svg'
 
 export const SidebarData = [
   {
@@ -20,7 +19,7 @@ export const SidebarData = [
   {
     title: 'Services',
     path: '/service',
-    icon: <img src={floss} style={{height:`20px`,width:`20px`}} />,
+    icon: <img src='https://dentalforhome.s3.amazonaws.com/images/floss.svg' style={{height:`20px`,width:`20px`}} />,
     cName: 'nav-text'
   },
   {

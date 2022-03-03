@@ -3,7 +3,6 @@ import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 import { HiLocationMarker } from "react-icons/hi";
 import { IoIosCall, IoMdMail } from "react-icons/io";
-import img from "../../images/contact.png";
 
 function ContactMain() {
   return (
@@ -13,7 +12,7 @@ function ContactMain() {
           <div className="contact-left-left">
             <div className="contact-left-right-top-img">
               <img
-                src={img}
+                src='https://dentalforhome.s3.amazonaws.com/images/contact.png'
                 alt="Couldn't Load!"
                 style={{ height: `300px`, width: `375px` }}
               />
@@ -36,7 +35,7 @@ function ContactMain() {
           <div className="contact-left-right">
             <div className="contact-left-right-top">
               <img
-                src={img}
+                src='https://dentalforhome.s3.amazonaws.com/images/contact.png'
                 alt="Couldn't Load!"
                 style={{ height: `300px`, width: `375px` }}
               />

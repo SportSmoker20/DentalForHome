@@ -6,7 +6,7 @@
   background-color: rgb(66, 144, 194);
   height: 100vh;
   width: 100%;
-  background-image: url('../images/loginBack.jpeg');
+  background-image: url('https://dentalforhome.s3.amazonaws.com/images/loginBack.jpeg');
   background-size: cover  ;
 }
 .login-left {

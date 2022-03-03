@@ -1,14 +1,11 @@
-import { getByTitle } from "@testing-library/react";
 import React from "react";
-import img from "../../images/character1.svg";
-import AboutCard from "./AboutCard";
 import AboutTeamCard from "./AboutTeamCard";
 
 function AboutTeam() {
   const teamData = [
     {
       id: 0,
-      img: img,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
       name: "Sachin Soni",
       title: "Jobless at jobless",
       content:
@@ -17,7 +14,7 @@ function AboutTeam() {
     },
     {
       id: 1,
-      img: img,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
       name: "Bhupesh Sarangal",
       title: "Jobless at jobless",
       content:
@@ -26,7 +23,7 @@ function AboutTeam() {
     },
     {
       id: 2,
-      img: img,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
       name: "Prakhar Kulshrestha",
       title: "Jobless at jobless",
       content:
@@ -35,7 +32,7 @@ function AboutTeam() {
     },
     {
       id: 3,
-      img: img,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
       name: "Aditya Sharma",
       title: "Jobless at jobless",
       content:

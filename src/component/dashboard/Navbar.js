@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import { SidebarData } from "../sidebar/SidebarData";
 import { IconContext } from "react-icons";
 import "../../css/Sidebar.css";
-import character1 from "../../images/character1.svg";
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
@@ -44,7 +43,7 @@ function Navbar() {
               <label className="sidebar-profile-dental">Dental</label> For Home
             </p> */}
             <div className="profile-image">
-              <img src={character1} className="profile-image-inner" />
+              <img src='https://dentalforhome.s3.amazonaws.com/images/character1.svg' className="profile-image-inner" />
             </div>
             <p>Jesson George</p>
             <div className="sidebar-profile-edit">

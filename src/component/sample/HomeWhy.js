@@ -1,36 +1,32 @@
 import React from "react";
-import img1 from "../../images/why1.png";
-import img2 from "../../images/why2.png";
-import img3 from "../../images/why3.png";
-import img4 from "../../images/why4.png";
 import WhyCard from "./WhyCard";
 
 function HomeWhy() {
   const whyData = [
     {
       id: 0,
-      img: img1,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/why1.png',
       title: "TRUST",
       content:
         "We build our patients trust in dental for home by providing best quality services from our expert dental team.",
     },
     {
       id: 1,
-      img: img2,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/why2.png',
       title: "SECURITY",
       content:
         "At dental for home, we stick to our core ethics and keep the patient’s data secure and private.",
     },
     {
       id: 2,
-      img: img3,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/why3.png',
       title: "AFFORDABLE",
       content:
         "At dental for home, we provide 50% discount on all services as compared to market price!!",
     },
     {
       id: 3,
-      img: img4,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/why4.png',
       title:"RESPECT",
       content:
         "It is the key value of dental for home to respect everyone. We respect patients’ feelings",

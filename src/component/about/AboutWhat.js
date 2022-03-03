@@ -1,5 +1,4 @@
 import React from "react";
-import img from "../../images/aboutWhoAre2.PNG";
 
 function AboutWhat() {
   return (

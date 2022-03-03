@@ -28,7 +28,7 @@
 }
 
 .service-card-container {
-  background-image: url("../images/service2.jpg");
+  background-image: url("https://dentalforhome.s3.amazonaws.com/images/service2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 10px;

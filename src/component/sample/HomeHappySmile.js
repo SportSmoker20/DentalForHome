@@ -1,5 +1,4 @@
 import React from "react";
-import img1 from "../../images/character1.svg";
 import HappySmileCard from "./HappySmileCard";
 
 function HomeHappySmile() {
@@ -8,7 +7,7 @@ function HomeHappySmile() {
       id: 0,
       content:
         "Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quoerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum.",
-      img: img1,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
       name: "Sanjeev Kumar",
       role: "Jobless at jobless",
     },
@@ -16,7 +15,7 @@ function HomeHappySmile() {
       id: 1,
       content:
         "Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quoerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum.",
-      img: img1,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
       name: "Sanjeev Kumar",
       role: "Jobless at jobless",
     },
@@ -24,7 +23,7 @@ function HomeHappySmile() {
       id: 2,
       content:
         "Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quoerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum.",
-      img: img1,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
       name: "Sanjeev Kumar",
       role: "Jobless at jobless",
     },
@@ -32,7 +31,7 @@ function HomeHappySmile() {
       id: 3,
       content:
         "Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quoerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum.",
-      img: img1,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
       name: "Sanjeev Kumar",
       role: "Jobless at jobless",
     },

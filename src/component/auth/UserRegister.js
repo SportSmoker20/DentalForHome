@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-import logo from "../../images/logoMain.png";
 
 
 function UserRegister(props) {
@@ -16,7 +15,7 @@ function UserRegister(props) {
       <div className="login-left">
       <div>
             <img
-              src={logo}
+              src='https://dentalforhome.s3.amazonaws.com/images/logoMain.png'
               style={{ height: `110px`, width: `220px`, paddingTop: `15vh`,marginBottom:`-150px` }}
             />
           </div>

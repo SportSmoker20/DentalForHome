@@ -15,7 +15,7 @@
     
     border-radius: 10px;
     margin: -6px -6px -6px -6px;
-    background-image: url('../images/card1.svg');
+    background-image: url('https://dentalforhome.s3.amazonaws.com/images/card1.svg');
     background-size:  cover;
     background-repeat: no-repeat;
     width: 50%;
@@ -102,7 +102,7 @@
 .plan-card-offer {
     /* background-color: rgb(229,154,108); */
     /* height: */
-    background-image: url('../images/offer.png');
+    background-image: url('https://dentalforhome.s3.amazonaws.com/images/offer.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 40%;
