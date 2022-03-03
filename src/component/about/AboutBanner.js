@@ -25,7 +25,7 @@ function AboutBanner() {
           </div>
         </div>
         <div className="about-bottom-right">
-          <img src={img1} />
+          <img src='https://dentalforhome.s3.amazonaws.com/images/aboutWhoAre.PNG' />
         </div>
       </div>
     </div>

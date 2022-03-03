@@ -10,30 +10,30 @@ function HomeFeatures() {
   const featureData = [
     {
       id: 0,
-      img: img1,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/feature1.jpeg',
       content: "Video Consultancy",
     },
     {
       id: 1,
-      img: img2,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/feature2.jpeg',
       content: "Check Up",
       
     },
     {
       id: 2,
-      img: img3,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/feature3.jpeg',
       content: "Diagnosis",
       
     },
     {
       id: 3,
-      img: img4,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/feature4.jpeg',
       content: "Dental Aids",
       
     },
     {
       id: 4,
-      img: img5,
+      img: 'https://dentalforhome.s3.amazonaws.com/images/feature4.jpeg',
       content: "Free Pick and Drop",
     },
     // {
