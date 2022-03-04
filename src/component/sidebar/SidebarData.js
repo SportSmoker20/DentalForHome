@@ -7,37 +7,37 @@ export const SidebarData = [
   {
     title: 'Dashboard',
     path: '/home',
-    icon: <AiIcons.AiFillDashboard style={{color:`rgb(107,109,104)`}} />,
+    icon: <AiIcons.AiFillDashboard className='fade-1' style={{color:`rgb(4,64,132)`}} />,
     cName: 'nav-text'
   },
   {
     title: 'My Plan',
     path: '/myplan',
-    icon: <IoIcons.IoIosPaper style={{color:`rgb(107,109,104)`}} />,
+    icon: <IoIcons.IoIosPaper className='fade-1' style={{color:`rgb(4,64,132)`}} />,
     cName: 'nav-text'
   },
   {
     title: 'Services',
     path: '/service',
-    icon: <img src='https://dentalforhome.s3.amazonaws.com/images/floss.svg' style={{height:`20px`,width:`20px`}} />,
+    icon: <img src='https://dentalforhome.s3.amazonaws.com/images/floss.svg' className='fade-1' style={{height:`20px`,width:`20px`}} />,
     cName: 'nav-text'
   },
   {
     title: 'My bookings',
     path: '/booking',
-    icon: <FaIcons.FaCalendarAlt style={{color:`rgb(107,109,104)`}} />,
+    icon: <FaIcons.FaCalendarAlt className='fade-1' style={{color:`rgb(4,64,132)`}} />,
     cName: 'nav-text'
   },
   {
     title: 'History',
     path: '/messages',
-    icon: <FaIcons.FaHistory style={{color:`rgb(107,109,104)`}} />,
+    icon: <FaIcons.FaHistory className='fade-1' style={{color:`rgb(4,64,132)`}} />,
     cName: 'nav-text'
   },
   {
     title: 'Settings',
     path: '/support',
-    icon: <AiIcons.AiTwotoneSetting style={{color:`rgb(107,109,104)`}} />,
+    icon: <AiIcons.AiTwotoneSetting className='fade-1' style={{color:`rgb(4,64,132)`}} />,
     cName: 'nav-text'
   }
 ];

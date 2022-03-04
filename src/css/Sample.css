@@ -233,9 +233,9 @@ width: 100%;
 z-index: 0;
 
 }
-.react-slideshow-container{
+/* .home-main > .react-slideshow-container{
   height: 90vh;
-}
+} */
 /* .react-slideshow-container .default-nav:last-of-type{
   display: none;
 }
@@ -423,7 +423,7 @@ z-index: 0;
     min-width: 30vw;
     margin: -10px;
   max-width: 40vw;
-  height: 36vh;
+  height: 46vh;
   }
   .features-title{
     margin-bottom: -35px;
@@ -885,11 +885,14 @@ justify-content: center;
   margin-right: 80px;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  height: max-content;
 }
 .happy-smile-card-container {
   flex: 1;
   margin: 10px;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 12px;
   min-width: 15vw;
   max-width: 18vw;

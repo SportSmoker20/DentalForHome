@@ -15,6 +15,7 @@ import Edit from "./component/edit/Edit";
 import Service from "./component/service/Service";
 import PricingMain from "./component/pricing/PricingMain";
 import Pricing from "./component/pricing/Pricing";
+import NewBooking from "./component/bookingNew/NewBooking";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(true);
@@ -36,7 +37,7 @@ function App() {
           <Route path="/auth/register" element={<UserRegister superLoggedIn={superLoggedIn}  setSuperLoggedIn={setSuperLoggedIn}/>} />
           <Route path="/home" exact element={<DashBoard subscribedLoggedIn={subscribedLoggedIn}/>} />
           <Route path="/pricing" element={<Pricing  loggedIn={loggedIn} />} />
-          <Route path="/booking" element={<Booking subscribedLoggedIn={subscribedLoggedIn} />} />
+          <Route path="/booking" element={<NewBooking subscribedLoggedIn={subscribedLoggedIn} />} />
           <Route path="/edit" element={<Edit subscribedLoggedIn={subscribedLoggedIn}/>} />
           <Route path="/service" element={<Service subscribedLoggedIn={subscribedLoggedIn}/>} />
         </Routes>

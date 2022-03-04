@@ -5,21 +5,21 @@ function HomeWhy() {
   const whyData = [
     {
       id: 0,
-      img: 'https://dentalforhome.s3.amazonaws.com/images/why1.png',
+      img: 'https://dentalforhome.s3.amazonaws.com/images/why2.png',
       title: "TRUST",
       content:
         "We build our patients trust in dental for home by providing best quality services from our expert dental team.",
     },
     {
       id: 1,
-      img: 'https://dentalforhome.s3.amazonaws.com/images/why2.png',
+      img: 'https://dentalforhome.s3.amazonaws.com/images/why3.png',
       title: "SECURITY",
       content:
         "At dental for home, we stick to our core ethics and keep the patient’s data secure and private.",
     },
     {
       id: 2,
-      img: 'https://dentalforhome.s3.amazonaws.com/images/why3.png',
+      img: 'https://dentalforhome.s3.amazonaws.com/images/why1.png',
       title: "AFFORDABLE",
       content:
         "At dental for home, we provide 50% discount on all services as compared to market price!!",

@@ -9,7 +9,7 @@ function HomeAchievements() {
       <div className="achievements-row">
         <div className="achievements-content">
           <div className="achievements-img">
-            <img src='https://dentalforhome.s3.amazonaws.com/images/achi3.png' alt={"Couldn't Load"} style={{width:`100px`,height:`100px`,paddingBottom:`20px`}}/>
+            <img src='https://dentalforhome.s3.amazonaws.com/images/achie3.png' alt={"Couldn't Load"} style={{width:`100px`,height:`100px`,paddingBottom:`20px`}}/>
           </div>
           <div className="achievements-text">
             <p>10,000+ Smiles</p>
@@ -17,7 +17,7 @@ function HomeAchievements() {
         </div>
         <div className="achievements-content">
           <div className="achievements-img">
-            <img src='https://dentalforhome.s3.amazonaws.com/images/achi1.png' alt={"Couldn't Load"} style={{width:`100px`,height:`100px`,paddingBottom:`20px`}}/>
+            <img src='https://dentalforhome.s3.amazonaws.com/images/achie1.png' alt={"Couldn't Load"} style={{width:`100px`,height:`100px`,paddingBottom:`20px`}}/>
           </div>
           <div className="achievements-text">
             <p>19+ Clinics</p>
@@ -25,7 +25,7 @@ function HomeAchievements() {
         </div>
         <div className="achievements-content">
           <div className="achievements-img">
-            <img src='https://dentalforhome.s3.amazonaws.com/images/achi4.png' alt={"Couldn't Load"} style={{width:`100px`,height:`100px`,paddingBottom:`20px`}}/>
+            <img src='https://dentalforhome.s3.amazonaws.com/images/achie4.png' alt={"Couldn't Load"} style={{width:`100px`,height:`100px`,paddingBottom:`20px`}}/>
           </div>
           <div className="achievements-text">
             <p>50+ Dentistry Specialists</p>
@@ -33,7 +33,7 @@ function HomeAchievements() {
         </div>
         <div className="achievements-content">
           <div className="achievements-img">
-            <img src='https://dentalforhome.s3.amazonaws.com/images/achi2.png' alt={"Couldn't Load"} style={{width:`100px`,height:`100px`,paddingBottom:`20px`}}/>
+            <img src='https://dentalforhome.s3.amazonaws.com/images/achie2.png' alt={"Couldn't Load"} style={{width:`100px`,height:`100px`,paddingBottom:`20px`}}/>
           </div>
           <div className="achievements-text">
             <p>5+ years of experience</p>

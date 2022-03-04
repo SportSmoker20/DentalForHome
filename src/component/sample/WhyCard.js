@@ -6,7 +6,7 @@ function WhyCard(props) {
       <div className="why-card-top">
         <img
           src={props.data.img}
-          style={{ height: `120px`, width: `85px` }}
+          style={{ height: `80px`, width: `75px`,paddingRight:`20px` }}
           alt={"Couldn't Load"}
         />
         <p className="why-card-top-title">{props.data.title}</p>

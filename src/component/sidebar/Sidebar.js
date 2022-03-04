@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
+import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 import "../../css/Sidebar.css";
 import { IconContext } from "react-icons";
-
 
 function Sidebar() {
   const profile = localStorage.getItem("testObject");
@@ -54,7 +54,7 @@ function Sidebar() {
           </ul>
         </nav>
       </IconContext.Provider>
-      <img src='https://dentalforhome.s3.amazonaws.com/images/sidebarFooter.png' className="sidebar-img" />
+      {/* <img src={sidebarFooter} className="sidebar-img" /> */}
     </>
   );
 }

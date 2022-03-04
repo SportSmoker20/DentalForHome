@@ -60,7 +60,7 @@ function Service( props) {
     },
   ];
 
-  if (props.superLoggedIn) {
+  if (props.subscribedLoggedIn) {
     return (
       <div>
         <Sidebar />

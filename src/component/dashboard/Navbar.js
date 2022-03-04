@@ -22,7 +22,7 @@ function Navbar() {
       <div className="navbar-main">
         <div className="navbar-text">
           <p style={{ fontWeight: `bold` }}>Your Dashboard is Updated</p>
-          <p>Hi Users, Exciting offers for you. (Diwali Special Offer)</p>
+          <p>Hi Users, Exciting offers for you.</p>
         </div>
         <div className="navbar-menu">
           {sidebar ? <ImCross onClick={showSidebar} className="navbar-menu-inner" />  : <FiMenu onClick={showSidebar} className="navbar-menu-inner" />  }
