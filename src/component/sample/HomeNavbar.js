@@ -9,7 +9,7 @@ function HomeNavbar(props) {
   const scrollFaq = () => {
     const anchor = document.querySelector("#home-faq");
     anchor.scrollIntoView({ behavior: "smooth", block: "center" });
-    showSidebar()
+    showSidebar();
   };
 
   const showSidebar = () => {
@@ -123,12 +123,12 @@ function HomeNavbar(props) {
               }
             >
               <div className="navbar-small-img">
-                  <img
-                    src="https://dentalforhome.s3.amazonaws.com/images/logoMain.png"
-                    style={{ height: `100px`, width: `max-content` }}
-                  />
-                  <ImCross onClick={showSidebar} className="navbar-img" />
-                </div>
+                <img
+                  src="https://dentalforhome.s3.amazonaws.com/images/logoMain.png"
+                  style={{ height: `100px`, width: `max-content` }}
+                />
+                <ImCross onClick={showSidebar} className="navbar-img" />
+              </div>
               <div className="small-navbar-center-option">
                 <Link to={`/`} style={{ textDecoration: `none` }}>
                   <p
@@ -143,7 +143,6 @@ function HomeNavbar(props) {
                 </Link>
               </div>
               <div className="small-navbar-center-option">
-                
                 <Link to={`/about`} style={{ textDecoration: `none` }}>
                   <p
                     style={
@@ -184,8 +183,16 @@ function HomeNavbar(props) {
                   </p>
                 </Link>
               </div>
+              <div></div>
               <div className="small-navbar-center-option">
                 <p onClick={() => scrollFaq()}>FAQ</p>
+              </div>
+              <div className="small-navbar-center-option login-bottm">
+                <Link to={`/auth/login`} style={{ textDecoration: `none` }}>
+                  <div className="navbar-right-text">
+                    <p style={{ color: `white` }}>Log In</p>
+                  </div>
+                </Link>
               </div>
             </nav>
           </div>

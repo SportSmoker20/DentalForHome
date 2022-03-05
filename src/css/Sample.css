@@ -45,6 +45,7 @@
 }
 .navbar-right-text {
   background-color: rgb(60, 100, 177);
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,6 +118,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.small-navbar-center-option.login-bottm{
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 @media only screen and (max-width: 1000px){
   .navbar-left{
@@ -243,7 +250,14 @@ z-index: 0;
   display: none;
 } */
 
-
+@media only screen and (max-height: 550px){
+  .home-main {
+    height: 480px;
+  }
+  .home-silderimg-container{
+    height: 90%;
+  }
+}
 @media only screen and (max-width: 1000px){
   .home-banner-center{
     transform: scale(0.9);
@@ -422,8 +436,9 @@ z-index: 0;
     transform: scale(0.8);
     min-width: 30vw;
     margin: -10px;
+    margin-bottom: -35px;
   max-width: 40vw;
-  height: 46vh;
+  /* height: 35px; */
   }
   .features-title{
     margin-bottom: -35px;
@@ -435,6 +450,8 @@ z-index: 0;
     transform: scale(0.6);
     min-width: 45vw;
     margin: -35px;
+    margin-bottom: -70px;
+    
   max-width: 50vw;
 
   }
@@ -445,6 +462,8 @@ z-index: 0;
     min-width: 55vw;
     margin: -45px;
   max-width: 60vw;
+  margin-bottom: -95px;
+  /* height: 35vh; */
   }
 }
 
@@ -459,6 +478,7 @@ z-index: 0;
   justify-content: center;
   align-items: center;
   background-color: white;
+  padding-bottom: 20px;
 }
 .service-content {
   display: flex;
@@ -491,8 +511,8 @@ z-index: 0;
   
   width: 15%;
   margin: 40px;
-  margin-bottom: 0px;
-  margin-top: 0;
+  margin-bottom: -2vh;
+  margin-top: -4vh;
   min-width: 18vw;
   max-width: 20vw;
 }
@@ -517,6 +537,8 @@ transform: scale(0.9);
 min-width: 30vw;
 max-width: 34vw;
 margin: 0px;
+margin-bottom: -5vh;
+  
   }
 }
 
@@ -525,8 +547,7 @@ margin: 0px;
 min-width: 40vw;
 max-width: 34vw;
 margin: 0px;
-margin-top: -22px;
-  }
+margin-bottom: -9vh;  }
 }
 
 /* MAP */
@@ -1204,6 +1225,7 @@ justify-content: center;
 .faq-row-wrapper .faq-body .faq-row .row-content .row-content-text {
   margin-top: 20px;
   margin-bottom: 10px;
+  font-weight: 400;
 }
 @media only screen and (max-width: 1300px){
   .faq-row-wrapper .faq-body{
@@ -1332,6 +1354,7 @@ justify-content: center;
   width: 87%;
   background: rgb(243, 246, 250);
 }
+
 
 .faq-small-container
   .faq-row-wrapper
