@@ -11,53 +11,74 @@ function Service( props) {
     {
       text: "Root Canal Treatment",
       img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+1.png',
-      bg: 'https://dentalforhome.s3.amazonaws.com/images/service.png1',
+      bg: 'rgb(244,251,255)',
+      color: 'rgb(36,168,251)'
     },
     {
       text: "Teeth Extraction",
       img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+2.png',
-      bg: 'https://dentalforhome.s3.amazonaws.com/images/service.png2',
+      bg: 'rgb(242,241,255)',
+      color: 'rgb(122,110,253)'
     },
     {
       text: "Dental Filling",
       img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+3.png',
-      bg: 'https://dentalforhome.s3.amazonaws.com/images/service.png3',
+      bg: 'rgb(254,258,239)',
+      color: 'rgb(255,199,1)'
     },
     {
       text: "Teeth Pain First-Aid",
       img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+4.png',
-      bg: 'https://dentalforhome.s3.amazonaws.com/images/service.png4',
+      bg: 'rgb(255,249,233)',
+      color: 'rgb(254,83,98)'
     },
     {
       text: "Teeth Cleaning",
       img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+5.png',
-      bg: 'https://dentalforhome.s3.amazonaws.com/images/service.png5',
+      bg: 'rgb(244,251,255)',
+      color: 'rgb(36,168,251)'
     },
     {
       text: "Teeth Whitening",
       img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+6.png',
-      bg: 'https://dentalforhome.s3.amazonaws.com/images/service.png6',
+      bg: 'rgb(248,255,233)',
+      color: 'rgb(155,221,16)'
+      
     },
     {
-      text: "Initial Oral Examination",
-      img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+7.png',
-      bg: 'https://dentalforhome.s3.amazonaws.com/images/service.png7',
+      text: "Root Canal Treatment",
+      img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+1.png',
+      bg: 'rgb(244,251,255)',
+      color: 'rgb(36,168,251)'
     },
     {
-      text: "50% off on (Bridges Crowns)",
-      img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+8.png',
-      bg: 'https://dentalforhome.s3.amazonaws.com/images/service.png8',
+      text: "Teeth Extraction",
+      img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+2.png',
+      bg: 'rgb(242,241,255)',
+      color: 'rgb(122,110,253)'
     },
     {
-      text: "Unlimited X-ray",
-      img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+9.png',
-      bg: 'https://dentalforhome.s3.amazonaws.com/images/service.png9',
+      text: "Dental Filling",
+      img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+3.png',
+      bg: 'rgb(254,258,239)',
+      color: 'rgb(255,199,1)'
     },
     {
-      text: "Free Pick & Drop by our ambulances",
-      img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+10.png',
-      bg: 'https://dentalforhome.s3.amazonaws.com/images/service10.png',
+      text: "Teeth Pain First-Aid",
+      img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+4.png',
+      bg: 'rgb(255,249,233)',
+      color: 'rgb(254,83,98)'
     },
+    // {
+    //   text: "Teeth Cleaning",
+    //   img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+5.png',
+    //   bg: 'rgb(244,251,255)',
+    // },
+    // {
+    //   text: "Teeth Whitening",
+    //   img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+6.png',
+    //   bg: 'rgb(248,255,233)',
+    // },
   ];
 
   if (props.subscribedLoggedIn) {
@@ -69,7 +90,7 @@ function Service( props) {
         <div className="service-main">
           <div className="service-main-title">
             <div className="service-title-top">Services</div>
-            <div className="service-title-bottom">Services from your plan</div>
+            {/* <div className="service-title-bottom">Services from your plan</div> */}
           </div>
           <div className="service-main-card">
             {serviceData.map((data) => (

@@ -6,7 +6,7 @@ import Sidebar from '../sidebar/Sidebar'
 import EditProfile from './EditProfile'
 
 function Edit(props) {
-  if(props.superLoggedIn){
+  if(props.subscribedLoggedIn){
     return (
       <div>
           <Sidebar />

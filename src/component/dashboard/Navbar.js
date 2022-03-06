@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
-import { ImCross } from "react-icons/im";
+import { GrClose } from "react-icons/gr";
 
 import { FaBell, FaIcons, FaUserEdit } from "react-icons/fa";
 
@@ -25,7 +25,7 @@ function Navbar() {
           <p>Hi Users, Exciting offers for you.</p>
         </div>
         <div className="navbar-menu">
-          {sidebar ? <ImCross onClick={showSidebar} className="navbar-menu-inner" />  : <FiMenu onClick={showSidebar} className="navbar-menu-inner" />  }
+          {sidebar ? <GrClose onClick={showSidebar} className="navbar-menu-inner" />  : <FiMenu onClick={showSidebar} className="navbar-menu-inner" />  }
           
         </div>
         <div className="navbar-icon">

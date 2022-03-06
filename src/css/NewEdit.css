@@ -1,0 +1,32 @@
+.new-edit-top-container{
+    margin-left: 300px;
+}
+.new-booking-top-container.edit{
+    margin-left: 300px;
+}
+.new-edit-top-container {
+    /* width: 60%; */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    margin-right: 30px;
+
+}
+.new-edit-top-left{
+    width: 25vw;
+    /* height: 40vh; */
+    background-color: aqua;
+}
+.new-edit-top-mid-label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.new-edit-top-mid{
+    margin-left: 5vw;
+}
+.new-edit-top-right{
+    margin-left: 15vw;
+}
