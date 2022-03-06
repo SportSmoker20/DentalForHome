@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 
@@ -7,7 +8,16 @@ function UserRegister(props) {
   const [email, setEmail] = useState();
 
   const  handleSubmit = () => {
-    props.setSuperLoggedIn(true)
+    if(name === '' || email === ''){
+      alert('Please Enter Details!!!')
+    } else {
+      console.log(JSON.parse(localStorage.getItem("testObject"))[0])
+    //   axios.put('http://localhost:5000/api/user',{
+    //     name:name,
+    // mobile: JSON.parse(localStorage.getItem("testObject")),
+    // email: email
+    //   })
+    }
   }
 
   return (

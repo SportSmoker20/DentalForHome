@@ -4,13 +4,24 @@ import ReactDatePicker from "react-datepicker";
 import Item from "./Item";
 import { AiTwotoneHome } from "react-icons/ai";
 import { RiVideoChatFill } from "react-icons/ri";
+import axios from "axios";
 
 const itemsToShow = 3;
 
 const getMid = () => Math.ceil(itemsToShow / 2) - 1;
 
-function NewBookingSelect() {
+function convert(date) {
+  // var date = new Date(str),
+  const mnth = ("0" + (date.getMonth() + 1)).slice(-2);
+  const day = ("0" + date.getDate()).slice(-2);
+  return [date.getFullYear(), mnth, day].join("-");
+}
+
+function NewBookingSelect(props) {
   const [startDate, setStartDate] = useState(new Date());
+  const [date, setDate] = useState(convert(startDate));
+  const [name, setName] = useState();
+  const [location, setLocation] = useState();
 
   const [bookOptionHome, setBookOptionHome] = useState();
   const [bookOptionVideo, setBookOptionVideo] = useState();
@@ -38,6 +49,12 @@ function NewBookingSelect() {
   const onChange = (_, next) => {
     const mid = getMid();
     setMidItemIndex(mid + next.index);
+  };
+
+  const onDateChange = (date) => {
+    setStartDate(date);
+    const temp = convert(date);
+    setDate(temp);
   };
 
   const items = [
@@ -91,32 +108,66 @@ function NewBookingSelect() {
     { id: 47, title: "11:00 PM" },
     { id: 48, title: "11:30 PM" },
   ];
+
+  const onBookAppointment = async () => {
+    if (name === "Select Name" || name === undefined) {
+      alert("Please Select Name");
+    } else if (location === "Select Location" || location === undefined) {
+      alert("Please Select Location");
+    } else if (!bookOptionHome && !bookOptionVideo) {
+      alert("Please Select Booking Type");
+    } else {
+      let bookType;
+      if (bookOptionHome) {
+        bookType = "Home";
+      } else {
+        bookType = "VideoCall";
+      }
+      await axios.post("http://localhost:5000/api/appointment", {
+        user_id: 1,
+        patient_name: "Dhanesh",
+        dentist_name: "Mitali",
+        location: location,
+        date: date,
+        time: items[midItemIndex].title,
+        type: bookType,
+      }).then((res,err)=>{
+        if(err){
+          alert(err)
+        } else {
+          props.setUpcoming(upcoming => [...upcoming, res]);
+        }
+      })
+      // props.setUpcoming(upcoming => [...upcoming, data]);
+    }
+  };
+
   return (
     <div className="new-booking-select">
       <div className="new-booking-top">
         <div className="new-booking-select-option">
-          <select name="name">
-            <option value="volvo">Prakhar</option>
-            <option value="saab">Prakhar</option>
-            <option value="mercedes">Prakhar</option>
-            <option value="audi">Prakhar</option>
+          <select name="name" onChange={(e) => setName(e.target.value)}>
+            <option value="volvo">Select Name</option>
+            <option value="Prakhar">Prakhar</option>
+            <option value="Prakhar">Prakhar</option>
+            <option value="Prakhar">Prakhar</option>
           </select>
         </div>
         <div className="new-booking-select-option">
-          <select name="location">
-            <option value="volvo">Delhi</option>
-            <option value="saab">Delhi</option>
-            <option value="mercedes">Delhi</option>
-            <option value="audi">Delhi</option>
+          <select name="location" onChange={(e) => setLocation(e.target.value)}>
+            <option value="volvo">Select Location</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Delhi">Delhi</option>
           </select>
         </div>
         <div className="new-booking-date">
           <ReactDatePicker
             selected={startDate}
-            onChange={(date) => setStartDate(date)}
+            onChange={(date) => onDateChange(date)}
           />
         </div>
-        <div className="new-booking-book">
+        <div className="new-booking-book" onClick={() => onBookAppointment()}>
           <p>Book Appointment</p>
         </div>
       </div>
@@ -156,7 +207,7 @@ function NewBookingSelect() {
                 ? "new-booking-icon iconSelect"
                 : "new-booking-icon"
             }
-            onClick={()=>onChange1()}
+            onClick={() => onChange1()}
           >
             <AiTwotoneHome
               className={
@@ -172,7 +223,7 @@ function NewBookingSelect() {
                 ? "new-booking-icon iconSelect"
                 : "new-booking-icon"
             }
-            onClick={()=>onChange2()}
+            onClick={() => onChange2()}
           >
             <RiVideoChatFill
               className={
