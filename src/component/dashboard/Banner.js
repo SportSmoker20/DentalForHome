@@ -26,7 +26,7 @@ function Banner() {
         arrows: false,
         infinite: true,
         easing: "ease",
-        indicators: true
+        indicators: false
         // indicators: (i) => <div className="indicator">{i + 1}</div>
       };
       

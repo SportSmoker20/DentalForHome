@@ -18,10 +18,11 @@
   display: flex;
   /* justify-content: center; */
   padding: 15px;
-  font-size: 25px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 600;
   /* border-bottom: 1px solid black; */
-  width: 30vw;
+  width: max-content;
+  margin-top: -10px;
 }
 .service-title-bottom {
   padding: 15px;
@@ -59,8 +60,8 @@
   
 }
 .service-card-text-inner{
-  font-size: 18px;
-  height: 10px;
+  font-size: 20px;
+  height: 5px;
   margin-top: -5px;
   padding-bottom: 10px;
   color: rgb(66, 74, 77);

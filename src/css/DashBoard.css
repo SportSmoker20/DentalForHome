@@ -16,7 +16,7 @@
 }
 
 .navbar-icon-inner {
-  box-shadow: 0 0px 3px rgb(0 0 0 / 0.2);
+  /* box-shadow: 0 0px 3px rgb(0 0 0 / 0.2); */
   margin: 10px;
   height: 20px;
   width: 20px;
@@ -52,7 +52,7 @@
 }
 
 .navbar-menu-inner {
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
   margin: 10px;
   height: 20px;
   width: 20px;
@@ -186,9 +186,11 @@
   width: 100%;
   /* margin-left: -30px; */
 }
-.service-card-container .option-card{
-  min-width: 20vw;
-  max-width: 20vw;
+
+.service-card-container.option-card{
+  height: 200px;
+  /* min-width: 20vw;
+  max-width: 20vw; */
 }
 /* ul{
   margin-top: -40px;
@@ -249,6 +251,7 @@
     height: 40vh;
   }
   .banner-main{
+    
     height: 40vh;
   }
 }
@@ -262,6 +265,15 @@
   }
 }
 @media screen and (max-width: 800px) {
+  .navbar-icon{
+    padding: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+  }
+  .navbar-icon-inner {
+    margin-left: -10px;
+  }
   .sliderimg {
     /* height: 200px; */
   }
@@ -282,8 +294,8 @@
     margin-right: 5px;
   }
   .banner-main {
-    width: 100%;
-    margin-left: 0px;
+    width: 108%;
+    margin-left: -15px;
     margin-right: 0px;
     position: relative;
     padding-top: 80px;
@@ -398,6 +410,7 @@
 }
 @media screen and (max-width: 480px){
   .banner-main{
+
     height: 35vh;
   }
   .silderimg-container{
@@ -426,9 +439,13 @@
 }
 @media screen and (max-width: 400px){
   .service-card-container.option-card{
-    margin-bottom: -30px;
+    margin-bottom: 0px;
   }
   .banner-main{
+    /* margin-right: 1px;
+    margin-left: 1px; */
+    /* margin-left: -5px; */
+    /* width: 112%; */
     height: 30vh;
   }
   .silderimg-container{

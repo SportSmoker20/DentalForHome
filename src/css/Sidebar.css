@@ -81,7 +81,9 @@ span {
 .sidebar-profile {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+  height: 40vh; 
   margin-right: 20px;
   color: rgb(4,64,132);
   padding-bottom: 25px;
@@ -90,24 +92,32 @@ span {
 font-size: 22px;
 }
 .sidebar-profile-edit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 29px;
+  width: 153px;
 text-decoration: none;
+font-size: 12px;
 font-weight: 500;
 color: white;
 }
 
 .profile-image {
-  height: 80px;
-  width: 80px;
+  height: 128px;
+  width: 128px;
   border-radius: 100px;
   background-color: rgb(4,64,132);
   display: flex;
   justify-content: center;
   box-shadow: 0 1px 5px rgb(0 0 0 / 0.6);
+  margin-top: 25px;
 }
 .profile-image-inner {
 
-height: 70px;
-width: 70px;
+height: 110px;
+width: 110px;
 }
 
 .sidebar-profile-edit{

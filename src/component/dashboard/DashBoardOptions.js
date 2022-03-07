@@ -75,6 +75,10 @@ function DashBoardOptions() {
         </div>
       </div> */}
       <div className="option-main-sub">
+      <div className="service-main-title">
+            <div className="service-title-top">Your Easy Access</div>
+            {/* <div className="service-title-bottom">Services from your plan</div> */}
+          </div>
         <div className="service-main-card option-card">
           {optionData.map((data) => (
             <OptionCard content={data} />

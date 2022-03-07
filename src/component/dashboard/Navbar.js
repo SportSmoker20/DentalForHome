@@ -21,7 +21,7 @@ function Navbar() {
     <div className="navbar-supermain">
       <div className="navbar-main">
         <div className="navbar-text">
-          <p style={{ fontWeight: `bold` }}>Your Dashboard is Updated</p>
+          <p style={{ fontWeight: `bold`,height:`10px` }}>Your Dashboard is Updated</p>
           <p>Hi Users, Exciting offers for you.</p>
         </div>
         <div className="navbar-menu">
