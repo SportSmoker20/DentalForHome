@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import '../../css/DashBoard.css'
 import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
+import '../../css/DashBoard.css'
 
+import 'react-slideshow-image/dist/styles.css'
 function Banner() {
     const slideImages = [
         {
@@ -18,10 +19,21 @@ function Banner() {
           
         // },
       ];
+      const properties = {
+        duration: 2000,
+        autoplay: true,
+        transitionDuration: 1000,
+        arrows: false,
+        infinite: true,
+        easing: "ease",
+        indicators: true
+        // indicators: (i) => <div className="indicator">{i + 1}</div>
+      };
+      
 
   return (
     <div className="banner-main">
-        <Slide arrows="false" >
+        <Slide {...properties} className="ban-slide">
          {slideImages.map((slideImage, index)=> (
             <div className="silderimg-container"  key={index} style={{borderRadius:`20px`}}>
                   <img className="sliderimg" src={slideImage.src} />

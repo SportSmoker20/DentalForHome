@@ -1,11 +1,45 @@
 import React from "react";
 import { MdDesignServices } from "react-icons/md";
+import OptionCard from "./OptionCard";
 // import bookingIcon from "../../images/bookingIcon.png";
 // import downloadIcon from "../../images/downloadIcon.png";
 // import serviceIcon from "../../images/serviceIcon.png";
 // import prescprIcon from "../../images/prescprIcon.png";
 
 function DashBoardOptions() {
+  const optionData = [
+    {
+      text: "Services",
+      img: "https://dentalforhome.s3.amazonaws.com/images/optionService.png",
+      bg: "rgb(244,251,255)",
+      color: "rgb(36,168,251)",
+    },
+    {
+      text: "Booking",
+      img: "https://dentalforhome.s3.amazonaws.com/images/optionBook.png",
+      bg: "rgb(242,241,255)",
+      color: "rgb(122,110,253)",
+    },
+    {
+      text: "Pic & Drop",
+      img: "https://dentalforhome.s3.amazonaws.com/images/optionPick.png",
+      bg: "rgb(254,258,239)",
+      color: "rgb(255,199,1)",
+    },
+    {
+      text: "Prescription",
+      img: "https://dentalforhome.s3.amazonaws.com/images/optionPrescription.png",
+      bg: "rgb(255,249,233)",
+      color: "rgb(254,83,98)",
+    },
+    {
+      text: "Downloads",
+      img: "https://dentalforhome.s3.amazonaws.com/images/optionDownload.png",
+      bg: "rgb(248,255,233)",
+      color: "rgb(155,221,16)",
+    },
+  ];
+
   return (
     <div className="options-main">
       {/* <div className="options-main-1">
@@ -41,33 +75,10 @@ function DashBoardOptions() {
         </div>
       </div> */}
       <div className="option-main-sub">
-        <div className="option-bottom-sub">
-          {/* <img
-            src={serviceIcon}
-            style={{ height: `60px`, width: `60px`, paddingRight: `20px` }}
-          /> */}
-          <div>Services</div>
-        </div>
-        <div className="option-bottom-sub">
-          {/* <img
-            src={serviceIcon}
-            style={{ height: `60px`, width: `60px`, paddingRight: `20px` }}
-          /> */}
-          <div>Booking</div>
-        </div>
-        <div className="option-bottom-sub">
-          {/* <img
-            src={serviceIcon}
-            style={{ height: `60px`, width: `60px`, paddingRight: `20px` }}
-          /> */}
-          <div>Prescription</div>
-        </div>
-        <div className="option-bottom-sub">
-          {/* <img
-            src={serviceIcon}
-            style={{ height: `60px`, width: `60px`, paddingRight: `20px` }}
-          /> */}
-          <div>My Downloads</div>
+        <div className="service-main-card option-card">
+          {optionData.map((data) => (
+            <OptionCard content={data} />
+          ))}
         </div>
       </div>
     </div>

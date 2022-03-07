@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FiMenu } from "react-icons/fi";
+import { FiLogOut, FiMenu } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 
 import { FaBell, FaIcons, FaUserEdit } from "react-icons/fa";
@@ -31,6 +31,7 @@ function Navbar() {
         <div className="navbar-icon">
           <RiMessage2Fill className="navbar-icon-inner" />
           <FaBell className="navbar-icon-inner" />
+          <FiLogOut className="navbar-icon-inner" />
         </div>
       </div>
       {/* <div className="nav-collapse-main"> */}

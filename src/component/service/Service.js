@@ -35,8 +35,8 @@ function Service( props) {
     {
       text: "Teeth Cleaning",
       img: 'https://dentalforhome.s3.amazonaws.com/images/dental+vector+graphics+5.png',
-      bg: 'rgb(244,251,255)',
-      color: 'rgb(36,168,251)'
+      bg: 'rgb(248,255,233)',
+      color: 'rgb(155,221,16)'
     },
     {
       text: "Teeth Whitening",
