@@ -20,9 +20,9 @@ import NewEdit from "./component/edit/NewEdit";
 import axios from "axios";
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(true);
-  const [superLoggedIn, setSuperLoggedIn] = useState(true);
-  const [subscribedLoggedIn, setSubscribedLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [superLoggedIn, setSuperLoggedIn] = useState(false);
+  const [subscribedLoggedIn, setSubscribedLoggedIn] = useState(false);
   useEffect(async()=>{
     const data = JSON.parse(localStorage.getItem("testObject"))
     if(data!==null){
