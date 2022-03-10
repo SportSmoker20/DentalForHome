@@ -1,21 +1,32 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FiLogOut, FiMenu } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 
 import { FaBell, FaIcons, FaUserEdit } from "react-icons/fa";
 
 import { RiMessage2Fill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { SidebarData } from "../sidebar/SidebarData";
 import { IconContext } from "react-icons";
 import "../../css/Sidebar.css";
+import { UserContext } from "../../App";
 
 function Navbar() {
+  const  {  setLoggedIn,setSuperLoggedIn,setSubscribedLoggedIn } = useContext(UserContext)
+
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => {
     setSidebar(!sidebar);
   };
+
+  const logout = () => {
+    setLoggedIn(false)
+    setSuperLoggedIn(false)
+    setSubscribedLoggedIn(false)
+    localStorage.removeItem("testObject");
+    return <Navigate to="/auth/login" />
+  }
 
   return (
     <div className="navbar-supermain">
@@ -31,7 +42,7 @@ function Navbar() {
         <div className="navbar-icon">
           <RiMessage2Fill className="navbar-icon-inner" />
           <FaBell className="navbar-icon-inner" />
-          <FiLogOut className="navbar-icon-inner" />
+          <FiLogOut className="navbar-icon-inner" onClick={logout}/>
         </div>
       </div>
       {/* <div className="nav-collapse-main"> */}
@@ -48,7 +59,7 @@ function Navbar() {
             </div>
             <p>Jesson George</p>
             <div className="sidebar-profile-edit">
-              <FaUserEdit style={{ padding: `20px 15px 0 0` }} />
+              {/* <FaUserEdit style={{ padding: `20px 15px 0 0` }} /> */}
               <Link to={"/edit"} className="sidebar-profile-edit">
                 <p>Edit Profile</p>
               </Link>

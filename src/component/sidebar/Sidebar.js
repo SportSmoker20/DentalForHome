@@ -7,7 +7,7 @@ import "../../css/Sidebar.css";
 import { IconContext } from "react-icons";
 
 function Sidebar() {
-  const profile = localStorage.getItem("testObject");
+  // const profile = localStorage.getItem("testObject");
 
   return (
     <>

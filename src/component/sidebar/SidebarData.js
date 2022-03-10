@@ -19,7 +19,7 @@ export const SidebarData = [
   {
     title: 'Services',
     path: '/service',
-    icon: <img src='https://dentalforhome.s3.amazonaws.com/images/suitcase.png' className='fade-1' style={{height:`20px`,width:`20px`}} />,
+    icon: <img src='https://dentalforhome.s3.amazonaws.com/images/suitcase1.png' className='fade-1' style={{height:`20px`,width:`20px`}} />,
     cName: 'nav-text'
   },
   {
@@ -30,7 +30,7 @@ export const SidebarData = [
   },
   {
     title: 'History',
-    path: '/messages',
+    path: '/history',
     icon: <FaIcons.FaHistory className='fade-1' style={{color:`rgb(4,64,132)`}} />,
     cName: 'nav-text'
   },

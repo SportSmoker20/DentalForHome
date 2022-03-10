@@ -6,6 +6,7 @@
   width: 100%;
   background: rgb(243, 246, 250);
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 /* NAVBAR */
@@ -14,6 +15,7 @@
   background: rgb(243, 246, 250);
   width: 100%;
   z-index: 2;
+  overflow-x: hidden;
 }
 .home-navbar-container {
   width: 100%;
@@ -361,7 +363,7 @@ z-index: 0;
   min-width: 223px;
   max-width: 247px;
   flex-direction: column;
-  box-shadow: 0px 0px 5px rgb(0 0 0 / 0.7);
+  box-shadow: 0px 0px 5px rgb(0 0 0 / 0.3);
   width: 15%;
   height: 300px;
 }
@@ -526,6 +528,7 @@ z-index: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
 }
 @media only screen and (min-width: 1600px){
   .home-service-card-container{
@@ -1205,7 +1208,7 @@ justify-content: center;
   align-items: center;
   padding-left: 20px;
   height: 45px;
-  box-shadow: 0px 1px 4px rgb(0 0 0 / 0.15);
+  box-shadow: 0px 1px 5px rgb(0 0 0 / 0.15);
   border-radius: 12px;
   margin-bottom: 10px;
   margin-right: 150px;
@@ -1217,7 +1220,7 @@ justify-content: center;
 .faq-row-wrapper .faq-body .faq-row {
   display: flex;
   padding-left: 20px;
-  box-shadow: 0px 0px 2px rgb(0 0 0 / 0.3);
+  box-shadow: 0px 0px 2px rgb(0 0 0 / 0.1);
   border-radius: 12px;
   margin-bottom: 10px;
   margin-right: 150px;
@@ -1282,6 +1285,7 @@ justify-content: center;
   align-items: center;
   color: #fff;
   font-size: 18px;
+  margin-bottom: 20px;
 }
 .footer-bottom-text > p {
   margin-left: 20px;

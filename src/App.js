@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import Home from "./component/sample/Home";
 import Login from "./component/auth/Login";
 import About from "./component/about/About";
@@ -18,53 +18,62 @@ import Pricing from "./component/pricing/Pricing";
 import NewBooking from "./component/bookingNew/NewBooking";
 import NewEdit from "./component/edit/NewEdit";
 import axios from "axios";
+import History from "./component/history/History";
+
+export const UserContext = createContext();
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [superLoggedIn, setSuperLoggedIn] = useState(false);
   const [subscribedLoggedIn, setSubscribedLoggedIn] = useState(false);
-  useEffect(async()=>{
-    const data = JSON.parse(localStorage.getItem("testObject"))
-    if(data!==null){
+
+  useEffect(async () => {
+    const data = JSON.parse(localStorage.getItem("testObject"));
+    if (data !== null) {
       await axios
-      .get("http://localhost:5000/api/user/" + data.mobile).then((res,err)=>{
-        if(!err){
-          if(res.data[0].subscriber === 1){
-            setSubscribedLoggedIn(true)
-          } else {
-            setSuperLoggedIn(true)
+        .get("http://localhost:5000/api/user/" + data.mobile)
+        .then((res, err) => {
+          if (!err) {
+            if (res.data[0].subscriber === 0) {
+              setSubscribedLoggedIn(true);
+            } else {
+              setSuperLoggedIn(true);
+            }
           }
-          
-          
-        }
-      }
-      )
+        });
     }
-  },[])
-
-
+  }, []);
 
   return (
-    <div>
-      <Router>
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/about" exact element={<About />} />
-          <Route path="/contactUs" exact element={<ContactUs />} />
-          <Route
-            path="/auth/login"
-            element={<Login setSubscribedLoggedIn={setSubscribedLoggedIn} subscribedLoggedIn={subscribedLoggedIn} superLoggedIn={superLoggedIn} loggedIn={loggedIn} setSuperLoggedIn={setSuperLoggedIn} setLoggedIn={setLoggedIn} />}
-          />
-          <Route path="/appointment" element={<Register />} />
-          <Route path="/auth/register" element={<UserRegister superLoggedIn={superLoggedIn}  setSuperLoggedIn={setSuperLoggedIn}/>} />
-          <Route path="/home" exact element={<DashBoard setSubscribedLoggedIn={setSubscribedLoggedIn} subscribedLoggedIn={subscribedLoggedIn}/>} />
-          <Route path="/pricing" element={<Pricing  loggedIn={loggedIn} />} />
-          <Route path="/booking" element={<NewBooking subscribedLoggedIn={subscribedLoggedIn} />} />
-          <Route path="/edit" element={<NewEdit subscribedLoggedIn={subscribedLoggedIn}/>} />
-          <Route path="/service" element={<Service subscribedLoggedIn={subscribedLoggedIn}/>} />
-          <Route path="/myplan" element={<MyPlan subscribedLoggedIn={subscribedLoggedIn}/>} />
-        </Routes>
-      </Router>
+    <div className="app-main">
+      <UserContext.Provider
+        value={{
+          loggedIn: loggedIn,
+          superLoggedIn: superLoggedIn,
+          subscribedLoggedIn: subscribedLoggedIn,
+          setLoggedIn: setLoggedIn,
+          setSuperLoggedIn: setSuperLoggedIn,
+          setSubscribedLoggedIn: setSubscribedLoggedIn,
+        }}
+      >
+        <Router>
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/about" exact element={<About />} />
+            <Route path="/contactUs" exact element={<ContactUs />} />
+            <Route path="/auth/login" element={<Login />} />
+            <Route path="/appointment" element={<Register />} />
+            <Route path="/auth/register" element={<UserRegister />} />
+            <Route path="/home" exact element={<DashBoard />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/booking" element={<NewBooking />} />
+            <Route path="/edit" element={<NewEdit />} />
+            <Route path="/serviceHistory" element={<History />} />
+            <Route path="/service" element={<Service />} />
+            <Route path="/myplan" element={<MyPlan />} />
+          </Routes>
+        </Router>
+      </UserContext.Provider>
     </div>
   );
 }

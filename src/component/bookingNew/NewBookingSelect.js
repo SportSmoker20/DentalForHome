@@ -1,6 +1,8 @@
 import Carousel from "react-elastic-carousel";
 import React, { useState } from "react";
 import ReactDatePicker from "react-datepicker";
+import DatePicker from "react-datepicker";
+
 import Item from "./Item";
 import { AiTwotoneHome } from "react-icons/ai";
 import { RiVideoChatFill } from "react-icons/ri";
@@ -19,29 +21,30 @@ function convert(date) {
 
 function NewBookingSelect(props) {
   const [startDate, setStartDate] = useState(new Date());
+  const [startTime, setStartTime] = useState(new Date());
   const [date, setDate] = useState(convert(startDate));
   const [name, setName] = useState();
   const [location, setLocation] = useState();
+  const [bookType, setBookType] = useState();
+  // const [bookOptionHome, setBookOptionHome] = useState();
+  // const [bookOptionVideo, setBookOptionVideo] = useState();
 
-  const [bookOptionHome, setBookOptionHome] = useState();
-  const [bookOptionVideo, setBookOptionVideo] = useState();
-
-  const onChange1 = () => {
-    if (bookOptionVideo) {
-      setBookOptionVideo(false);
-      setBookOptionHome(true);
-    } else {
-      setBookOptionHome(true);
-    }
-  };
-  const onChange2 = () => {
-    if (bookOptionHome) {
-      setBookOptionHome(false);
-      setBookOptionVideo(true);
-    } else {
-      setBookOptionVideo(true);
-    }
-  };
+  // const onChange1 = () => {
+  //   if (bookOptionVideo) {
+  //     setBookOptionVideo(false);
+  //     setBookOptionHome(true);
+  //   } else {
+  //     setBookOptionHome(true);
+  //   }
+  // };
+  // const onChange2 = () => {
+  //   if (bookOptionHome) {
+  //     setBookOptionHome(false);
+  //     setBookOptionVideo(true);
+  //   } else {
+  //     setBookOptionVideo(true);
+  //   }
+  // };
 
   const [midItemIndex, setMidItemIndex] = useState(getMid);
   // 0 based
@@ -114,30 +117,32 @@ function NewBookingSelect(props) {
       alert("Please Select Name");
     } else if (location === "Select Location" || location === undefined) {
       alert("Please Select Location");
-    } else if (!bookOptionHome && !bookOptionVideo) {
+    } else if (bookType === "Select Type") {
       alert("Please Select Booking Type");
     } else {
-      let bookType;
-      if (bookOptionHome) {
-        bookType = "Home";
-      } else {
-        bookType = "VideoCall";
-      }
-      await axios.post("http://localhost:5000/api/appointment", {
-        user_id: 1,
-        patient_name: "Dhanesh",
-        dentist_name: "Mitali",
-        location: location,
-        date: date,
-        time: items[midItemIndex].title,
-        type: bookType,
-      }).then((res,err)=>{
-        if(err){
-          alert(err)
-        } else {
-          props.setUpcoming(upcoming => [...upcoming, res]);
-        }
-      })
+      // let bookType;
+      // if (bookOptionHome) {
+      //   bookType = "Home";
+      // } else {
+      //   bookType = "VideoCall";
+      // }
+      await axios
+        .post("http://localhost:5000/api/appointment", {
+          user_id: 1,
+          patient_name: "Dhanesh",
+          dentist_name: "Mitali",
+          location: location,
+          date: date,
+          time: items[midItemIndex].title,
+          type: bookType,
+        })
+        .then((res, err) => {
+          if (err) {
+            alert(err);
+          } else {
+            props.setUpcoming((upcoming) => [...upcoming, res]);
+          }
+        });
       // props.setUpcoming(upcoming => [...upcoming, data]);
     }
   };
@@ -154,25 +159,25 @@ function NewBookingSelect(props) {
           </select>
         </div>
         <div className="new-booking-select-option">
-          <select name="location" onChange={(e) => setLocation(e.target.value)}>
+          <select name="Type" onChange={(e) => setLocation(e.target.value)}>
             <option value="volvo">Select Location</option>
             <option value="Delhi">Delhi</option>
             <option value="Delhi">Delhi</option>
             <option value="Delhi">Delhi</option>
           </select>
         </div>
-        <div className="new-booking-date">
-          <ReactDatePicker
-            selected={startDate}
-            onChange={(date) => onDateChange(date)}
-          />
-        </div>
-        <div className="new-booking-book" onClick={() => onBookAppointment()}>
-          <p>Book Appointment</p>
-        </div>
+
+        <div className="new-booking-select-option type">
+            <select name="type" onChange={(e) => setBookType(e.target.value)}>
+              <option value="volvo">Select Type</option>
+              <option value="Delhi">Home</option>
+              <option value="Delhi">Video</option>
+            </select>
+          </div>
+        
       </div>
       <div className="new-booking-bottom">
-        <div className="new-booking-time">
+        {/* <div className="new-booking-time">
           <div className="time-container-inner" />
           <Carousel
             itemsToShow={itemsToShow}
@@ -199,9 +204,28 @@ function NewBookingSelect(props) {
               </Item>
             ))}
           </Carousel>
+        </div> */}
+
+        <div className="new-booking-top-bottom">
+          <div className="new-booking-date">
+            <DatePicker
+              selected={startTime}
+              onChange={(date) => setStartTime(date)}
+              showTimeSelect
+              showTimeSelectOnly
+              timeIntervals={15}
+              timeCaption="Time"
+              dateFormat="h:mm aa"
+            />
+          </div>
+          <div className="new-booking-date">
+          <ReactDatePicker
+            selected={startDate}
+            onChange={(date) => onDateChange(date)}
+          />
         </div>
-        <div className="new-booking-icon-container">
-          <div
+
+          {/* <div
             className={
               bookOptionHome
                 ? "new-booking-icon iconSelect"
@@ -216,8 +240,8 @@ function NewBookingSelect(props) {
                   : "new-booking-icon-inner"
               }
             />
-          </div>
-          <div
+          </div> */}
+          {/* <div
             className={
               bookOptionVideo
                 ? "new-booking-icon iconSelect"
@@ -232,6 +256,14 @@ function NewBookingSelect(props) {
                   : "new-booking-icon-inner"
               }
             />
+          </div> */}
+          <div className="new-booking-book-outer">
+            <div
+              className="new-booking-book"
+              onClick={() => onBookAppointment()}
+            >
+              <p>Book Appointment</p>
+            </div>
           </div>
         </div>
       </div>

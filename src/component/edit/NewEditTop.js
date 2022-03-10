@@ -12,41 +12,50 @@ function NewEditTop() {
         </div>
       </div>
       <div className="new-edit-top-container">
-        <div className="new-edit-top-left"></div>
-        <div className="new-edit-top-mid">
-        <div>
-            <p>Purva Kapoor</p>
+        <div className="new-edit-top-left">
+        <img src='https://dentalforhome.s3.amazonaws.com/images/character1.svg'style={{height:`110px`,width:`110px`}} className="profile-image-inner" /></div>
+        <div className="new-edit-top-content">
+          <div className="new-edit-top-mid">
+            <div className="new-edit-top-mid-title">
+              <p>Purva Kapoor</p>
+            </div>
+            <div className="new-edit-top-mid-label">
+              <label>Gender : </label>
+              <p>Male</p>
+            </div>
+            <div className="new-edit-top-mid-label">
+              <label>DOB :</label>
+              <p>17th July, 1996</p>
+            </div>
+            <div className="new-edit-top-mid-email">
+              <p>Prakharkapoor@gmail.com</p>
+            </div>
+            <div className="new-edit-top-mid-mob">
+              <p>+91 8527474339</p>
+            </div>
+            <div className="new-edit-top-mid-edit">
+              <p>Edit Details</p>
+            </div>
           </div>
-          <div className="new-edit-top-mid-label">
-            <label>Gender : </label>
-            <p>Male</p>
-          </div>
-          <div className="new-edit-top-mid-label">
-            <label>DOB :</label>
-            <p>17th July, 1996</p>
-          </div>
-          <div>
-            <p>Prakharkapoor@gmail.com</p>
-          </div>
-          <div>
-            <p>+91 8527474339</p>
-          </div>
-        </div>
-        <div className="new-edit-top-right">
-          <div>
-            <p>Members</p>
-          </div>
-          <div>
-            <p>Purva Kapoor (you)</p>
-          </div>
-          <div>
-            <p>Sarthak Kapoor</p>
-          </div>
-          <div>
-            <p>Jayati Kapoor</p>
-          </div>
-          <div>
-            <p>Sameer Kapoor</p>
+          <div className="new-edit-top-right">
+            <div className="new-edit-top-right-title">
+              <p>Members</p>
+            </div>
+            <div className="new-edit-top-right-name">
+              <p>Purva Kapoor (you)</p>
+            </div>
+            <div className="new-edit-top-right-name">
+              <p>Sarthak Kapoor</p>
+            </div>
+            <div className="new-edit-top-right-name">
+              <p>Jayati Kapoor</p>
+            </div>
+            <div className="new-edit-top-right-name">
+              <p>Sameer Kapoor</p>
+            </div>
+            <div className="new-edit-top-right-name">
+              <p>Add More (+)</p>
+            </div>
           </div>
         </div>
       </div>

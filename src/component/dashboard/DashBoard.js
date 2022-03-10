@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import Banner from "./Banner";
 import DashBoardFooter from "./DashBoardFooter";
 import DashBoardOptions from "./DashBoardOptions";
@@ -7,8 +7,11 @@ import "../../css/DashBoard.css";
 import Sidebar from "../sidebar/Sidebar";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
+import { UserContext } from "../../App";
 
-function DashBoard(props) {
+function DashBoard() {
+  const  {  setSubscribedLoggedIn,subscribedLoggedIn } = useContext(UserContext)
+
   useEffect(async()=>{
     const data = JSON.parse(localStorage.getItem("testObject"))
     if(data!==null){
@@ -17,7 +20,7 @@ function DashBoard(props) {
         if(!err){
           if(res.data[0].subscriber !== 0){
             console.log("ff")
-            props.setSubscribedLoggedIn(true)
+            setSubscribedLoggedIn(true)
           }
           // else{
           //   setSuperLoggedIn()
@@ -28,7 +31,7 @@ function DashBoard(props) {
       )
     }
   },[])
-  if (props.subscribedLoggedIn) {
+  if (subscribedLoggedIn) {
     return (
       <div>
         <Sidebar />

@@ -6,7 +6,7 @@ function HomeServiceCard(props) {
       <div className="home-service-img">
         <img
           src={props.data.img}
-          style={{ width: `200px`, height: `200px` }}
+          style={{ width: `70px`, height: `70px` }}
           alt={"Couldn't Load"}
         />
       </div>

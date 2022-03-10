@@ -29,11 +29,27 @@
   align-items: center;
   width: 100%;
 }
+.new-booking-top-bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.new-booking-book-outer{
+  width: 32%;
+  /* float: right; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
 .new-booking-bottom {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .new-booking-icon-container {
@@ -58,12 +74,14 @@
   padding-top: 12px;
 }
 .new-booking-select-option {
-  width: 22%;
+  width: 32%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
+
 .new-booking-select-option > select {
   width: 100%;
   height: 5vh;
@@ -71,7 +89,9 @@
   box-shadow: 0px 1px 5px rgb(0 0 0 / 0.2);
   border-radius: 8px;
   color: rgb(4, 64, 102);
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 15px;
 }
 .new-booking-select-option > select:focus {
   border: 2px solid rgb(4, 64, 102);
@@ -81,22 +101,34 @@
   color: black;
 }
 .new-booking-date {
-  width: 22%;
+  width: 30.5%;
+  display: flex;
+  flex-direction: row-reverse;
+  /* justify-content: flex-end; */
+  /* align-items: flex-end; */
 }
 /* .new-booking-date>.react-datepicker-wrapper>.react-datepicker__input-container{
     width: 25%;
 } */
+.react-datepicker__header:not(.react-datepicker__header--has-time-select){
+    width: 77px;
+}
+.new-booking-select-option.type{
+  /* margin-left: -150px; */
+}
 .new-booking-date
   > .react-datepicker-wrapper
   > .react-datepicker__input-container
   > input {
-  width: 100%;
-  height: 5vh;
+  width: 98%;
+  height: 4.5vh;
   border: 1.5px solid rgb(4, 64, 102);
   box-shadow: 0px 1px 5px rgb(0 0 0 / 0.2);
-  border-radius: 12px;
+  border-radius: 8px;
   color: rgb(4, 64, 102);
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 16px;
+padding-left: 20px;
 }
 .new-booking-date
   > .react-datepicker-wrapper
@@ -105,15 +137,17 @@
   border: 2px solid rgb(4, 64, 102);
 }
 .new-booking-book {
-  width: 22%;
+  width: 196px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #044066;
-  border-radius: 15px;
+  border-radius: 8px;
   height: 5.5vh;
   color: white;
+  font-weight: 400;
+  font-size: 14;
 }
 .new-time-div {
   padding: 15px 5px 15px 5px;
@@ -200,7 +234,7 @@ thead{
 }
 
 .zigzag{
-    margin-top: 4vh;
+    margin-top: 6vh;
     box-shadow: 0px 1px 5px rgb(0 0 0 / 0.2);
     border-radius: 15px;
 }
@@ -209,11 +243,11 @@ thead{
 
 }
 .zigzag > thead > tr {
-  text-align: left;
-  padding-left: 10px;
+  /* text-align: left; */
+  /* padding-left: 10px; */
 }
 .zigzag > thead > tr > th {
-  padding-left: 20px;
+  /* padding-left: 20px; */
   height: 6vh;
 }
 /* .header{
@@ -222,8 +256,9 @@ thead{
 .header-inner {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  /* justify-content: space-between; */
   align-items: center;
+  margin-left: 1vw;
 }
 .header-inner-icon {
   display: flex;
@@ -265,7 +300,10 @@ tr > td:last-child {
 } */
 td {
   /* padding: 20px; */
-  padding-left: 15px;
+  /* padding-left: 15px; */
+ /* text-align: left; */
+ /* margin-left: 1vw; */
+ padding-left: 1vw;
   height: 10px;
 }
 table {
@@ -332,6 +370,9 @@ tbody>td{
   h1{
     margin-bottom: -30px;
   }
+
+
+  
   @media screen and (max-width: 1100px){
     .new-booking-time {
       margin-left: -30px;
@@ -347,6 +388,10 @@ tbody>td{
     .new-booking-top{
 
       margin-left: -20px;
+    }
+    .new-booking-top-bottom{
+
+      margin-left: -40px;
     }
   }
   @media screen and (max-width: 1000px){
@@ -516,3 +561,31 @@ transform: scale(1);
     justify-content: center;
     margin-top: -50px;
   }
+.booking-top-container-content.edit{
+  margin-bottom: 20px;
+}
+  .ReactModal__Overlay--after-open{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ReactModal__Content--after-open{
+padding: 40px;
+    height: 320px;
+    width: 80vw;
+  }
+  .modal-container-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .booking-top-container-close{
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  /* .modal-title{
+    
+  } */

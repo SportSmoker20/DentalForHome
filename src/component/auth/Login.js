@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../../css/Auth.css";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
@@ -6,8 +6,10 @@ import { Link, Navigate } from "react-router-dom";
 import OtpInput from "react-otp-input";
 import axios from "axios";
 import PhoneInput from "react-phone-number-input";
+import { UserContext } from "../../App";
 
-function Login(props) {
+function Login() {
+  const  {  loggedIn,superLoggedIn,subscribedLoggedIn,setLoggedIn,setSuperLoggedIn,setSubscribedLoggedIn } = useContext(UserContext)
   const [otpSent, setOtpSent] = useState(false);
   let OTP = "";
   const [otp, setOtp] = useState();
@@ -41,47 +43,48 @@ function Login(props) {
   };
 
   const submitHandler = async () => {
-    await axios
-      .get("http://localhost:5000/api/user/" + mobile)
-      .then((res, err) => {
-        if (err) {
-          console.log(err);
-        } else {
-          // setUser(true)
-          // props.setSuperLoggedIn(true);
-          if (res.data.length === 0) {
-            const mobileNo = [
-              {
-                mobile: mobile,
-              },
-            ];
-            localStorage.setItem("testObject", JSON.stringify(mobileNo));
-            props.setLoggedIn(true);
-            return <Navigate to="/auth/register" />;
+    if ((OTP = otp)) {
+      // if (user) {
+      //  tSuperLoggedIn(true);
+      //   alert("otp match");
+      // } else {
+
+      //  tLoggedIn(true);
+      //   alert("otp match11");
+      // }
+
+      await axios
+        .get("http://localhost:5000/api/user/" + mobile)
+        .then((res, err) => {
+          if (err) {
+            console.log(err);
           } else {
-            console.log(res);
-            localStorage.setItem("testObject", JSON.stringify(res.data[0]));
-            console.log(res);
-            if (res.data[0].subscriber !== 0) {
-              props.setSubscribedLoggedIn(true);
+            // setUser(true)
+            // props.setSuperLoggedIn(true);
+            if (res.data.length === 0) {
+              const mobileNo = [
+                {
+                  mobile: mobile,
+                },
+              ];
+              localStorage.setItem("testObject", JSON.stringify(mobileNo));
+              setLoggedIn(true);
+              return <Navigate to="/auth/register" />;
             } else {
-              props.setSuperLoggedIn(false);
+              console.log(res);
+              localStorage.setItem("testObject", JSON.stringify(res.data[0]));
+              console.log(res);
+              if (res.data[0].subscriber === 0) {
+                setSubscribedLoggedIn(true);
+              } else {
+                setSuperLoggedIn(true);
+              }
             }
           }
-        }
-      });
-    // if ((OTP = otp)) {
-    //   if (user) {
-    //     props.setSuperLoggedIn(true);
-    //     alert("otp match");
-    //   } else {
-
-    //     props.setLoggedIn(true);
-    //     alert("otp match11");
-    //   }
-    // } else {
-    //   alert("otp mismatch");
-    // }
+        });
+    } else {
+      alert("otp mismatch");
+    }
   };
   // useEffect(() => {
   //   if (!props.loggedIn) {
@@ -93,11 +96,11 @@ function Login(props) {
   //     return <Navigate to="/auth/login" />;
   //   }
   // }, []);
-  useEffect(() => {
-    if (props.superLoggedIn) {
-      return <Navigate to="/pricing" />;
-    }
-  }, [props.superLoggedIn]);
+  // useEffect(() => {
+  //   if (props.superLoggedIn) {
+  //     return <Navigate to="/pricing" />;
+  //   }
+  // }, [props.superLoggedIn]);
   // useEffect(() => {
   //   if (props.subscribedLoggedIn) {
   //     console.log(props.subscribedLoggedIn);
@@ -105,11 +108,11 @@ function Login(props) {
   //   }
   // }, [props.subscribedLoggedIn]);
 
-  if (props.subscribedLoggedIn) {
+  if (subscribedLoggedIn) {
     return <Navigate to="/home" />;
-  } else if (props.superLoggedIn) {
+  } else if (superLoggedIn) {
     return <Navigate to="/pricing" />;
-  } else if (props.loggedIn) {
+  } else if (loggedIn) {
     return <Navigate to="/auth/register" />;
   } else {
     if (otpSent) {
@@ -156,8 +159,8 @@ function Login(props) {
             </div>
           </div>
           <div className="login-right"></div>
-          {/* {props.superLoggedIn ? <Navigate to="/pricing" /> : null}
-          {props.loggedIn ? <Navigate to="/auth/register" /> : null} */}
+          {superLoggedIn ? <Navigate to="/pricing" /> : null}
+          {loggedIn ? <Navigate to="/auth/register" /> : null}
         </div>
       );
     } else {

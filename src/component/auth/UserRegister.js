@@ -1,9 +1,12 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
+import { UserContext } from "../../App";
 
 
-function UserRegister(props) {
+function UserRegister() {
+  const  {  superLoggedIn,setSuperLoggedIn } = useContext(UserContext)
+
   const [name, setName] = useState();
   const [email, setEmail] = useState();
 
@@ -82,7 +85,7 @@ function UserRegister(props) {
           </Link>
         </div>
       </div>
-      {props.superLoggedIn ? <Navigate to="/home" /> : null}
+      {superLoggedIn ? <Navigate to="/home" /> : null}
     </div>
   );
 }

@@ -372,6 +372,7 @@
     transition: 850ms;
 }
 .nav-collapse-main.active {
+  width: 229px;
   left: 0;
     transition: 350ms;
 }

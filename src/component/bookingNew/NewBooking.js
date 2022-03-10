@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Sidebar from "../sidebar/Sidebar";
 import '../../css/NewBooking.css'
 import { Navigate } from "react-router-dom";
@@ -8,8 +8,10 @@ import NewBookingUpcoming from "./NewBookingUpcoming";
 import NewBookingPast from "./NewBookingPast";
 import Navbar from "../dashboard/Navbar";
 import axios from "axios";
+import { UserContext } from "../../App";
 
-function NewBooking(props) {
+function NewBooking() {
+  const  {  subscribedLoggedIn } = useContext(UserContext)
 
   const[upcoming,setUpcoming] = useState([])
   const[past,setPast] = useState([])
@@ -21,7 +23,7 @@ function NewBooking(props) {
       if (err) {
         console.log(err);
       } else {
-        console.log(res)
+        // console.log(res)
         res.data.map((data)=>{
           if(data.status === "completed"){
             setPast(past => [...past, data]);
@@ -44,7 +46,7 @@ function NewBooking(props) {
     window.addEventListener("resize", handleResize);
   });
 
-  if(props.subscribedLoggedIn){
+  if(subscribedLoggedIn){
     return (
       <div className="new-booking-container">
         {width>800 ? <Sidebar /> : <Navbar />}
@@ -56,7 +58,8 @@ function NewBooking(props) {
         <br />
       </div>
     );
-  } else {
+  } 
+  else {
     return(
       <Navigate to="/auth/login" />
     )

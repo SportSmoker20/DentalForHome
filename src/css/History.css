@@ -1,0 +1,75 @@
+.history-container{
+    margin-left: 300px;
+}
+.history-count-container-top{
+    display: flex;
+    flex-direction: row;
+    
+}
+.new-booking-top-container.history{
+    margin-left: 0;
+    
+}
+.history-count-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.history-count-container-left{
+    background-color: #F8FFE9;
+    width: 38vw;
+    height: 200px;
+    margin: 10px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    box-shadow: 0px 0.8908261656761169px 3.5633046627044678px 0px #00000040;
+
+
+}
+.history-count-container-right{
+    background-color: #FEEEEF;
+    width: 38vw;
+    height: 200px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    box-shadow: 0px 0.8908261656761169px 3.5633046627044678px 0px #00000040;
+
+}
+.history-count-container-left-count{
+    font-weight: 700;
+    font-size: 130px;
+   color: #9BDD10;
+    height: 150px;
+}
+.history-count-container-left-count>p{
+    margin-top: 0px;
+    
+}
+.history-count-container-left-content>p{
+    color: #373F41;
+    font-weight: bold;
+}
+.history-count-container-right-count{
+    font-weight: 700;
+    font-size: 130px;
+   color: #FE5362;
+    height: 150px;
+}
+.history-count-container-right-count>p{
+    margin-top: 0px;
+    
+}
+.history-count-container-right-content>p{
+    color: #373F41;
+    font-weight: bold;
+    
+}

@@ -5,6 +5,7 @@ import PricingMain from './PricingMain'
 import '../../css/Pricing.css'
 
 function Pricing() {
+  
   return (
     <div className='pricing-container'>
         <HomeNavbar tabName={"pricing"}/>

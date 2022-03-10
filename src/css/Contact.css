@@ -8,6 +8,7 @@
   background: rgb(243, 246, 250);
   width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 .contact-main-container {
   padding-top: 13.8vh;
@@ -74,6 +75,10 @@
   margin-right: 30px;
   padding: 13px;
   background-color: rgb(243, 246, 250);
+}
+.contact>.faq-row-wrapper.faq-body{
+  width: 1vw;
+  /* margin-left: 0; */
 }
 
 

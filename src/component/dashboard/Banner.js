@@ -7,14 +7,14 @@ import 'react-slideshow-image/dist/styles.css'
 function Banner() {
     const slideImages = [
         {
-            src:'https://dentalforhome.s3.amazonaws.com/images/download.jpg'
+            src:'https://dentalforhome.s3.amazonaws.com/images/banner1.png'
         },
         {
-          src:'https://dentalforhome.s3.amazonaws.com/images/download.jpg'
+          src:'https://dentalforhome.s3.amazonaws.com/images/banner2.png'
         },
-        {
-          src:'https://dentalforhome.s3.amazonaws.com/images/download.jpg'
-        }
+        // {
+        //   src:'https://dentalforhome.s3.amazonaws.com/images/banner.png'
+        // }
         // {
           
         // },

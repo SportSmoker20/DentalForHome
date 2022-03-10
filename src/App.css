@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rajdhani:wght@300&display=swap');
 .App {
   text-align: center;
 }
-
+.app-main{
+  font-family: 'Poppins';
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
