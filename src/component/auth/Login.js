@@ -61,7 +61,8 @@ function Login() {
           } else {
             // setUser(true)
             // props.setSuperLoggedIn(true);
-            if (res.data.length === 0) {
+            console.log(res)
+            if (res.data[0].email === "") {
               const mobileNo = [
                 {
                   mobile: mobile,
@@ -71,9 +72,7 @@ function Login() {
               setLoggedIn(true);
               return <Navigate to="/auth/register" />;
             } else {
-              console.log(res);
               localStorage.setItem("testObject", JSON.stringify(res.data[0]));
-              console.log(res);
               if (res.data[0].subscriber === 0) {
                 setSubscribedLoggedIn(true);
               } else {

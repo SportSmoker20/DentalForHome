@@ -26,6 +26,8 @@ function NewBookingSelect(props) {
   const [name, setName] = useState();
   const [location, setLocation] = useState();
   const [bookType, setBookType] = useState();
+  const userData = JSON.parse(localStorage.getItem("testObject"));
+
   // const [bookOptionHome, setBookOptionHome] = useState();
   // const [bookOptionVideo, setBookOptionVideo] = useState();
 
@@ -128,8 +130,8 @@ function NewBookingSelect(props) {
       // }
       await axios
         .post("http://localhost:5000/api/appointment", {
-          user_id: 1,
-          patient_name: "Dhanesh",
+          user_id: userData.id,
+          patient_name: userData.name,
           dentist_name: "Mitali",
           location: location,
           date: date,

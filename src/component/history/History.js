@@ -21,11 +21,12 @@ function History() {
   });
   const[upcoming,setUpcoming] = useState([])
   const[past,setPast] = useState([])
-  const user_id = 1
+  const userData = JSON.parse(localStorage.getItem("testObject"));
+
   const[refresh,setRefresh] = useState(false)
 
   useEffect(async()=>{
-   await axios.get('http://localhost:5000/api/appointment/'+ user_id).then((res, err) => {
+   await axios.get('http://localhost:5000/api/appointment/'+ userData.id).then((res, err) => {
       if (err) {
         console.log(err);
       } else {

@@ -29,7 +29,7 @@
   align-items: center;
   width: 100%;
 }
-.new-booking-top-bottom{
+.new-booking-top-bottom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -37,7 +37,7 @@
   width: 100%;
   margin-top: 10px;
 }
-.new-booking-book-outer{
+.new-booking-book-outer {
   width: 32%;
   /* float: right; */
   display: flex;
@@ -53,11 +53,10 @@
 }
 
 .new-booking-icon-container {
-  
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   width: 40%;
 }
 .new-booking-time {
@@ -79,7 +78,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 .new-booking-select-option > select {
@@ -110,10 +108,10 @@
 /* .new-booking-date>.react-datepicker-wrapper>.react-datepicker__input-container{
     width: 25%;
 } */
-.react-datepicker__header:not(.react-datepicker__header--has-time-select){
-    width: 77px;
+.react-datepicker__header:not(.react-datepicker__header--has-time-select) {
+  width: 77px;
 }
-.new-booking-select-option.type{
+.new-booking-select-option.type {
   /* margin-left: -150px; */
 }
 .new-booking-date
@@ -128,7 +126,7 @@
   color: rgb(4, 64, 102);
   font-weight: 400;
   font-size: 16px;
-padding-left: 20px;
+  padding-left: 20px;
 }
 .new-booking-date
   > .react-datepicker-wrapper
@@ -217,30 +215,28 @@ h1 {
   margin-bottom: 0;
 }
 
-
-.booking-past-container{
-    /* margin-top: 50px; */
-    padding-top: 20px;
-    padding-bottom: 20px;
+.booking-past-container {
+  /* margin-top: 50px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-table{
+table {
   border: separate;
   border-spacing: 0 15px;
-  background-color: rgb(249,249,249);
+  background-color: rgb(249, 249, 249);
 }
-thead{
+thead {
   /* z-index: 30; */
   background-color: #fff;
 }
 
-.zigzag{
-    margin-top: 6vh;
-    box-shadow: 0px 1px 5px rgb(0 0 0 / 0.2);
-    border-radius: 15px;
+.zigzag {
+  margin-top: 6vh;
+  box-shadow: 0px 1px 5px rgb(0 0 0 / 0.2);
+  border-radius: 15px;
 }
 .zigzag > thead {
   background-color: rgb(243, 251, 254);
-
 }
 .zigzag > thead > tr {
   /* text-align: left; */
@@ -301,9 +297,9 @@ tr > td:last-child {
 td {
   /* padding: 20px; */
   /* padding-left: 15px; */
- /* text-align: left; */
- /* margin-left: 1vw; */
- padding-left: 1vw;
+  /* text-align: left; */
+  /* margin-left: 1vw; */
+  padding-left: 1vw;
   height: 10px;
 }
 table {
@@ -311,281 +307,326 @@ table {
   padding: 10px;
   color: black;
 }
-tbody>td{
-    background-color: rgb(248, 248, 248);
+tbody > td {
+  background-color: rgb(248, 248, 248);
 }
-
-
-
+.table-join {
+  width: 6vw;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #044066;
+  cursor: pointer;
+}
 
 .react-datepicker {
-    background-color: rgb(33, 169, 255);
-  }
-  
-  .react-datepicker__header {
-    background-color: rgb(33, 169, 255);
-    width: 100%;
-  }
-  .react-datepicker__month-container {
-    /* width: 25vw; */
-    /* padding: 10px; */
-    background-color: rgb(244, 251, 254);
-  }
-  .react-datepicker__current-month {
-    color: #044066;
-    font-weight: bold;
-    font-size: large;
-    
-  }
-  .react-datepicker__day-name {
-    color: #044066;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  .react-datepicker__day {
-    color: #044066;
-    font-weight: bold;
-    font-size: 13px;
-  }
-  .react-datepicker__navigation--previous {
-    left: 15px;
-  }
-  .react-datepicker__navigation--next {
-    right: 40px;
-  }
-  .react-datepicker__day--keyboard-selected {
-    background-image: url("https://dentalforhome.s3.amazonaws.com/images/calendar1.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  background-color: rgb(33, 169, 255);
+}
 
-  .rec-slider-container{
-    background-color: rgb(255, 237, 239);
-    display: flex;
-    flex-direction: row;
-    width: 40vw;
-    /* padding-left: 50px; */
-  }
-  h1{
-    margin-bottom: -30px;
-  }
+.react-datepicker__header {
+  background-color: rgb(33, 169, 255);
+  width: 100%;
+}
+.react-datepicker__month-container {
+  /* width: 25vw; */
+  /* padding: 10px; */
+  background-color: rgb(244, 251, 254);
+}
+.react-datepicker__current-month {
+  color: #044066;
+  font-weight: bold;
+  font-size: large;
+}
+.react-datepicker__day-name {
+  color: #044066;
+  font-weight: bold;
+  font-size: 14px;
+}
+.react-datepicker__day {
+  color: #044066;
+  font-weight: bold;
+  font-size: 13px;
+}
+.react-datepicker__navigation--previous {
+  left: 15px;
+}
+.react-datepicker__navigation--next {
+  right: 40px;
+}
+.react-datepicker__day--keyboard-selected {
+  background-image: url("https://dentalforhome.s3.amazonaws.com/images/calendar1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+.rec-slider-container {
+  background-color: rgb(255, 237, 239);
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  /* padding-left: 50px; */
+}
+h1 {
+  margin-bottom: -30px;
+}
+.new-booking-book{
+  font-size: 15px;
+width: 60%;
+}
+.no-appointment{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -50px;
+}
+.booking-top-container-content.edit{
+margin-bottom: 20px;
+}
+.ReactModal__Overlay--after-open{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
-  
-  @media screen and (max-width: 1100px){
-    .new-booking-time {
-      margin-left: -30px;
-      width: 70%;
-    }
-    .new-booking-icon-container{
-      transform: scale(0.9);
-      width: 40%;
-    }
-    .zigzag{
-      margin-left: -20px;
-    }
-    .new-booking-top{
+.ReactModal__Content--after-open{
+padding: 40px;
+  height: 320px;
+  width: 80vw;
+}
+.modal-container-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.booking-top-container-close{
+  padding: 20px;
+  cursor: pointer;
+}
 
-      margin-left: -20px;
-    }
-    .new-booking-top-bottom{
-
-      margin-left: -40px;
-    }
+@media screen and (max-width: 1100px) {
+  .new-booking-time {
+    margin-left: -30px;
+    width: 70%;
   }
-  @media screen and (max-width: 1000px){
-    .new-booking-top{
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        /* max-width: 80%; */
-    }
-    .new-booking-select-option{
-      flex: 1;
-      margin: 10px;
-      min-width: 24vw;
-      max-width: 30vw;
-    }
-    .new-booking-date{
-      flex: 1;
-      margin: 10px;
-      min-width: 21vw;
-      max-width: 30vw;
-    }
-    .new-booking-book{
-      flex: 1;
-      margin: 10px;
-      min-width: 21vw;
-      max-width: 30vw;
-    }
-    .zigzag{
-      margin-left: -70px;
-      transform: scale(0.9);
-    }
-    .new-booking-time {
-      transform: scale(0.9);
-margin: 0;
-      margin-left: -30px;
-      width: 85vw;
-    }
-    .new-booking-icon-container{
-      transform: scale(0.8);
-      width: 40vw;
-      margin-left: -20px;
-    }
+  .new-booking-icon-container {
+    transform: scale(0.9);
+    width: 40%;
   }
-  @media screen and (max-width: 920px){
-    .new-booking-select{
-      transform: scale(0.95);
-      margin-right: -60px;
-      margin-left: -40px;
-        }
-    .booking-upcoming-container{
-      transform: scale(0.95);
-      margin-left: -20px;
-    }
-    .booking-past-container{
-      transform: scale(0.95);
-      margin-left: -20px;
-    }
+  .zigzag {
+    margin-left: -20px;
   }
-  @media screen and (max-width: 800px){
-    h1{
-      margin-bottom: -30px;
-    }
-    .new-booking-container{
-      margin-left: 20px;
-      margin-top: 0;
-      /* margin-top: 50px; */
-    }
-    .new-booking-select{
-      margin-top: 0;
-      margin-right: 0px;
-      margin-left: 0px;
-      
-        }
-    .booking-upcoming-container{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-transform: scale(1);
-      margin-left: 80px;
-      /* width: 90vw; */
-    }
-    .booking-past-container{
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-transform: scale(1);
-      margin-left: 80px;
-    }
-    .new-booking-top-container{
-      padding-top: 80px;
-    }
-    .new-booking-select-option{
-      flex: 1;
-      margin: 10px;
-      min-width: 42vw;
-      /* max-width: 30vw; */
-    }
-    .new-booking-date{
-      flex: 1;
-      margin: 10px;
-      min-width: 42vw;
-      /* max-width: 40vw; */
-    }
-    .new-booking-book{
-      flex: 1;
-      margin: 10px;
-      min-width: 42vw;
-    }
-    .new-booking-select{
-      margin-right: -50px;
-    }
-    .new-booking-top-container{
-      margin-left: 25;
-    }
+  .new-booking-top {
+    margin-left: -20px;
   }
-  @media screen and (max-width: 700px){
-    .table-none{
-      display: none;
-    }
-    .zigzag{
-      margin-right: -40px;
-      width: 90vw;
-    }
-    h1{
-      margin-left: -6vw;
-      margin-bottom: -30px;
-    }
+  .new-booking-top-bottom {
+    margin-left: -40px;
   }
-  @media screen and (max-width: 570px){
-    .new-booking-top{
-      flex-direction: column;
-    }
-    .new-booking-select-option{
-      min-width: 90vw;
-    }
-    .new-booking-date{
-      min-width: 90vw;
-    }
-    .new-booking-book{
-      min-width: 90vw;
-    }
-    .new-booking-bottom{
-      flex-direction: column;
-    }
-    .new-booking-time{
-      width: 100vw;
-    }
-    .new-booking-icon-container{
-      width: 100vw;
-    }
-  }
-  @media screen and (max-width: 400px){
-    .new-booking-time{
-      width: 110vw;
-    }
-    h1{
-      margin-left: -16vw;
-    }
-    .zigzag{
-      margin-left: -19vw;
-    }
+}
+@media screen and (max-width: 1000px) {
+  .new-booking-top {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* max-width: 80%; */
   }
   .no-appointment{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: -50px;
+    /* z-index: 30;
+    margin-top: -20px; */
+    position: relative;
   }
-.booking-top-container-content.edit{
-  margin-bottom: 20px;
+  .new-booking-top-bottom {
+    flex-direction: column;
+  }
+
+  .new-booking-select-option {
+    flex: 1;
+    margin: 10px;
+    width: 60vw;
+    margin-left: 25px;
+  }
+  .new-booking-date {
+    flex: 1;
+    margin: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 58.5vw;
+  }
+  .new-booking-book {
+    flex: 1;
+    margin: 10px;
+    min-width: 21vw;
+    max-width: 30vw;
+  }
+  .zigzag {
+    /* margin-left: -70px; */
+    transform: scale(0.9);
+    /* z-index: 1; */
+  }
+  .new-booking-time {
+    transform: scale(0.9);
+    margin: 0;
+    margin-left: -30px;
+    width: 85vw;
+  }
+  .new-booking-icon-container {
+    transform: scale(0.8);
+    width: 40vw;
+    margin-left: -20px;
+  }
 }
-  .ReactModal__Overlay--after-open{
+@media screen and (max-width: 920px) {
+  .new-booking-select {
+    /* transform: scale(0.95); */
+    margin-right: -60px;
+    margin-left: -40px;
+  }
+  .booking-upcoming-container {
+    /* transform: scale(0.95); */
+    margin-left: -20px;
+  }
+  .booking-past-container {
+    /* transform: scale(0.95); */
+    margin-left: -20px;
+  }
+  .zigzag{
+    margin-left: -40px;
+    width: 75vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  h1 {
+    margin-bottom: -30px;
+  }
+  .new-booking-container {
+    margin-left: 20px;
+    margin-top: 0;
+    /* margin-top: 50px; */
+  }
+  .new-booking-select {
+    margin-top: 0;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .booking-upcoming-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    transform: scale(1);
+    margin-left: 0px;
+    width: 90vw;
   }
-
-  .ReactModal__Content--after-open{
-padding: 40px;
-    height: 320px;
-    width: 80vw;
-  }
-  .modal-container-content{
+  .booking-past-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    transform: scale(1);
+    margin-left: 0px;
   }
-  .booking-top-container-close{
-    padding: 20px;
-    cursor: pointer;
+  .new-booking-top-container {
+    padding-top: 80px;
   }
+  .new-booking-select-option {
+    flex: 1;
+    margin: 10px;
+    margin-left: 25px;
+    min-width: 42vw;
+    /* max-width: 30vw; */
+  }
+  .new-booking-date {
+    flex: 1;
+    margin: 10px;
+    min-width: 42vw;
+    /* max-width: 40vw; */
+  }
+  .new-booking-book {
+    flex: 1;
+    margin: 10px;
+    min-width: 42vw;
+  }
+  .new-booking-select {
+    margin-right: -50px;
+  }
+  .new-booking-top-container {
+    margin-left: 25;
+  }
+  .new-booking-book-outer {
+    width: 50%;
+  }
+  .zigzag {
+    /* margin-right: -40px; */
+    width: 108vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  .table-none {
+    display: none;
+  }
+  .table-join {
+    width: 15vw;
+  }
+  .zigzag {
+    /* margin-right: -40px; */
+    margin-left: -30px;
+    width: 105vw;
+  }
+  h1 {
+    /* margin-left: -6vw; */
+    margin-bottom: -30px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .new-booking-top {
+    flex-direction: column;
+  }
+  .new-booking-select-option {
+    min-width: 95.5vw;
+    margin-left: 17.5px;
+  }
+  .new-booking-date {
+    min-width: 92vw;
+  }
+  .new-booking-book {
+    /* justify-content: center; */
+    min-width: 50vw;
+  }
+  .zigzag {
+    width: 108vw;
+  }
+  .new-booking-bottom {
+    flex-direction: column;
+  }
+  .new-booking-time {
+    width: 100vw;
+  }
+  .new-booking-icon-container {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .new-booking-select-option {
+    min-width: 96vw;
+    margin-left: 15px;
+  }
+  .new-booking-time {
+    width: 110vw;
+  }
+  h1 {
+    /* margin-left: -16vw; */
+  }
+  .zigzag {
+    /* margin-left: -19vw; */
+    width: 110vw;
+  }
+}
 
-  /* .modal-title{
+/* .modal-title{
     
   } */
