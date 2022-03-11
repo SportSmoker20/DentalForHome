@@ -31,17 +31,27 @@ function DashBoard() {
         });
     }
   }, []);
+  const [width, setWidth] = useState(window.innerWidth);
+  React.useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+  });
   if (subscribedLoggedIn) {
     return (
       <div>
-        <Sidebar />
+        
         <div className="dashboard-main">
           {data.type === "admin" ? (
             <div>
+              {width>800 ? <Sidebar /> : <Navbar />}
                <AdminDashBoard />
             </div>
           ) : (
             <div>
+              <Sidebar />
               <Navbar />
               <Banner />
               <DashBoardOptions />

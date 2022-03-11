@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { SidebarData } from "./SidebarData";
+import { AdminSidebarData, SidebarData } from "./SidebarData";
 import "../../css/Sidebar.css";
 import { IconContext } from "react-icons";
 
 function Sidebar() {
-  // const profile = localStorage.getItem("testObject");
+  const profile = JSON.parse(localStorage.getItem("testObject"));
+  console.log(profile.name)
 
   return (
     <>
@@ -43,7 +44,7 @@ function Sidebar() {
               <div className="profile-image">
                 <img src='https://dentalforhome.s3.amazonaws.com/images/character1.svg' className="profile-image-inner" />
               </div>
-              <p>Jesson George</p>
+              <p>{profile.name}</p>
               <div className="sidebar-profile-edit">
                 {/* <FaIcons.FaUserEdit style={{ padding: `20px 15px 0 0` }} /> */}
                 <Link to={"/edit"} className="sidebar-profile-edit">
@@ -51,7 +52,7 @@ function Sidebar() {
                 </Link>
               </div>
             </div>
-            {SidebarData.map((item, index) => {
+            {profile.type==="admin"?<div>{SidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>
@@ -60,7 +61,17 @@ function Sidebar() {
                   </Link>
                 </li>
               );
-            })}
+            })}</div>:<div>{AdminSidebarData.map((item, index) => {
+              return (
+                <li key={index} className={item.cName}>
+                  <Link to={item.path}>
+                    {item.icon}
+                    <span>{item.title}</span>
+                  </Link>
+                </li>
+              );
+            })}</div>}
+            
           </ul>
         </nav>
       </IconContext.Provider>

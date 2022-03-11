@@ -6,39 +6,31 @@ function ContactTeam() {
   const teamData = [
     {
       id: 0,
-      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
-      name: "Sachin Soni",
-      title: "Jobless at jobless",
-      content:
-        "Ea aperiri ponderum ullamcorper sit, verear offendit imperdiet nameu, liber delicato tractatos ad.",
-      linkedIn: "abc",
+      office: 'USA Office',
+      address: " 16192 Coastal Highway, Lewes, Delaware 19958, County of Sussex, USA",
+      mobile: " +1 518 660 1020",
+      email: " info@holisticbiocon.com"
     },
     {
       id: 1,
-      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
-      name: "Bhupesh Sarangal",
-      title: "Jobless at jobless",
-      content:
-        "Ea aperiri ponderum ullamcorper sit, verear offendit imperdiet nameu, liber delicato tractatos ad.",
-      linkedIn: "abc",
+      office: 'NEW YORK',
+      address: "447 Broadway, 2nd FL #129 New York, NY 10013 USA",
+      mobile: " +1 518 660 1020",
+      email: " info@holisticbiocon.com"
     },
     {
       id: 2,
-      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
-      name: "Prakhar Kulshrestha",
-      title: "Jobless at jobless",
-      content:
-        "Ea aperiri ponderum ullamcorper sit, verear offendit imperdiet nameu, liber delicato tractatos ad.",
-      linkedIn: "abc",
+      office: 'LONDON Office',
+      address: " 56 Fulham High Street, London SW6 3LQ, UNITED KINGDOM",
+      mobile: "+44 7443 812753",
+      email: " info@holisticbiocon.com"
     },
     {
       id: 3,
-      img: 'https://dentalforhome.s3.amazonaws.com/images/character1.svg',
-      name: "Aditya Sharma",
-      title: "Jobless at jobless",
-      content:
-        "Ea aperiri ponderum ullamcorper sit, verear offendit imperdiet nameu, liber delicato tractatos ad.",
-      linkedIn: "abc",
+      office: 'SINGAPORE Office',
+      address: "111 North Bridge Road, #27-01, Peninsula Plaza, Singapore 179098",
+      mobile: "+44 7443 812753",
+      email: " info@holisticbiocon.com"
     }
   ];
 
