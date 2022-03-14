@@ -1,6 +1,5 @@
 import React from "react";
-import "../../css/Sidebar.css";
-import "../../css/NewPlan.css";
+
 
 function PlanCard(props) {
   // return (

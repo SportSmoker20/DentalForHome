@@ -1,6 +1,5 @@
 import React from "react";
 import HomeNavbar from "./HomeNavbar";
-import "../../css/Sample.css";
 import HomeBanner from "./HomeBanner";
 import HomeFeatures from "./HomeFeatures";
 import HomeService from "./HomeService";

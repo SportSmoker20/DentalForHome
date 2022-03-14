@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import "../../css/Auth.css";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { Link, Navigate } from "react-router-dom";
@@ -54,7 +53,7 @@ function Login() {
       // }
 
       await axios
-        .get("http://localhost:5000/api/user/" + mobile)
+        .get("http://3.80.77.164:5000/api/user/" + mobile)
         .then((res, err) => {
           if (err) {
             console.log(err);

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../dashboard/Navbar";
 import Sidebar from "../sidebar/Sidebar";
-import "../../css/NewEdit.css";
-import "../../css/History.css";
+
 import HistoryTop from "./HistoryTop";
 import HistoryCount from "./HistoryCount";
 import NewBookingSelect from "../bookingNew/NewBookingSelect";
@@ -26,7 +25,7 @@ function History() {
   const[refresh,setRefresh] = useState(false)
 
   useEffect(async()=>{
-   await axios.get('http://localhost:5000/api/appointment/'+ userData.id).then((res, err) => {
+   await axios.get('http://3.80.77.164:5000/api/appointment/'+ userData.id).then((res, err) => {
       if (err) {
         console.log(err);
       } else {

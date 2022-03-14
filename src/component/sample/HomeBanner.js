@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Slide } from "react-slideshow-image";
-import "../../css/DashBoard.css";
 
 function HomeBanner() {
   const slideImages = [

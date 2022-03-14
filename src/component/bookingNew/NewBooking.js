@@ -19,7 +19,7 @@ function NewBooking() {
   const[refresh,setRefresh] = useState(false)
 
   useEffect(async()=>{
-   await axios.get('http://localhost:5000/api/appointment/user/'+ userData.id).then((res, err) => {
+   await axios.get('http://3.80.77.164:5000/api/appointment/user/'+ userData.id).then((res, err) => {
       if (err) {
         console.log(err);
       } else {

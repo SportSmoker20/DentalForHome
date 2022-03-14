@@ -1,7 +1,6 @@
 import React from "react";
 import HomeNavbar from "../sample/HomeNavbar";
 import AboutBanner from "./AboutBanner";
-import "../../css/About.css";
 import AboutWhat from "./AboutWhat";
 import HomeService from "../sample/HomeService";
 import AboutDirectors from "./AboutDirectors";

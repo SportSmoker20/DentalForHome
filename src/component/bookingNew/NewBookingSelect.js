@@ -129,7 +129,7 @@ function NewBookingSelect(props) {
       //   bookType = "VideoCall";
       // }
       await axios
-        .post("http://localhost:5000/api/appointment", {
+        .post("http://3.80.77.164:5000/api/appointment", {
           user_id: userData.id,
           patient_name: userData.name,
           dentist_name: "Mitali",

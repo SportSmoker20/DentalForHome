@@ -3,7 +3,6 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Carousel from "react-elastic-carousel";
 
-import "../../css/Booking.css";
 import Item from "./Item";
 
 const itemsToShow = 3;

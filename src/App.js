@@ -1,6 +1,18 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import "./css/Sample.css";
+import "./css/About.css";
+import "./css/Auth.css";
+import "./css/Booking.css";
+import "./css/Contact.css";
+import "./css/DashBoard.css";
+import "./css/Edit.css";
+import "./css/NewEdit.css";
+import "./css/History.css";
+import "./css/Sidebar.css";
+import "./css/NewPlan.css";
+import "./css/Service.css";
+import "./css/Patient.css";
 import { createContext, useEffect, useState } from "react";
 import Home from "./component/sample/Home";
 import Login from "./component/auth/Login";
@@ -19,6 +31,7 @@ import NewBooking from "./component/bookingNew/NewBooking";
 import NewEdit from "./component/edit/NewEdit";
 import axios from "axios";
 import History from "./component/history/History";
+import Patient from "./component/patient/Patient";
 
 export const UserContext = createContext();
 
@@ -31,7 +44,7 @@ function App() {
     const data = JSON.parse(localStorage.getItem("testObject"));
     if (data !== null) {
       await axios
-        .get("http://localhost:5000/api/user/" + data.mobile)
+        .get("http://3.80.77.164:5000/api/user/" + data.mobile)
         .then((res, err) => {
           if (!err) {
             if (res.data[0].subscriber === 0) {
@@ -71,6 +84,8 @@ function App() {
             <Route path="/serviceHistory" element={<History />} />
             <Route path="/service" element={<Service />} />
             <Route path="/myplan" element={<MyPlan />} />
+            <Route path="/patient" element={<Patient />} />
+
           </Routes>
         </Router>
       </UserContext.Provider>

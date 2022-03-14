@@ -12,7 +12,7 @@ function AdminDashBoard() {
 
 
   useEffect(async()=>{
-   await axios.get('http://localhost:5000/api/appointment/admin'+ "Mitali").then((res, err) => {
+   await axios.get('http://3.80.77.164:5000/api/appointment/admin'+ "Mitali").then((res, err) => {
       if (err) {
         console.log(err);
       } else {

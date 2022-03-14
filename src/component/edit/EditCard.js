@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { HiOutlineDotsCircleHorizontal } from "react-icons/hi";
-import "../../css/Edit.css";
 
 function EditCard() {
   const [gender, setGender] = useState("Male");

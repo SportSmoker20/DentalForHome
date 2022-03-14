@@ -3,7 +3,6 @@ import Banner from "../dashboard/Banner";
 import Navbar from "../dashboard/Navbar";
 import Sidebar from "../sidebar/Sidebar";
 import ServiceCard from "./ServiceCard";
-import "../../css/Service.css";
 import { Link, Navigate } from "react-router-dom";
 import { UserContext } from "../../App";
 

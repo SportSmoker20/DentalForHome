@@ -25,7 +25,7 @@ function NewBookingUpcoming(props) {
     for (let i = 0; i < 12; i++) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
-    await axios.put('http://localhost:5000/api/appointment',{
+    await axios.put('http://3.80.77.164:5000/api/appointment',{
       id: id,
       link: "https://main.d2saeuh4kvfyop.amplifyapp.com/"+result
     }).then((res,err)=>{

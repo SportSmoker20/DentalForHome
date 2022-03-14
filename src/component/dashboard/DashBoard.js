@@ -3,7 +3,6 @@ import Banner from "./Banner";
 import DashBoardFooter from "./DashBoardFooter";
 import DashBoardOptions from "./DashBoardOptions";
 import Navbar from "./Navbar";
-import "../../css/DashBoard.css";
 import Sidebar from "../sidebar/Sidebar";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
@@ -17,7 +16,7 @@ function DashBoard() {
     setData(JSON.parse(localStorage.getItem("testObject")));
     if (data !== null) {
       await axios
-        .get("http://localhost:5000/api/user/" + data.mobile)
+        .get("http://3.80.77.164:5000/api/user/" + data.mobile)
         .then((res, err) => {
           if (!err) {
             if (res.data[0].subscriber !== 0) {

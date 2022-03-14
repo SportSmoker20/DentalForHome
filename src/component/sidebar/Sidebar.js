@@ -3,7 +3,6 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { AdminSidebarData, SidebarData } from "./SidebarData";
-import "../../css/Sidebar.css";
 import { IconContext } from "react-icons";
 
 function Sidebar() {
@@ -52,7 +51,7 @@ function Sidebar() {
                 </Link>
               </div>
             </div>
-            {profile.type==="admin"?<div>{SidebarData.map((item, index) => {
+            {profile.type==="admin"?<div>{AdminSidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>
