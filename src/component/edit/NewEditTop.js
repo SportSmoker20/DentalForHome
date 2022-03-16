@@ -1,6 +1,7 @@
 import React from "react";
 
 function NewEditTop() {
+  const profile = JSON.parse(localStorage.getItem("testObject"));
   return (
     <div>
       <div className="new-booking-top-container edit">
@@ -17,7 +18,7 @@ function NewEditTop() {
         <div className="new-edit-top-content">
           <div className="new-edit-top-mid">
             <div className="new-edit-top-mid-title">
-              <p>Purva Kapoor</p>
+              <p>{profile.name}</p>
             </div>
             <div className="new-edit-top-mid-label">
               <label>Gender : </label>
@@ -42,7 +43,7 @@ function NewEditTop() {
               <p>Members</p>
             </div>
             <div className="new-edit-top-right-name">
-              <p>Purva Kapoor (you)</p>
+              <p>{profile.name} (you)</p>
             </div>
             <div className="new-edit-top-right-name">
               <p>Sarthak Kapoor</p>

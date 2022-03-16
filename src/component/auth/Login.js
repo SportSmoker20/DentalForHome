@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import "../../css/Auth.css";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { Link, Navigate } from "react-router-dom";
@@ -144,7 +145,7 @@ function Login() {
               <div className="otp-resend">
                 <p>
                   Didn't get the code yet?{" "}
-                  <label onClick={() => sendOtp()} style={{ color: `blue` }}>
+                  <label onClick={() => sendOtp()} style={{ color: `blue`,cursor:`pointer` }}>
                     Resend
                   </label>
                 </p>

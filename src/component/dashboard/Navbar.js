@@ -33,7 +33,7 @@ function Navbar() {
         <div className="navbar-main">
           <div className="navbar-text">
             <p style={{ fontWeight: `bold`,height:`10px` }}>Your Dashboard is Updated</p>
-            <p>Hi Users, Exciting offers for you.</p>
+            <p>Hi {profile.name}, Exciting offers for you.</p>
           </div>
           <div className="navbar-menu">
             {sidebar ? <GrClose onClick={showSidebar} className="navbar-menu-inner" />  : <FiMenu onClick={showSidebar} className="navbar-menu-inner" />  }
@@ -57,7 +57,7 @@ function Navbar() {
               <div className="profile-image">
                 <img src='https://dentalforhome.s3.amazonaws.com/images/character1.svg' className="profile-image-inner" />
               </div>
-              <p>Jesson George</p>
+              <p>{profile.name}</p>
               <div className="sidebar-profile-edit">
                 {/* <FaUserEdit style={{ padding: `20px 15px 0 0` }} /> */}
                 <Link to={"/edit"} className="sidebar-profile-edit">
@@ -86,7 +86,7 @@ function Navbar() {
         <div className="navbar-main">
           <div className="navbar-text">
             <p style={{ fontWeight: `bold`,height:`10px` }}>Your Dashboard is Updated</p>
-            <p>Hi Users, Exciting offers for you.</p>
+            <p>Hi {profile.name}, Exciting offers for you.</p>
           </div>
           <div className="navbar-menu">
             {sidebar ? <GrClose onClick={showSidebar} className="navbar-menu-inner" />  : <FiMenu onClick={showSidebar} className="navbar-menu-inner" />  }
@@ -110,7 +110,7 @@ function Navbar() {
               <div className="profile-image">
                 <img src='https://dentalforhome.s3.amazonaws.com/images/character1.svg' className="profile-image-inner" />
               </div>
-              <p>Jesson George</p>
+              <p>{profile.name}</p>
               <div className="sidebar-profile-edit">
                 {/* <FaUserEdit style={{ padding: `20px 15px 0 0` }} /> */}
                 <Link to={"/edit"} className="sidebar-profile-edit">

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 function EditInfo() {
-  const [add1, setAdd1] = useState("H-1B");
-  const [add2, setAdd2] = useState("Shantinagar");
-  const [landmark, setLandmark] = useState(
-    "In front of Sarva Dharma Sai Mandir"
-  );
-  const [country, setCountry] = useState("India");
-  const [state, setState] = useState("Maharashtra");
-  const [pincode, setPincode] = useState("411111");
+  const [add1, setAdd1] = useState();
+  const [add2, setAdd2] = useState();
+  const [landmark, setLandmark] = useState();
+  const [country, setCountry] = useState();
+  const [state, setState] = useState();
+  const [pincode, setPincode] = useState();
+
+  
 
   return (
     <div className="info-main">

@@ -147,6 +147,7 @@ font-size: 17px;
     justify-content: center;
     margin-bottom: 30px;
     margin-top: 20px;
+    cursor: pointer;
 }
 .new-edit-bottom-container-save>p{
     font-weight: bold;

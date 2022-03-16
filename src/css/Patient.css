@@ -76,8 +76,8 @@
         margin-left: 20px;
         
     }
-    .patient-card-container{
-        /* justify-content: space-evenly; */
+    .patient-container-card{
+        justify-content: space-evenly;
         
     }
     .patient-bottom-container{
@@ -88,6 +88,5 @@
     .patient-bottom-container{
        flex-direction: column;
        margin-left: -20px;
-       margin-right: 10px;
     }
 }

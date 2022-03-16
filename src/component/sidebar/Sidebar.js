@@ -60,7 +60,7 @@ function Sidebar() {
                   </Link>
                 </li>
               );
-            })}</div>:<div>{AdminSidebarData.map((item, index) => {
+            })}</div>:<div>{SidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>

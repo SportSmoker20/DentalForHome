@@ -32,6 +32,7 @@ import NewEdit from "./component/edit/NewEdit";
 import axios from "axios";
 import History from "./component/history/History";
 import Patient from "./component/patient/Patient";
+import HistoryMain from "./component/history/HistoryMain";
 
 export const UserContext = createContext();
 
@@ -85,7 +86,7 @@ function App() {
             <Route path="/service" element={<Service />} />
             <Route path="/myplan" element={<MyPlan />} />
             <Route path="/patient" element={<Patient />} />
-
+            <Route path="/history" element={<HistoryMain />} />
           </Routes>
         </Router>
       </UserContext.Provider>
