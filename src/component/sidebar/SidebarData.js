@@ -63,7 +63,7 @@ export const AdminSidebarData = [
   },
   {
     title: 'My bookings',
-    path: '/booking',
+    path: '/adminBooking',
     icon: <FaIcons.FaCalendarAlt className='fade-1' style={{color:`rgb(4,64,132)`}} />,
     cName: 'nav-text'
   },

@@ -33,6 +33,7 @@ import axios from "axios";
 import History from "./component/history/History";
 import Patient from "./component/patient/Patient";
 import HistoryMain from "./component/history/HistoryMain";
+import DentistBooking from "./component/bookingNew/DentistBooking";
 
 export const UserContext = createContext();
 
@@ -45,7 +46,7 @@ function App() {
     const data = JSON.parse(localStorage.getItem("testObject"));
     if (data !== null) {
       await axios
-        .get("http://3.80.77.164:5000/api/user/" + data.mobile)
+        .get("https://homedentist.in/api/user/" + data.mobile)
         .then((res, err) => {
           if (!err) {
             if (res.data[0].subscriber === 0) {
@@ -81,6 +82,7 @@ function App() {
             <Route path="/home" exact element={<DashBoard />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/booking" element={<NewBooking />} />
+            <Route path="/adminBooking" element={<DentistBooking />} />
             <Route path="/edit" element={<NewEdit />} />
             <Route path="/serviceHistory" element={<History />} />
             <Route path="/service" element={<Service />} />

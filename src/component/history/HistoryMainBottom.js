@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsCheckCircleFill, BsThreeDotsVertical } from 'react-icons/bs'
+import { BsCheckCircleFill, BsDownload, BsThreeDotsVertical } from 'react-icons/bs'
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io'
 
 function HistoryMainBottom(props) {
@@ -160,7 +160,7 @@ if(props.past.length===0){
             <td className='table-none'>{data.date.split("T")[0]}</td>
             <td className='table-none'>{data.time.split(".")[0]}</td>
             <td style={{display:`flex`,flexDirection:`row`,justifyContent:`center`,alignItems:`center`,height:`100%`,paddingTop:`10px`}}><BsCheckCircleFill style={{color:`yellow`}}/></td>
-            <td style={{paddingLeft:`30px`}}><BsThreeDotsVertical /></td>
+            <td style={{paddingLeft:`30px`}}><BsDownload style={{color:`#044066`}} /></td>
           </tr>
           ))}
         </tbody>

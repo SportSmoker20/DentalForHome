@@ -23,7 +23,7 @@ function HistoryMain() {
   });
 
   useEffect(async()=>{
-    await axios.get('http://3.80.77.164:5000/api/appointment/user/'+ userData.id).then((res, err) => {
+    await axios.get('https://homedentist.in/api/appointment/user/'+ userData.id).then((res, err) => {
        if (err) {
          console.log(err);
        } else {

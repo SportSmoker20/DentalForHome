@@ -12,7 +12,7 @@ function NewEditBottom() {
   const [pincode, setPincode] = useState(profile.pincode);
 
 const SubmitHandler = async () => {
-  await axios.put('http://3.80.77.164:5000/api/user/address',{
+  await axios.put('https://homedentist.in/api/user/address',{
     house_number: add1,
     locality: add2,
     landmark: landmark,

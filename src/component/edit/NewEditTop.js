@@ -2,6 +2,26 @@ import React from "react";
 
 function NewEditTop() {
   const profile = JSON.parse(localStorage.getItem("testObject"));
+
+  const memberData = [
+    {
+      name: profile.name,
+      bgc: "#F8FFE9"
+    },
+    {
+      name: "Sarthak Kapoor",
+      bgc: "#F2F1FF"
+    },
+    {
+      name: "Jayati Kapoor",
+      bgc: "#FEEEEF"
+    },
+    {
+      name: "Sameer Kapoor",
+      bgc: "#FFF9E9"
+    },
+  ];
+
   return (
     <div>
       <div className="new-booking-top-container edit">
@@ -14,7 +34,12 @@ function NewEditTop() {
       </div>
       <div className="new-edit-top-container">
         <div className="new-edit-top-left">
-        <img src='https://dentalforhome.s3.amazonaws.com/images/character1.svg'style={{height:`110px`,width:`110px`}} className="profile-image-inner" /></div>
+          <img
+            src="https://dentalforhome.s3.amazonaws.com/images/character1.svg"
+            style={{ height: `110px`, width: `110px` }}
+            className="profile-image-inner"
+          />
+        </div>
         <div className="new-edit-top-content">
           <div className="new-edit-top-mid">
             <div className="new-edit-top-mid-title">
@@ -42,7 +67,7 @@ function NewEditTop() {
             <div className="new-edit-top-right-title">
               <p>Members</p>
             </div>
-            <div className="new-edit-top-right-name">
+            {/* <div className="new-edit-top-right-name">
               <p>{profile.name} (you)</p>
             </div>
             <div className="new-edit-top-right-name">
@@ -53,10 +78,17 @@ function NewEditTop() {
             </div>
             <div className="new-edit-top-right-name">
               <p>Sameer Kapoor</p>
-            </div>
-            <div className="new-edit-top-right-name">
-              <p>Add More (+)</p>
-            </div>
+            </div> */}
+            {memberData.map((data) => (
+              <div className="new-edit-top-right-name" style={{backgroundColor:`${data.bgc}`}}>
+                <p>{data.name}</p>
+              </div>
+            ))}
+            {memberData.length < 4 ? (
+              <div className="new-edit-top-right-name" >
+                <p>Add More (+)</p>
+              </div>
+            ) : ""}
           </div>
         </div>
       </div>

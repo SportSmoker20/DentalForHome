@@ -7,7 +7,7 @@ import Sidebar from "../sidebar/Sidebar";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
 import { UserContext } from "../../App";
-import AdminDashBoard from "./AdminDashBoard";
+import DentistDashBoard from "./DentistDashBoard";
 
 function DashBoard() {
   const { setSubscribedLoggedIn, subscribedLoggedIn } = useContext(UserContext);
@@ -16,7 +16,7 @@ function DashBoard() {
     setData(JSON.parse(localStorage.getItem("testObject")));
     if (data !== null) {
       await axios
-        .get("http://3.80.77.164:5000/api/user/" + data.mobile)
+        .get("https://homedentist.in/api/user/" + data.mobile)
         .then((res, err) => {
           if (!err) {
             if (res.data[0].subscriber !== 0) {
@@ -46,7 +46,7 @@ function DashBoard() {
           {data.type === "admin" ? (
             <div>
               {width>800 ? <Sidebar /> : <Navbar />}
-               <AdminDashBoard />
+               <DentistDashBoard />
             </div>
           ) : (
             <div>

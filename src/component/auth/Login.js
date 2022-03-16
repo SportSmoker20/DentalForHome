@@ -54,7 +54,7 @@ function Login() {
       // }
 
       await axios
-        .get("http://3.80.77.164:5000/api/user/" + mobile)
+        .get("https://homedentist.in/api/user/" + mobile)
         .then((res, err) => {
           if (err) {
             console.log(err);

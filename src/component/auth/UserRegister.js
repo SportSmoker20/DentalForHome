@@ -20,7 +20,7 @@ function UserRegister() {
     } else {
       console.log(JSON.parse(localStorage.getItem("testObject"))[0]);
       axios
-        .put("http://3.80.77.164:5000/api/user", {
+        .put("https://homedentist.in/api/user", {
           name: name,
           mobile: JSON.parse(localStorage.getItem("testObject"))[0].mobile,
           email: email,

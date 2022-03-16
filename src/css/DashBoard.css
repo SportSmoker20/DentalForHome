@@ -476,3 +476,13 @@
     width: 65vw;
   }
 }
+
+.dentist-dashboard-container{
+  margin-left: 300px;
+  margin-right: 30px;
+  padding-top: 20px;
+}
+.dentist-dashboard-stat{
+  font-weight: 600;
+  font-size: 18px;
+}
