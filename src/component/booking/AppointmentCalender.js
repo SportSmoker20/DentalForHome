@@ -7,19 +7,17 @@ import Item from "./Item";
 
 const itemsToShow = 3;
 
-const getMid = () => Math.ceil(itemsToShow / 2) - 1; 
+const getMid = () => Math.ceil(itemsToShow / 2) - 1;
 function AppointmentCalender() {
   const [startDate, setStartDate] = useState();
 
   const [midItemIndex, setMidItemIndex] = useState(getMid);
   // 0 based
-  
 
   const onChange = (_, next) => {
     const mid = getMid();
     setMidItemIndex(mid + next.index);
-  };  
-
+  };
 
   const items = [
     { id: 1, title: "12:00 AM" },
@@ -95,10 +93,15 @@ function AppointmentCalender() {
       dateFormat="h:mm aa"
     /> */}
         <div className="time-container-inner" />
-        <Carousel itemsToShow={itemsToShow} enableMouseSwipe={true} onNextStart={onChange}
-        onPrevStart={onChange}>
-          {items.map((item,id) => (
+        <Carousel
+          itemsToShow={itemsToShow}
+          enableMouseSwipe={true}
+          onNextStart={onChange}
+          onPrevStart={onChange}
+        >
+          {items.map((item, id) => (
             <Item
+              key={id}
               style={{
                 transition:
                   midItemIndex === id
@@ -108,8 +111,6 @@ function AppointmentCalender() {
                 // backgroundImage: midItemIndex === id ? "url('../../images/download.jpg')" : "rgb(62,189,143)",
               }}
               className={midItemIndex === id ? "time-top" : "time-div"}
-              
-              key={id}
             >
               {item.title}
             </Item>

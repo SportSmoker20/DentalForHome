@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function PlanCard(props) {
   // return (
   //   <div style={{backgroundImage:`url(props.imgSrc))`}} className="plan-card">
@@ -34,33 +33,35 @@ function PlanCard(props) {
       <div className="new-plan-card-img-container">
         <div className="new-plan-card-img"></div>
       </div>
-      <div className="
-      ">
+      <div
+        className="
+      "
+      >
         <div className="new-plan-card-content-top">
           <div className="new-card-content-top-title">
             <p>{props.data.name}</p>
           </div>
           <div className="new-card-content-top-subtitle">
             <label>Member Id : </label>
-            <p> {props.data.memberId}</p>
+            <p> {props.data.id}</p>
           </div>
         </div>
         <div className="new-plan-card-content-bottom">
-        <div className="new-plan-card-content-bottom-label">
-            <label>Gender :   </label>
+          <div className="new-plan-card-content-bottom-label">
+            <label>Gender : </label>
             <p>{props.data.gender}</p>
           </div>
           <div className="new-plan-card-content-bottom-label">
-            <label>Plan Type  :   </label>
+            <label>Plan Type : </label>
             <p>{props.data.planType}</p>
           </div>
-          
+
           <div className="new-plan-card-content-bottom-label">
-            <label>Valid From:   </label>
+            <label>Valid From: </label>
             <p>{props.data.validFrom}</p>
           </div>
           <div className="new-plan-card-content-bottom-label">
-            <label>Valid Upto:   </label>
+            <label>Valid Upto: </label>
             <p>{props.data.validTo}</p>
           </div>
         </div>

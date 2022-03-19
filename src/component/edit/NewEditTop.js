@@ -6,26 +6,26 @@ function NewEditTop() {
   const memberData = [
     {
       name: profile.name,
-      bgc: "#F8FFE9"
+      bgc: "#F8FFE9",
     },
     {
       name: "Sarthak Kapoor",
-      bgc: "#F2F1FF"
+      bgc: "#F2F1FF",
     },
     {
       name: "Jayati Kapoor",
-      bgc: "#FEEEEF"
+      bgc: "#FEEEEF",
     },
     {
       name: "Sameer Kapoor",
-      bgc: "#FFF9E9"
+      bgc: "#FFF9E9",
     },
   ];
 
   return (
     <div>
       <div className="new-booking-top-container edit">
-        <div className="booking-top-container-title">
+        <div className="booking-top-container-title" style={{ height: `7vh` }}>
           <p>Your Profile</p>
         </div>
         <div className="booking-top-container-content">
@@ -38,6 +38,7 @@ function NewEditTop() {
             src="https://dentalforhome.s3.amazonaws.com/images/character1.svg"
             style={{ height: `110px`, width: `110px` }}
             className="profile-image-inner"
+            alt="Coludn't Load"
           />
         </div>
         <div className="new-edit-top-content">
@@ -67,28 +68,23 @@ function NewEditTop() {
             <div className="new-edit-top-right-title">
               <p>Members</p>
             </div>
-            {/* <div className="new-edit-top-right-name">
-              <p>{profile.name} (you)</p>
-            </div>
-            <div className="new-edit-top-right-name">
-              <p>Sarthak Kapoor</p>
-            </div>
-            <div className="new-edit-top-right-name">
-              <p>Jayati Kapoor</p>
-            </div>
-            <div className="new-edit-top-right-name">
-              <p>Sameer Kapoor</p>
-            </div> */}
-            {memberData.map((data) => (
-              <div className="new-edit-top-right-name" style={{backgroundColor:`${data.bgc}`}}>
+
+            {memberData.map((data, key) => (
+              <div
+                key={key}
+                className="new-edit-top-right-name"
+                style={{ backgroundColor: `${data.bgc}` }}
+              >
                 <p>{data.name}</p>
               </div>
             ))}
             {memberData.length < 4 ? (
-              <div className="new-edit-top-right-name" >
+              <div className="new-edit-top-right-name">
                 <p>Add More (+)</p>
               </div>
-            ) : ""}
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>

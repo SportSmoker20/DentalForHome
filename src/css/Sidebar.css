@@ -2,7 +2,7 @@
   background-color: #060b26;
   height: 80px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -31,7 +31,7 @@
 
 .nav-text {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   /* padding: 2px 0px 2px 0px; */
   list-style: none;
@@ -40,7 +40,7 @@
 
 .nav-text a {
   text-decoration: none;
-  color: rgb(4,64,132);
+  color: rgb(4, 64, 132);
   font-size: 15px;
   width: 95%;
   height: 100%;
@@ -49,8 +49,8 @@
   padding: 0 20px;
   border-radius: 4px;
 }
-.fade-1{
-  color: rgb(4,64,132);
+.fade-1 {
+  color: rgb(4, 64, 132);
 }
 .nav-text a:hover {
   background-color: rgb(146, 191, 241);
@@ -71,7 +71,7 @@
   width: 100%;
   height: 80px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -84,13 +84,13 @@ span {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 40vh; 
+  height: 40vh;
   margin-right: 20px;
-  color: rgb(4,64,132);
+  color: rgb(4, 64, 132);
   padding-bottom: 25px;
 }
 .sidebar-dental {
-font-size: 22px;
+  font-size: 22px;
 }
 .sidebar-profile-edit {
   display: flex;
@@ -99,63 +99,61 @@ font-size: 22px;
   align-items: center;
   height: 29px;
   width: 153px;
-text-decoration: none;
-font-size: 12px;
-font-weight: 500;
-color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
 }
 
 .profile-image {
   height: 105px;
   width: 105px;
   border-radius: 100px;
-  background-color: rgb(213,213,213);
+  background-color: rgb(213, 213, 213);
   display: flex;
   justify-content: center;
   box-shadow: 0 1px 5px rgb(0 0 0 / 0.6);
   /* margin-top: 25px; */
 }
 .profile-image-inner {
-
-height: 90px;
-width: 90px;
+  height: 90px;
+  width: 90px;
 }
 
-.sidebar-profile-edit{
-display: flex;
-flex-direction: row;
-background-color: rgb(4,64,132);
-padding: 0 15px 0  15px;
-border-radius: 5px;
+.sidebar-profile-edit {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(4, 64, 132);
+  padding: 0 15px 0 15px;
+  border-radius: 5px;
 }
 
 .sidebar-profile-dental {
-font-weight: bold;
+  font-weight: bold;
 }
 
 .sidebar-container {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.sidebar-img{
-position: fixed;
-bottom: 0;
-height: 84px;
-width: 98px;
-margin: 1px 0 10px 82px;
-box-shadow: 0 0px 20px rgb(0 0 0 / 0.6);
-border-radius: 20px;
-z-index: 2;
+.sidebar-img {
+  position: fixed;
+  bottom: 0;
+  height: 84px;
+  width: 98px;
+  margin: 1px 0 10px 82px;
+  box-shadow: 0 0px 20px rgb(0 0 0 / 0.6);
+  border-radius: 20px;
+  z-index: 2;
 }
 @media screen and (max-width: 800px) {
-.nav-menu {
-  display: none;
-}
-.sidebar-img{
-
-  display: none;
-}
-.sidebar-profile{
-  width: 100%;
-}
+  .nav-menu {
+    display: none;
+  }
+  .sidebar-img {
+    display: none;
+  }
+  .sidebar-profile {
+    width: 100%;
+  }
 }

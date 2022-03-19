@@ -6,9 +6,9 @@ export default styled.div`
   align-items: center;
   height: 4.5vh;
   width: 20vw;
-  color: rgb(245,114,118);
+  color: rgb(245, 114, 118);
   font-weight: bold;
   margin: 6px;
   font-size: 15px;
-//   padding: 10px
+  //   padding: 10px
 `;

@@ -18,14 +18,26 @@ function ServiceCard(props) {
       >
         <img
           src={props.content.img}
+          alt="Coludn't Load"
           style={{ height: `70px`, width: `70px` }}
         />
         <div className="service-card-text">
-          <p className="service-card-text-inner">{props.content.text}</p>4
           {props.content.text === "Patients" ||
           props.content.text === "Services" ||
           props.content.text === "Hours" ? (
-            ""
+            <p className="service-card-text-inner">{props.content.count}</p>
+          ) : (
+            <p className="service-card-text-inner">{props.content.text}</p>
+          )}
+          {props.content.text === "Patients" ||
+          props.content.text === "Services" ||
+          props.content.text === "Hours" ? (
+            <p
+              className="service-card-text-inner"
+              style={{ color: `${props.content.color}` }}
+            >
+              {props.content.text}
+            </p>
           ) : (
             <p
               className="service-card-text-inner"

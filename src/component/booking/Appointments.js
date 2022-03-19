@@ -73,13 +73,15 @@ function Appointments() {
               </div>
             </th>
           </tr>
-          {arr.map((data) => (
-            // return (
-            // <div className="appointment-row-1">
-            <tr className="appointment-row">
+          {arr.map((data, key) => (
+            <tr className="appointment-row" key={key}>
               <td>
                 <div className="table-name">
-                  <img src='https://dentalforhome.s3.amazonaws.com/images/character1.svg' className="table-image" />
+                  <img
+                    src="https://dentalforhome.s3.amazonaws.com/images/character1.svg"
+                    alt="Coludn't Load"
+                    className="table-image"
+                  />
                   {data.name}
                 </div>
               </td>
@@ -93,8 +95,6 @@ function Appointments() {
                 <BsThreeDots style={{ height: `25px`, width: `25px` }} />
               </td>
             </tr>
-            // </div>
-            // );
           ))}
         </table>
       </div>

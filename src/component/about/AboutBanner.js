@@ -4,7 +4,10 @@ function AboutBanner() {
   return (
     <div className="about-banner-container">
       <div className="about-top">
-        <img src='https://dentalforhome.s3.amazonaws.com/images/logoMain.png' alt="Couldn't Load" />
+        <img
+          src="https://dentalforhome.s3.amazonaws.com/images/logoMain.png"
+          alt="Couldn't Load"
+        />
       </div>
       <div className="about-bottom">
         <div className="about-bottom-left">
@@ -23,7 +26,7 @@ function AboutBanner() {
           </div>
         </div>
         <div className="about-bottom-right">
-          <img src='https://dentalforhome.s3.amazonaws.com/images/aboutWhoAre.PNG' />
+          <img src="https://dentalforhome.s3.amazonaws.com/images/aboutWhoAre.PNG" />
         </div>
       </div>
     </div>

@@ -1,29 +1,22 @@
-import React from 'react'
-import { Navigate } from 'react-router-dom'
-import Banner from '../dashboard/Banner'
-import Navbar from '../dashboard/Navbar'
-import Sidebar from '../sidebar/Sidebar'
-import EditProfile from './EditProfile'
+import React from "react";
+import { Navigate } from "react-router-dom";
+import Banner from "../dashboard/Banner";
+import Navbar from "../dashboard/Navbar";
+import Sidebar from "../sidebar/Sidebar";
+import EditProfile from "./EditProfile";
 
 function Edit(props) {
-  if(props.subscribedLoggedIn){
+  if (props.subscribedLoggedIn) {
     return (
       <div>
-          <Sidebar />
-          <Navbar />
+        <Sidebar />
+        <Navbar />
         <EditProfile />
-  
       </div>
-    )
+    );
   } else {
-    return(
-      <Navigate to="/auth/login" />
-    )
+    return <Navigate to="/auth/login" />;
   }
-
-    
-
-  
 }
 
-export default Edit
+export default Edit;

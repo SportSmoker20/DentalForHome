@@ -4,15 +4,26 @@
   margin-top: 3vh;
 }
 .new-booking-top-container {
-  width: max-content;
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+.new-booking-main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.navbar-icon.icon-disable {
+  float: right;
+  margin: 0;
+  padding: 0;
+  /* margin-top: 20px; */
 }
 .booking-top-container-title {
   font-size: 18px;
   font-weight: bold;
   color: rgb(9, 9, 9);
-  height: 3vh;
+  height: 5vh;
 }
 .booking-top-container-content {
   font-weight: 400;
@@ -146,6 +157,7 @@
   color: white;
   font-weight: 400;
   font-size: 14;
+  cursor: pointer;
 }
 .new-time-div {
   padding: 15px 5px 15px 5px;
@@ -172,6 +184,7 @@
   margin: 10px;
   border-radius: 12px;
 }
+
 .new-booking-icon {
   display: flex;
   flex-direction: row;
@@ -323,6 +336,9 @@ tbody > td {
   background-color: #044066;
   cursor: pointer;
 }
+.table-join.start {
+  width: 7vw;
+}
 
 .react-datepicker {
   background-color: rgb(33, 169, 255);
@@ -375,51 +391,50 @@ tbody > td {
 h1 {
   margin-bottom: -30px;
 }
-.new-booking-book{
+.new-booking-book {
   font-size: 15px;
-width: 60%;
+  width: 60%;
 }
-.no-appointment{
+.no-appointment {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: -50px;
 }
-.booking-top-container-content.edit{
-margin-bottom: 20px;
+.booking-top-container-content.edit {
+  margin-bottom: 20px;
 }
-.ReactModal__Overlay--after-open{
+.ReactModal__Overlay--after-open {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.ReactModal__Content--after-open{
-padding: 40px;
+.ReactModal__Content--after-open {
+  padding: 40px;
   height: 320px;
   width: 80vw;
 }
-.modal-container-content{
+.modal-container-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.booking-top-container-close{
+.booking-top-container-close {
   padding: 20px;
   cursor: pointer;
 }
-.react-datepicker__day--selected{
+.react-datepicker__day--selected {
   background-color: rgb(187, 247, 255);
   color: #044066;
 }
 
-.react-datepicker{
+.react-datepicker {
   border: none;
   box-shadow: 0px 1px 5px rgb(0 0 0 / 0.4);
   /* border-radius: 10px; */
-
 }
 .react-datepicker__header {
   border-bottom: none;
@@ -443,6 +458,12 @@ padding: 40px;
   .new-booking-top-bottom {
     margin-left: -40px;
   }
+  .new-booking-book {
+    width: 15vw;
+  }
+  .new-booking-select-option {
+    width: 33%;
+  }
 }
 @media screen and (max-width: 1000px) {
   .new-booking-top {
@@ -451,7 +472,7 @@ padding: 40px;
     flex-direction: column;
     /* max-width: 80%; */
   }
-  .no-appointment{
+  .no-appointment {
     /* z-index: 30;
     margin-top: -20px; */
     position: relative;
@@ -495,7 +516,11 @@ padding: 40px;
     width: 40vw;
     margin-left: -20px;
   }
+  .table-join.start {
+    width: 10vw;
+  }
 }
+
 @media screen and (max-width: 920px) {
   .new-booking-select {
     /* transform: scale(0.95); */
@@ -510,12 +535,15 @@ padding: 40px;
     /* transform: scale(0.95); */
     margin-left: -20px;
   }
-  .zigzag{
+  .zigzag {
     margin-left: -40px;
     width: 75vw;
   }
 }
 @media screen and (max-width: 800px) {
+  .navbar-icon.icon-disable {
+    display: none;
+  }
   h1 {
     margin-bottom: -30px;
   }
@@ -595,6 +623,9 @@ padding: 40px;
     /* margin-left: -6vw; */
     margin-bottom: -30px;
   }
+  .table-join.start {
+    width: 12vw;
+  }
 }
 @media screen and (max-width: 570px) {
   .new-booking-top {
@@ -616,6 +647,7 @@ padding: 40px;
   }
   .new-booking-bottom {
     flex-direction: column;
+    margin-top: -10px;
   }
   .new-booking-time {
     width: 100vw;
@@ -623,11 +655,14 @@ padding: 40px;
   .new-booking-icon-container {
     width: 100vw;
   }
+  .table-join.start {
+    width: 17vw;
+  }
 }
 @media screen and (max-width: 400px) {
   .new-booking-select-option {
-    min-width: 96vw;
-    margin-left: 15px;
+    min-width: 98vw;
+    margin-left: 10px;
   }
   .new-booking-time {
     width: 110vw;
@@ -638,6 +673,9 @@ padding: 40px;
   .zigzag {
     /* margin-left: -19vw; */
     width: 110vw;
+  }
+  .table-join.start {
+    width: 22vw;
   }
 }
 

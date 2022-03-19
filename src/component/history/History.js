@@ -18,41 +18,40 @@ function History() {
 
     window.addEventListener("resize", handleResize);
   });
-  const[upcoming,setUpcoming] = useState([])
-  const[past,setPast] = useState([])
+  const [upcoming, setUpcoming] = useState([]);
+  const [past, setPast] = useState([]);
   const userData = JSON.parse(localStorage.getItem("testObject"));
 
-  const[refresh,setRefresh] = useState(false)
-
-  useEffect(async()=>{
-   await axios.get('https://homedentist.in/api/appointment/'+ userData.id).then((res, err) => {
-      if (err) {
-        console.log(err);
-      } else {
-        // console.log(res.data[0])
-        res.data.map((dat)=>{
-          if(dat.status === "completed"){
-            setPast(past => [...past, dat]);
+  useEffect(() => {
+    async function fetchData() {
+      await axios
+        .get(process.env.REACT_APP_BACKEND + "/api/appointment/" + userData.id)
+        .then((res, err) => {
+          if (err) {
+            console.log(err);
           } else {
-            setUpcoming(upcoming => [...upcoming, dat]);
-          } 
-        })
-      }
-
-    })
-    // setRefresh(false)
-  },[])
+            res.data.map((data, key) => {
+              if (data.status === "completed") {
+                return setPast((past) => [...past, data]);
+              } else {
+                return setUpcoming((upcoming) => [...upcoming, data]);
+              }
+            });
+          }
+        });
+    }
+    fetchData();
+  }, [userData.id]);
 
   return (
     <div>
       {width > 800 ? <Sidebar /> : <Navbar />}
       <HistoryTop />
       <div className="history-container">
-        
         <HistoryCount />
-        <NewBookingSelect setUpcoming={setUpcoming} setPast={setPast}/>
-        <NewBookingUpcoming upcoming={upcoming}/>
-        <NewBookingPast past={past}/>
+        <NewBookingSelect setUpcoming={setUpcoming} setPast={setPast} />
+        <NewBookingUpcoming upcoming={upcoming} />
+        <NewBookingPast past={past} />
       </div>
     </div>
   );

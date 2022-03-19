@@ -3,40 +3,7 @@ import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 import { HiLocationMarker } from "react-icons/hi";
 import { IoIosCall, IoMdMail } from "react-icons/io";
-import Faq from "react-faq-component";
-import '../../css/Contact.css'
-const data = {
-  rows: [
-    {
-      title: "How do I contact Dental for Home for any queries?",
-      content: `To contact us, you can either complete the form in the Contact Us section or you can call at our toll-free number. It’s a free service!`,
-    },
-    {
-      title: "What is your office address and phone number?",
-      content: "Currently our office is located in \n phone number: 0123456789",
-    },
-    {
-      title: "In which location do Dental for Home serves?",
-      content: `We are already serving 19 locations in Delhi NCR and soon be expanding our facilities to other places as well.`,
-    },
-
-    {
-      title: "What are your hours of operation?",
-      content: `Our website is open 24 hours a day, 7 days a week. Call Centre support is available from Monday to Saturday, 08:30 am to 09:00 pm IST and on Sunday's from 09:00 am - 05:00 pm IST.`,
-    }
-  ],
-};
-const styles = {
-  titleTextColor: "grey",
-  rowTitleColor: "rgb(81, 82, 82)",
-  rowContentColor: "rgb(184, 177, 177)",
-  arrowColor: "rgb(4,64,102)",
-};
-const config = {
-  animate: true,
-  arrowColor: "rgb(4,64,102)",
-  tabFocus: true,
-};
+import "../../css/Contact.css";
 
 function ContactMain() {
   return (

@@ -4,7 +4,7 @@ function AboutWhat() {
   return (
     <div className="about-what-container">
       <div className="about-what-bottom-left">
-        <img src='https://dentalforhome.s3.amazonaws.com/images/aboutWhoAre2.PNG' />
+        <img src="https://dentalforhome.s3.amazonaws.com/images/aboutWhoAre2.PNG" alt="Couldn't Load" />
       </div>
       <div className="about-what-bottom-right">
         <div className="about-what-bottom-left-title">

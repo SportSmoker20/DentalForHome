@@ -1,35 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 import Banner from "./Banner";
-import DashBoardFooter from "./DashBoardFooter";
 import DashBoardOptions from "./DashBoardOptions";
 import Navbar from "./Navbar";
 import Sidebar from "../sidebar/Sidebar";
 import { Navigate } from "react-router-dom";
-import axios from "axios";
-import { UserContext } from "../../App";
 import DentistDashBoard from "./DentistDashBoard";
 
 function DashBoard() {
-  const { setSubscribedLoggedIn, subscribedLoggedIn } = useContext(UserContext);
-  const [data,setData] = useState([]);
-  useEffect(async () => {
-    setData(JSON.parse(localStorage.getItem("testObject")));
-    if (data !== null) {
-      await axios
-        .get("https://homedentist.in/api/user/" + data.mobile)
-        .then((res, err) => {
-          if (!err) {
-            if (res.data[0].subscriber !== 0) {
-              console.log("ff");
-              setSubscribedLoggedIn(true);
-            }
-            // else{
-            //   setSuperLoggedIn()
-            // }
-          }
-        });
-    }
-  }, []);
+  const data = JSON.parse(localStorage.getItem("testObject"));
+
   const [width, setWidth] = useState(window.innerWidth);
   React.useEffect(() => {
     function handleResize() {
@@ -38,33 +17,34 @@ function DashBoard() {
 
     window.addEventListener("resize", handleResize);
   });
-  if (subscribedLoggedIn) {
-    return (
-      <div>
-        
-        <div className="dashboard-main">
-          {data.type === "admin" ? (
-            <div>
-              {width>800 ? <Sidebar /> : <Navbar />}
-               <DentistDashBoard />
-            </div>
-          ) : (
-            <div>
-              <Sidebar />
-              <Navbar />
-              <Banner />
-              <DashBoardOptions />
-             
-            </div>
-          )}
 
-          {/* <DashBoardFooter /> */}
-        </div>
-      </div>
-    );
-  } else {
+  if (data === null) {
     return <Navigate to="/auth/login" />;
+  } else {
+    if (data.subscriber === 0 && data.type === "user") {
+      return <Navigate to="/pricing" />;
+    }
   }
+
+  return (
+    <div>
+      <div className="dashboard-main">
+        {data.type === "admin" ? (
+          <div>
+            {width > 800 ? <Sidebar /> : <Navbar />}
+            <DentistDashBoard />
+          </div>
+        ) : (
+          <div>
+            <Sidebar />
+            <Navbar />
+            <Banner />
+            <DashBoardOptions />
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
 
 export default DashBoard;

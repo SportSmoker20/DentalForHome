@@ -10,9 +10,8 @@ function ContactUs() {
     <div className="contact-us-container">
       <HomeNavbar tabName={"contact"} />
       <ContactMain />
-      <ContactTeam  />
+      <ContactTeam />
       <HomeFAQ />
-      
       <HomeFooter />
     </div>
   );

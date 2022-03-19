@@ -45,7 +45,6 @@
   padding: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
-
 }
 .silderimg-container {
   height: 40vh;
@@ -80,7 +79,7 @@
 .option {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding: 30px 50px 30px 30px;
   margin: 10px 10px;
@@ -157,16 +156,15 @@
   margin-left: 50px;
   margin-right: 35px;
 }
-.option-main-sub{
+.option-main-sub {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  
 }
-.option-bottom-sub{
+.option-bottom-sub {
   background-color: rgb(221, 183, 183);
   margin: 10px;
   flex: 1;
@@ -181,13 +179,13 @@
   padding-bottom: 10px;
 }
 
-.service-main-card.option-card{
+.service-main-card.option-card {
   justify-content: space-around;
   width: 100%;
   /* margin-left: -30px; */
 }
 
-.service-card-container.option-card{
+.service-card-container.option-card {
   height: 200px;
   /* min-width: 20vw;
   max-width: 20vw; */
@@ -195,7 +193,7 @@
 /* ul{
   margin-top: -40px;
 } */
-.admin-dash{
+.admin-dash {
   margin-left: 300px;
 }
 
@@ -218,7 +216,7 @@
   .booking {
     width: 20vw;
   }
-  .service-card-container.option-card{
+  .service-card-container.option-card {
     min-width: 19vw;
     /* max-width: 20vw; */
   }
@@ -229,7 +227,7 @@
     flex-direction: column;
     /* margin-right: 5px; */
   }
-  .option-bottom-sub{
+  .option-bottom-sub {
     min-width: 24vw;
     max-width: 30vw;
   }
@@ -246,21 +244,19 @@
     width: 20vw;
   }
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
   .sliderimg {
     height: 40vh;
   }
   .silderimg-container {
     height: 40vh;
   }
-  .banner-main{
-    
+  .banner-main {
     height: 40vh;
   }
 }
-@media screen and (max-width: 920px){
-  
-  .banner-main{
+@media screen and (max-width: 920px) {
+  .banner-main {
     height: 40vh;
     transform: scale(0.9);
     /* width: 20%; */
@@ -268,16 +264,15 @@
   }
 }
 @media screen and (max-width: 800px) {
-  .navbar-icon{
+  .navbar-icon {
     padding: 10px;
     padding-bottom: 10px;
     padding-top: 10px;
-    
   }
   .navbar-icon-inner {
     margin-left: -10px;
   }
-  .admin-dash{
+  .admin-dash {
     margin-left: 15px;
   }
   .sliderimg {
@@ -312,11 +307,10 @@
   /* .sliderimg {
     height: 225px;
   } */
-  .service-card-container.option-card{
+  .service-card-container.option-card {
     min-width: 30vw;
     /* max-width: 20vw; */
   }
-  
 }
 @media screen and (max-width: 800px) {
   .options-main-1 {
@@ -329,8 +323,7 @@
     width: 84vw;
   }
   .download {
-    width:84vw;
-    
+    width: 84vw;
   }
   .prescription {
     width: 84vw;
@@ -368,31 +361,31 @@
   height: 100%;
   transition: 0.1s; */
   background-color: rgb(248, 248, 248);
-    width: 90vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    transition: 850ms;
+  width: 90vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
 }
 .nav-collapse-main.active {
   width: 229px;
   left: 0;
-    transition: 350ms;
+  transition: 350ms;
 }
-@media screen and (max-width: 650px){
-.service-card-container.option-card{
-  min-width: 30vw;
-  /* max-width: 20vw; */
+@media screen and (max-width: 650px) {
+  .service-card-container.option-card {
+    min-width: 30vw;
+    /* max-width: 20vw; */
+  }
 }
-}
-@media screen and (max-width: 590px){
-  .service-card-container.option-card{
-    min-width: 55vw;
+@media screen and (max-width: 590px) {
+  .service-card-container.option-card {
+    min-width: 59vw;
     /* margin: 7px; */
-    margin-bottom: -15px;
+    margin-bottom: -10px;
     margin-left: -40px;
     margin-right: -40px;
   }
@@ -412,21 +405,18 @@
     width: 80vw;
     margin-left: 5px;
   }
-  
-
 }
-@media screen and (max-width: 480px){
-  .banner-main{
+@media screen and (max-width: 480px) {
+  .banner-main {
+    height: 35vh;
+  }
+  .silderimg-container {
+    height: 35vh;
+  }
+  .sliderimg {
+    height: 35vh;
+  }
 
-    height: 35vh;
-  }
-  .silderimg-container{
-    height: 35vh;
-  }
-  .sliderimg{
-    height: 35vh;
-  }
-  
   .service {
     width: 70vw;
     margin-left: 5px;
@@ -444,25 +434,25 @@
     margin-left: 5px;
   }
 }
-@media screen and (max-width: 400px){
-  .service-card-container.option-card{
-    margin-bottom: 0px;
+@media screen and (max-width: 400px) {
+  .service-card-container.option-card {
+    margin-bottom: -22px;
   }
-  .banner-main{
+  .banner-main {
     /* margin-right: 1px;
     margin-left: 1px; */
     /* margin-left: -5px; */
     /* width: 112%; */
     height: 30vh;
   }
-  .silderimg-container{
+  .silderimg-container {
     height: 30vh;
   }
-  .sliderimg{
+  .sliderimg {
     height: 30vh;
   }
 }
-@media screen and (max-width: 350px){
+@media screen and (max-width: 350px) {
   .service {
     width: 65vw;
   }
@@ -477,12 +467,18 @@
   }
 }
 
-.dentist-dashboard-container{
+.dentist-dashboard-container {
   margin-left: 300px;
   margin-right: 30px;
   padding-top: 20px;
 }
-.dentist-dashboard-stat{
+.dentist-dashboard-stat {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 18 px;
+}
+@media screen and (max-width: 800px) {
+  .dentist-dashboard-container {
+    margin-left: 20px;
+    padding-top: 58px;
+  }
 }

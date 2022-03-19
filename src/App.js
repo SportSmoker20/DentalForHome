@@ -1,9 +1,8 @@
-import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
 import "./css/Sample.css";
 import "./css/About.css";
 import "./css/Auth.css";
-import "./css/Booking.css";
 import "./css/Contact.css";
 import "./css/DashBoard.css";
 import "./css/Edit.css";
@@ -22,10 +21,7 @@ import Register from "./component/auth/Register";
 import UserRegister from "./component/auth/UserRegister";
 import DashBoard from "./component/dashboard/DashBoard";
 import MyPlan from "./component/plan/MyPlan";
-import Booking from "./component/booking/Booking";
-import Edit from "./component/edit/Edit";
 import Service from "./component/service/Service";
-import PricingMain from "./component/pricing/PricingMain";
 import Pricing from "./component/pricing/Pricing";
 import NewBooking from "./component/bookingNew/NewBooking";
 import NewEdit from "./component/edit/NewEdit";
@@ -41,12 +37,11 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [superLoggedIn, setSuperLoggedIn] = useState(false);
   const [subscribedLoggedIn, setSubscribedLoggedIn] = useState(false);
-
-  useEffect(async () => {
-    const data = JSON.parse(localStorage.getItem("testObject"));
-    if (data !== null) {
+  const data = JSON.parse(localStorage.getItem("testObject"));
+  useEffect(() => {
+    async function fetchData() {
       await axios
-        .get("https://homedentist.in/api/user/" + data.mobile)
+        .get(process.env.REACT_APP_BACKEND + "/api/user/" + data.mobile)
         .then((res, err) => {
           if (!err) {
             if (res.data[0].subscriber === 0) {
@@ -57,7 +52,22 @@ function App() {
           }
         });
     }
-  }, []);
+    function retrieveData() {
+      if(data!==null){
+        if (data.subscriber === 0) {
+          setSubscribedLoggedIn(true);
+        } else {
+          setSuperLoggedIn(true);
+        }
+      }
+      
+    }
+    if (data !== null) {
+      fetchData();
+    } else {
+      retrieveData();
+    }
+  }, [data]);
 
   return (
     <div className="app-main">
@@ -74,21 +84,24 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" exact element={<Home />} />
-            <Route path="/about" exact element={<About />} />
-            <Route path="/contactUs" exact element={<ContactUs />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/auth/login" element={<Login />} />
             <Route path="/appointment" element={<Register />} />
+            <Route path="/about" exact element={<About />} />
+            <Route path="/contactUs" exact element={<ContactUs />} />
             <Route path="/auth/register" element={<UserRegister />} />
+
             <Route path="/home" exact element={<DashBoard />} />
-            <Route path="/pricing" element={<Pricing />} />
             <Route path="/booking" element={<NewBooking />} />
-            <Route path="/adminBooking" element={<DentistBooking />} />
             <Route path="/edit" element={<NewEdit />} />
             <Route path="/serviceHistory" element={<History />} />
             <Route path="/service" element={<Service />} />
             <Route path="/myplan" element={<MyPlan />} />
-            <Route path="/patient" element={<Patient />} />
             <Route path="/history" element={<HistoryMain />} />
+
+            <Route path="/adminBooking" element={<DentistBooking />} />
+            <Route path="/patient" element={<Patient />} />
+
           </Routes>
         </Router>
       </UserContext.Provider>

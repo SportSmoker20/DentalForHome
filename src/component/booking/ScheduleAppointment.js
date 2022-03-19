@@ -7,9 +7,7 @@ function ScheduleAppointment() {
   return (
     <div className="schedule-main">
       <div>
-      <AppointmentCalender />
-      {/* <div className='calender-main'></div> */}
-      {/* <div className='time-main'></div> */}
+        <AppointmentCalender />
       </div>
       <div className="schedule-option-1">
         <div className="schedule-option">

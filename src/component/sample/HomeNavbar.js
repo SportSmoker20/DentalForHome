@@ -27,10 +27,13 @@ function HomeNavbar(props) {
         <div className="navbar-left">
           <div className="navbar-left-text">
             {/* <p>DENTAL FOR HOME</p> */}
-            <img
-              src="https://dentalforhome.s3.amazonaws.com/images/logoMain.png"
-              style={{ height: `100px`, width: `max-content` }}
-            />
+            <Link to={`/`} style={{ textDecoration: `none` }}>
+              <img
+                src="https://dentalforhome.s3.amazonaws.com/images/logoMain.png"
+                alt="Coludn't Load"
+                style={{ height: `100px`, width: `max-content` }}
+              />
+            </Link>
           </div>
         </div>
         <div className="navbar-center">
@@ -107,6 +110,7 @@ function HomeNavbar(props) {
             <div className="navbar-small-img">
               <img
                 src="https://dentalforhome.s3.amazonaws.com/images/logoMain.png"
+                alt="Coludn't Load"
                 style={{ height: `100px`, width: `max-content` }}
               />
             </div>
@@ -125,6 +129,7 @@ function HomeNavbar(props) {
               <div className="navbar-small-img">
                 <img
                   src="https://dentalforhome.s3.amazonaws.com/images/logoMain.png"
+                  alt="Coludn't Load"
                   style={{ height: `100px`, width: `max-content` }}
                 />
                 <ImCross onClick={showSidebar} className="navbar-img" />

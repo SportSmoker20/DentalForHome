@@ -144,11 +144,10 @@ function PricingMain() {
                   </p>
                 </div>
               </div>
-              
             </div>
             <div className="pricing-foot">
-                <p>Buy Now</p>
-              </div>
+              <p>Buy Now</p>
+            </div>
           </div>
           <div className="pbo" style={{ backgroundColor: `rgb(4, 64,102)` }}>
             <div className="pricing-offer">
@@ -160,7 +159,9 @@ function PricingMain() {
               </div>
               <div className="pricing-offer-price-text">
                 <p>
-                This is a one-year dental care subscription, for 4 family members, valid for time-period of one year. Our dentists will serve you at your home.
+                  This is a one-year dental care subscription, for 4 family
+                  members, valid for time-period of one year. Our dentists will
+                  serve you at your home.
                 </p>
               </div>
             </div>

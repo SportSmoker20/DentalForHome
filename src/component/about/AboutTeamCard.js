@@ -1,5 +1,4 @@
 import React from "react";
-import { BsLinkedin } from "react-icons/bs";
 import { HiLocationMarker } from "react-icons/hi";
 import { IoIosCall, IoMdMail } from "react-icons/io";
 
@@ -17,15 +16,29 @@ function AboutTeamCard(props) {
         <p>{props.data.office}</p>
       </div>
       <div className="team-card-role">
-       <div> <HiLocationMarker style={{height:`30px`,width:`26px`,color:`#044066`}}/></div>
+        <div>
+          {" "}
+          <HiLocationMarker
+            style={{ height: `30px`, width: `26px`, color: `#044066` }}
+          />
+        </div>
         <p>{props.data.address}</p>
       </div>
       <div className="team-card-role">
-        <div><IoIosCall style={{height:`30px`,width:`26px`,color:`#044066`}}/></div>
+        <div>
+          <IoIosCall
+            style={{ height: `30px`, width: `26px`, color: `#044066` }}
+          />
+        </div>
         <p>{props.data.mobile}</p>
       </div>
       <div className="team-card-role">
-       <div> <IoMdMail style={{height:`30px`,width:`26px`,color:`#044066`}} /></div>
+        <div>
+          {" "}
+          <IoMdMail
+            style={{ height: `30px`, width: `26px`, color: `#044066` }}
+          />
+        </div>
         <p>{props.data.email}</p>
       </div>
       <br />

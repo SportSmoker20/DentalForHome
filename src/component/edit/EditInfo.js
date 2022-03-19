@@ -8,8 +8,6 @@ function EditInfo() {
   const [state, setState] = useState();
   const [pincode, setPincode] = useState();
 
-  
-
   return (
     <div className="info-main">
       <div className="info-title">

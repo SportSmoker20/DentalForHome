@@ -10,56 +10,50 @@ function EditCard() {
   return (
     <div className="edit-card-main">
       <div className="edit-card-top">
-        <img src='https://dentalforhome.s3.amazonaws.com/images/character.svg' className="edit-card-image" />
+        <img
+          src="https://dentalforhome.s3.amazonaws.com/images/character.svg"
+          className="edit-card-image"
+        />
         <div className="edit-top-container">
           <div className="edit-top-text">Jesson George</div>
-          <HiOutlineDotsCircleHorizontal className="edit-top-icon"/>
+          <HiOutlineDotsCircleHorizontal className="edit-top-icon" />
         </div>
       </div>
       <div className="edit-card-bottom">
         <div className="edit-field">
           <div className="edit-field-inner">
             <p>Gender - </p>
-            <input style={{width:`70px`}} value={gender} onChange={(e) => setGender(e.target.value)} />
+            <input
+              style={{ width: `70px` }}
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+            />
           </div>
           <div className="edit-field-inner">
             <p>Date of Birth - </p>
-            <input style={{width:`80px`}} value={dob} onChange={(e) => setDob(e.target.value)} />
+            <input
+              style={{ width: `80px` }}
+              value={dob}
+              onChange={(e) => setDob(e.target.value)}
+            />
           </div>
           <div className="edit-field-inner">
             <p>E-Mail -</p>
-            <input style={{marginLeft:`-1px`,width:`150px`}} value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input
+              style={{ marginLeft: `-1px`, width: `150px` }}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className="edit-field-inner">
             <p>Phone - </p>
-            <input style={{width:`80px`}} value={phone} onChange={(e) => setPhone(e.target.value)} />
+            <input
+              style={{ width: `80px` }}
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
           </div>
         </div>
-        {/* <div className="edit-field-input">
-          <div  className="edit-input">
-          </div>
-         <div  className="edit-input"> </div>
-         <div  className="edit-input"> </div>
-         <div  className="edit-input"> </div>
-        </div> */}
-        {/* <table cellspacing="0">
-          <tr>
-            <td className="edit-table-td">Gender - </td>
-            <td><input value={gender} onChange={(e) => setGender(e.target.value)} /></td>
-          </tr>
-          <tr>
-          <td className="edit-table-td" >Date of Birth - </td>
-          <td><input value={dob} onChange={(e) => setDob(e.target.value)} /></td>
-          </tr>
-          <tr>
-            <td className="edit-table-td"><p>E-Mail - </p></td>
-            <td><input value={email} onChange={(e) => setEmail(e.target.value)} /></td>
-          </tr>
-          <tr>
-            <td className="edit-table-td"><p>Phone</p></td>
-            <td> <input value={phone} onChange={(e) => setPhone(e.target.value)} /></td>
-          </tr>
-        </table> */}
       </div>
     </div>
   );

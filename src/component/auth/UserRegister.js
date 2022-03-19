@@ -13,14 +13,12 @@ function UserRegister() {
 
   const [name, setName] = useState();
   const [email, setEmail] = useState();
-  console.log("hiii");
   const handleSubmit = () => {
     if (name === "" || email === "") {
       alert("Please Enter Details!!!");
     } else {
-      console.log(JSON.parse(localStorage.getItem("testObject"))[0]);
       axios
-        .put("https://homedentist.in/api/user", {
+        .put(process.env.REACT_APP_BACKEND + "/api/user", {
           name: name,
           mobile: JSON.parse(localStorage.getItem("testObject"))[0].mobile,
           email: email,
@@ -28,11 +26,9 @@ function UserRegister() {
         .then((res, err) => {
           if (!err) {
             if (res.data[0].subscriber === 0) {
-              console.log("1");
               setSubscribedLoggedIn(true);
               return <Navigate to="/home" />;
             } else {
-              console.log("2");
               setSuperLoggedIn(true);
               return <Navigate to="/pricing" />;
             }
@@ -51,6 +47,7 @@ function UserRegister() {
           <div>
             <img
               src="https://dentalforhome.s3.amazonaws.com/images/logoMain.png"
+              alt="Coludn't Load"
               style={{
                 height: `110px`,
                 width: `220px`,

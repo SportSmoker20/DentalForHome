@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../sidebar/Sidebar";
-import '../../css/NewBooking.css'
+import "../../css/NewBooking.css";
 import { Navigate } from "react-router-dom";
 import NewBookingTop from "./NewBookingTop";
 import NewBookingSelect from "./NewBookingSelect";
@@ -8,34 +8,41 @@ import NewBookingUpcoming from "./NewBookingUpcoming";
 import NewBookingPast from "./NewBookingPast";
 import Navbar from "../dashboard/Navbar";
 import axios from "axios";
-import { UserContext } from "../../App";
 
 function NewBooking() {
-  const  {  subscribedLoggedIn } = useContext(UserContext)
   const userData = JSON.parse(localStorage.getItem("testObject"));
 
-  const[upcoming,setUpcoming] = useState([])
-  const[past,setPast] = useState([])
-  const[refresh,setRefresh] = useState(false)
+  const [upcoming, setUpcoming] = useState([]);
+  const [past, setPast] = useState([]);
+  const [refresh, setRefresh] = useState(true);
 
-  useEffect(async()=>{
-   await axios.get('https://homedentist.in/api/appointment/user/'+ userData.id).then((res, err) => {
-      if (err) {
-        console.log(err);
-      } else {
-        // console.log(res)
-        res.data.map((data)=>{
-          if(data.status === "completed"){
-            setPast(past => [...past, data]);
+  useEffect(() => {
+    async function fetchData() {
+      await axios
+        .get(
+          process.env.REACT_APP_BACKEND + "/api/appointment/user/" + userData.id
+        )
+        .then((res, err) => {
+          if (err) {
+            console.log(err);
           } else {
-            setUpcoming(upcoming => [...upcoming, data]);
-          } 
-        })
-      }
+            setUpcoming([]);
+            res.data.map((data, key) => {
+              if (data.status === "completed") {
+                return setPast((past) => [...past, data]);
+              } else {
+                return setUpcoming((upcoming) => [...upcoming, data]);
+              }
+            });
+          }
+        });
+    }
 
-    })
-    setRefresh(false)
-  },[refresh])
+    if (refresh) {
+      fetchData();
+    }
+    setRefresh(false);
+  }, [refresh, userData.id]);
 
   const [width, setWidth] = useState(window.innerWidth);
   React.useEffect(() => {
@@ -46,25 +53,33 @@ function NewBooking() {
     window.addEventListener("resize", handleResize);
   });
 
-  if(subscribedLoggedIn){
-    return (
+  const data = JSON.parse(localStorage.getItem("testObject"));
+
+  if (data === null) {
+    return <Navigate to="/auth/login" />;
+  } else {
+    if (data.subscriber === 0) {
+      return <Navigate to="/pricing" />;
+    }
+  }
+
+  return (
+    <div>
+      {width > 800 ? <Sidebar /> : <Navbar />}
       <div className="new-booking-container">
-        {width>800 ? <Sidebar /> : <Navbar />}
-        {/* <Sidebar /> */}
         <NewBookingTop />
-        <NewBookingSelect setUpcoming={setUpcoming} setPast={setPast}/>
-        <NewBookingUpcoming upcoming={upcoming}/>
-        <NewBookingPast past={past}/>
+        <NewBookingSelect
+          setUpcoming={setUpcoming}
+          setPast={setPast}
+          setRefresh={setRefresh}
+          refresh={refresh}
+        />
+        <NewBookingUpcoming upcoming={upcoming} />
+        <NewBookingPast past={past} />
         <br />
       </div>
-    );
-  } 
-  else {
-    return(
-      <Navigate to="/auth/login" />
-    )
-  }
-  
+    </div>
+  );
 }
 
 export default NewBooking;
