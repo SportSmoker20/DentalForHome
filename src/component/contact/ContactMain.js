@@ -50,7 +50,7 @@ function ContactMain() {
                     color: `rgb(4,64,102)`,
                   }}
                 />
-                <p>Delhi, India</p>
+                <p>D-59 Sector 48, Noida-201 301, Uttar Pradesh, India</p>
               </div>
               <div className="contact-access">
                 <IoIosCall
@@ -60,7 +60,10 @@ function ContactMain() {
                     color: `rgb(4,64,102)`,
                   }}
                 />
-                <p>+91 12345 12345</p>
+                <div className="contact-access-p">
+                <p>+91 98110 22853</p>
+                <p>+91 120 4559296</p>
+                </div>
               </div>
               <div className="contact-access">
                 <IoMdMail

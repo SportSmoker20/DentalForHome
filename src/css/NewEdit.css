@@ -3,6 +3,7 @@
   flex-direction: row;
   height: max-content;
   margin-left: 300px;
+  
 }
 .new-booking-top-container.edit {
   margin-left: 300px;
@@ -44,16 +45,17 @@
 }
 .new-edit-top-mid-email > p {
   margin-top: 0;
-  height: 5px;
+  height: 14px;
 }
 .new-edit-top-mid-mob > p {
-  height: 1px;
+  margin-top: 0;
+  height: 10px;
 }
 .new-edit-top-mid {
-  /* margin-left: 5vw; */
+  margin-left: 10px;
 }
 .new-edit-top-right {
-  /* margin-left: 15vw; */
+  margin-left: 1vw;
 }
 .new-edit-top-content {
   display: flex;
@@ -83,15 +85,20 @@
   margin-bottom: -20px;
 }
 .new-edit-top-right-name {
-  width: 23vw;
+  cursor: pointer;
+  flex: 1;
+  width: 30vw;
+  min-width: 21vw;
+  max-width: 30vw;
   background-color: #f2f1ff;
   height: 41px;
-  /* margin-top: -10px; */
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 3px;
   border-radius: 10px;
+  margin-right: 10px;
 }
 .new-edit-top-right-name > p {
   margin-left: 10px;
@@ -112,6 +119,7 @@
   margin-right: 30px;
 }
 .new-edit-bottom-container-detail {
+
   margin-right: 30px;
   display: flex;
   flex-direction: row;
@@ -254,3 +262,66 @@
     margin-left: 15px;
   }
 }
+
+.new-edit-top-right-content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* .member-personal{
+  margin-left: 300px;
+} */
+.member-personal-content{
+  display: flex;
+  
+  flex-direction: row;
+
+}
+.member-personal-content-name{
+  width: 72vw;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f3f6fa;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #6b6d68;
+  font-size: 15px;
+}
+.member-personal-content-detail{
+  width: 34.5vw;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f3f6fa;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #6b6d68;
+  font-size: 15px;
+}
+.member-personal-content-detail > label{
+  width: fit-content;
+}
+.member-personal-content-detail > input {
+  outline: none;
+  border: none;
+  background-color: #f3f6fa;
+  width: 20vw;
+  color: #6b6d68;
+  font-size: 15px;
+}
+.member-personal-content-name > input {
+  outline: none;
+  border: none;
+  background-color: #f3f6fa;
+  width: 30vw;
+  color: #6b6d68;
+  font-size: 15px;
+}
+

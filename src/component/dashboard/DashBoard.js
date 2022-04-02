@@ -19,9 +19,12 @@ function DashBoard() {
   });
 
   if (data === null) {
+    console.log('1')
     return <Navigate to="/auth/login" />;
+    
   } else {
     if (data.subscriber === 0 && data.type === "user") {
+      console.log('2')
       return <Navigate to="/pricing" />;
     }
   }
@@ -31,12 +34,12 @@ function DashBoard() {
       <div className="dashboard-main">
         {data.type === "admin" ? (
           <div>
-            {width > 800 ? <Sidebar /> : <Navbar />}
+            {width > 800 ? <Sidebar tab='Dashboard'/> : <Navbar />}
             <DentistDashBoard />
           </div>
         ) : (
           <div>
-            <Sidebar />
+            <Sidebar tab='Dashboard'/>
             <Navbar />
             <Banner />
             <DashBoardOptions />

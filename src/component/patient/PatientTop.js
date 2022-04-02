@@ -31,8 +31,8 @@ function PatientTop() {
           </div>
         </div>
         <div className="navbar-icon icon-disable">
-          <RiMessage2Fill className="navbar-icon-inner" />
-          <FaBell className="navbar-icon-inner" />
+          {/* <RiMessage2Fill className="navbar-icon-inner" />
+          <FaBell className="navbar-icon-inner" /> */}
           <FiLogOut className="navbar-icon-inner" onClick={logout} />
         </div>
       </div>

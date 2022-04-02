@@ -26,10 +26,12 @@ import Pricing from "./component/pricing/Pricing";
 import NewBooking from "./component/bookingNew/NewBooking";
 import NewEdit from "./component/edit/NewEdit";
 import axios from "axios";
-import History from "./component/history/History";
+import History from "./component/serviceRecord/History";
 import Patient from "./component/patient/Patient";
 import HistoryMain from "./component/history/HistoryMain";
 import DentistBooking from "./component/bookingNew/DentistBooking";
+import PatientProfile from "./component/patientProfile/PatientProfile";
+import Logout from "./component/auth/Logout";
 
 export const UserContext = createContext();
 
@@ -37,15 +39,15 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [superLoggedIn, setSuperLoggedIn] = useState(false);
   const [subscribedLoggedIn, setSubscribedLoggedIn] = useState(false);
-  const data = JSON.parse(localStorage.getItem("testObject"));
+  const [profileData,setProfileData] = useState(JSON.parse(localStorage.getItem("testObject")));
   useEffect(() => {
     async function fetchData() {
       await axios
-        .get(process.env.REACT_APP_BACKEND + "/api/user/" + data.mobile)
+        .get(process.env.REACT_APP_BACKEND + "/api/user/" + profileData.mobile)
         .then((res, err) => {
           if (!err) {
             if (res.data[0].subscriber === 0) {
-              setSubscribedLoggedIn(true);
+              // setSubscribedLoggedIn(true);
             } else {
               setSuperLoggedIn(true);
             }
@@ -53,8 +55,8 @@ function App() {
         });
     }
     function retrieveData() {
-      if(data!==null){
-        if (data.subscriber === 0) {
+      if(profileData!==null){
+        if (profileData.subscriber === 0 && profileData.email !== '') {
           setSubscribedLoggedIn(true);
         } else {
           setSuperLoggedIn(true);
@@ -62,12 +64,12 @@ function App() {
       }
       
     }
-    if (data !== null) {
+    if (profileData !== null) {
       fetchData();
     } else {
       retrieveData();
     }
-  }, [data]);
+  }, [profileData]);
 
   return (
     <div className="app-main">
@@ -79,6 +81,8 @@ function App() {
           setLoggedIn: setLoggedIn,
           setSuperLoggedIn: setSuperLoggedIn,
           setSubscribedLoggedIn: setSubscribedLoggedIn,
+          profileData: profileData,
+          setProfileData: setProfileData
         }}
       >
         <Router>
@@ -98,8 +102,10 @@ function App() {
             <Route path="/service" element={<Service />} />
             <Route path="/myplan" element={<MyPlan />} />
             <Route path="/history" element={<HistoryMain />} />
+            <Route path="/support" element={<Logout />} />
 
             <Route path="/adminBooking" element={<DentistBooking />} />
+            <Route path="/patientProfile" element={<PatientProfile />} />
             <Route path="/patient" element={<Patient />} />
 
           </Routes>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../dashboard/Navbar";
+import PatientProfile from "../patientProfile/PatientProfile";
 import Sidebar from "../sidebar/Sidebar";
 import PatientCard from "./PatientCard";
 import PatientTop from "./PatientTop";
@@ -59,17 +60,24 @@ function Patient() {
     },
   ];
 
+  const[patient,setPatient] = useState('')
+
+
+  if(patient !== ''){
+    return <PatientProfile patient={patient}/>
+  } else {
   return (
     <div className="patient-container">
-      {width > 800 ? <Sidebar /> : <Navbar />}
+      {width > 800 ? <Sidebar tab='patientProfile'/> : <Navbar />}
       <PatientTop />
       <div className="patient-container-card">
         {patientData.map((data, key) => (
-          <PatientCard key={key} patient={data} />
+          
+          <PatientCard key={key} patient={data} setPatient={setPatient}/>
         ))}
       </div>
     </div>
   );
-}
+}}
 
 export default Patient;

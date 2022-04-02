@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../../css/Auth.css";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
@@ -6,8 +6,14 @@ import { Link, Navigate } from "react-router-dom";
 import OtpInput from "react-otp-input";
 import axios from "axios";
 import PhoneInput from "react-phone-number-input";
+import { UserContext } from '../../App.js'
+import ReactModal from "react-modal";
+import { BsCalendarCheck } from "react-icons/bs";
+
 
 function Login() {
+  const [showBookModal, setShowBookModal] = useState(false);
+  const  {  loggedIn,superLoggedIn,subscribedLoggedIn,setLoggedIn,setSuperLoggedIn,setSubscribedLoggedIn } = useContext(UserContext)
   const [otpSent, setOtpSent] = useState(false);
   let OTP = "";
   const [otp, setOtp] = useState();
@@ -39,6 +45,12 @@ function Login() {
     });
   };
 
+  const handleBookCloseModal = () => {
+    setShowBookModal(false);
+      // setSuperLoggedIn(true);
+  };
+
+
   const submitHandler = async () => {
     if ((OTP = otp)) {
       await axios
@@ -47,17 +59,23 @@ function Login() {
           if (err) {
             console.log(err);
           } else {
-            console.log(res);
-            if (res.data[0].email === "") {
-              const mobileNo = [
-                {
-                  mobile: mobile,
-                },
-              ];
-              localStorage.setItem("testObject", JSON.stringify(mobileNo));
+            console.log(res)
+            if (res.data.email === "" || res.data[0].email === "") {
+              
+              localStorage.setItem(
+                "testObject",
+                JSON.stringify({ mobile: mobile })
+              );
+              setLoggedIn(true);
               return <Navigate to="/auth/register" />;
             } else {
               localStorage.setItem("testObject", JSON.stringify(res.data[0]));
+              if (res.data[0].subscriber === 0) {
+                setShowBookModal(true)
+                // setSuperLoggedIn(true);
+              } else {
+                setSubscribedLoggedIn(true);
+              }
             }
           }
         });
@@ -67,16 +85,24 @@ function Login() {
   };
   if (data !== null) {
     if (data.subscriber === 0) {
-      return <Navigate to="/pricing" />;
+      
+      // return <Navigate to="/pricing" />;
     }
     if (data.subscriber === 1) {
       return <Navigate to="/home" />;
     }
   }
-
+  if (subscribedLoggedIn) {
+    return <Navigate to="/home" />;
+  } else if (superLoggedIn) {
+    return <Navigate to="/pricing" />;
+  } else if (loggedIn) {
+    return <Navigate to="/auth/register" />;
+  } else {
   if (otpSent) {
     return (
       <div className="login-container">
+        {/* {data !== null ? <Navigate to="/auth/register" /> : null} */}
         <div className="login-left">
           <div style={{ width: `max-content` }}>
             <img
@@ -91,7 +117,7 @@ function Login() {
                 <p>Verification</p>
               </div>
               <div className="otp-title-bottom">
-                <p>Please enter OTP sent to your mobile number</p>
+                <p>Please enter OTP sent on {mobile}</p>
               </div>
             </div>
             <div className="otp-container-main">
@@ -122,6 +148,46 @@ function Login() {
           </div>
         </div>
         <div className="login-right"></div>
+      {loggedIn ? <Navigate to='/auth/register' />:null}
+      <ReactModal
+        isOpen={showBookModal}
+        contentLabel="onRequestClose Example"
+        onRequestClose={handleBookCloseModal}
+        shouldCloseOnOverlayClick={true}
+        style={{
+          overlay: {
+            position: "fixed",
+            backgroundColor: "rgba(0, 0, 0, 0.28)",
+          },
+          content: {
+            position: "absolute",
+            
+            border: "1px solid #ccc",
+            background: "#fff",
+            overflow: "auto",
+            WebkitOverflowScrolling: "touch",
+            borderRadius: "20px",
+            outline: "none",
+            padding: "20px",
+            inset: "auto",
+            width: '20vw'
+          },
+        }}
+      >
+        <div className="modal-container">
+          <div className="modal-container-content-book">
+            
+            <div>
+              <BsCalendarCheck style={{height:`80px`,width:`80px`}}/>
+            </div>
+            <div>
+              <p>You don't have a plan</p>
+              <p  className="modal-container-content-book" onClick={()=>setSuperLoggedIn(true)} >Select Plan</p>
+            </div>
+            
+          </div>
+        </div>
+      </ReactModal>
       </div>
     );
   } else {
@@ -211,10 +277,11 @@ function Login() {
             </Link>
           </div>
         </div>
+        
       </div>
     );
   }
-  // }
+  }
 }
 
 export default Login;

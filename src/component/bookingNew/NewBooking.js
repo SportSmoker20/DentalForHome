@@ -65,7 +65,7 @@ function NewBooking() {
 
   return (
     <div>
-      {width > 800 ? <Sidebar /> : <Navbar />}
+      {width > 800 ? <Sidebar tab='My bookings' /> : <Navbar />}
       <div className="new-booking-container">
         <NewBookingTop />
         <NewBookingSelect

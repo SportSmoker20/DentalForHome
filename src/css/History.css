@@ -1,10 +1,13 @@
 .history-container {
   margin-left: 300px;
+  margin-right: 30px;
+  overflow-y: hidden;
 }
 .history-count-container-top {
   display: flex;
   flex-direction: row;
 }
+
 .new-booking-top-container.history {
   margin-left: 0;
 }

@@ -106,9 +106,9 @@ function HistoryMainBottom(props) {
               <th className="header">Logo</th>
             </tr>
           </thead>
-          {/* <tbody> */}
-          {/* <tr> </tr> */}
-          {/* </tbody> */}
+          <tbody>
+          <tr> </tr>
+          </tbody>
         </table>
         <div className="no-appointment">No Past Appointments</div>
       </div>

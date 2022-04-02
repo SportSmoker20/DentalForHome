@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import NewBookingPast from "../bookingNew/NewBookingPast";
 import NewBookingUpcoming from "../bookingNew/NewBookingUpcoming";
 import Navbar from "../dashboard/Navbar";
@@ -8,14 +8,20 @@ import { FaBell } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { RiMessage2Fill } from "react-icons/ri";
 import { Navigate } from "react-router-dom";
+import { UserContext } from "../../App";
 
 function DentistBooking() {
   const [upcoming, setUpcoming] = useState([]);
   const [past, setPast] = useState([]);
   const [refresh, setRefresh] = useState(false);
 
+  const  {  setLoggedIn,setSuperLoggedIn,setSubscribedLoggedIn } = useContext(UserContext)
   const logout = () => {
+    setLoggedIn(false);
+    setSuperLoggedIn(false);
+    setSubscribedLoggedIn(false);
     localStorage.removeItem("testObject");
+    console.log("7")
     return <Navigate to="/auth/login" />;
   };
 
@@ -63,7 +69,7 @@ function DentistBooking() {
 
   return (
     <div className="admin-dashboard-container" style={{ marginRight: `30px` }}>
-      {width > 800 ? <Sidebar /> : <Navbar />}
+      {width > 800 ? <Sidebar tab='dentistBooking'/> : <Navbar />}
 
       <div className="new-booking-main-container">
         <div className="new-booking-top-container edit">
@@ -78,8 +84,8 @@ function DentistBooking() {
           </div>
         </div>
         <div className="navbar-icon icon-disable">
-          <RiMessage2Fill className="navbar-icon-inner" />
-          <FaBell className="navbar-icon-inner" />
+          {/* <RiMessage2Fill className="navbar-icon-inner" />
+          <FaBell className="navbar-icon-inner" /> */}
           <FiLogOut className="navbar-icon-inner" onClick={logout} />
         </div>
       </div>

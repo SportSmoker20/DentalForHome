@@ -207,7 +207,7 @@
   height: 30px;
 }
 .otp-title-bottom {
-  width: 85%;
+  /* width: 85%; */
   font-style: italic;
   font-weight: 350;
 }
@@ -336,4 +336,22 @@
   .register-submain-container {
     width: 90%;
   }
+}
+.navbar-right-drop{
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-menu.show{
+ width: 20vw;
+}
+.nav-drop-id{
+display: flex;
+flex-direction: row;
+}
+.modal-container-content-book{
+  /* padding:`15px`,backgroundColor:`blue`,color:`white`,cursor:`pointer` */
+  padding: 15px;
+  background-color: rgb(4, 64, 102);
+  color: #fff;
+  cursor: pointer;
 }

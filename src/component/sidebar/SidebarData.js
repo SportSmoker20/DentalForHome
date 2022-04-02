@@ -2,6 +2,7 @@ import React from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
+import { FiLogOut } from "react-icons/fi";
 
 export const SidebarData = [
   {
@@ -62,10 +63,10 @@ export const SidebarData = [
     cName: "nav-text",
   },
   {
-    title: "Settings",
+    title: "Logout",
     path: "/support",
     icon: (
-      <AiIcons.AiTwotoneSetting
+      <FiLogOut
         className="fade-1"
         style={{ color: `rgb(4,64,132)` }}
       />
@@ -133,10 +134,10 @@ export const AdminSidebarData = [
     cName: "nav-text",
   },
   {
-    title: "Settings",
+    title: "Logout",
     path: "/support",
     icon: (
-      <AiIcons.AiTwotoneSetting
+      <FiLogOut
         className="fade-1"
         style={{ color: `rgb(4,64,132)` }}
       />

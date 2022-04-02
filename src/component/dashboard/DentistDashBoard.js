@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import ServiceCard from "../service/ServiceCard";
 import { FaBell } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { RiMessage2Fill } from "react-icons/ri";
 import { Navigate } from "react-router-dom";
+import { UserContext } from "../../App";
 
 function DentistDashBoard() {
+  const  {  setLoggedIn,setSuperLoggedIn,setSubscribedLoggedIn } = useContext(UserContext)
   const logout = () => {
+    setLoggedIn(false);
+    setSuperLoggedIn(false);
+    setSubscribedLoggedIn(false);
     localStorage.removeItem("testObject");
+    console.log("7")
     return <Navigate to="/auth/login" />;
   };
 
@@ -65,8 +71,8 @@ function DentistDashBoard() {
           </div>
         </div>
         <div className="navbar-icon icon-disable">
-          <RiMessage2Fill className="navbar-icon-inner" />
-          <FaBell className="navbar-icon-inner" />
+          {/* <RiMessage2Fill className="navbar-icon-inner" />
+          <FaBell className="navbar-icon-inner" /> */}
           <FiLogOut className="navbar-icon-inner" onClick={logout} />
         </div>
       </div>

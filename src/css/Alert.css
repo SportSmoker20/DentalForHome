@@ -1,0 +1,20 @@
+.alert-container{
+    /* height: 20px; */
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+    height: 25px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    /* width: 20px; */
+}
+.select-alert{
+    position: absolute;
+    margin-left: 10vw;
+}
+.select-alert>.alert-container{
+    justify-content: flex-end;
+    height: 15px;
+}

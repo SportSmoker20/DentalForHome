@@ -9,7 +9,7 @@ function Edit(props) {
   if (props.subscribedLoggedIn) {
     return (
       <div>
-        <Sidebar />
+        <Sidebar tab='edit'/>
         <Navbar />
         <EditProfile />
       </div>

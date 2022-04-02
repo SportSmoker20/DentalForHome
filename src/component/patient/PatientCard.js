@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function PatientCard(props) {
   return (
@@ -22,7 +23,8 @@ function PatientCard(props) {
           {props.patient.lastAppointment}
         </p>
       </div>
-      <div className="patient-view-more">
+      <div className="patient-view-more" onClick={()=>props.setPatient(props.patient)}>
+        
         <p>View More</p>
       </div>
     </div>

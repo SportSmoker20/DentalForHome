@@ -1,7 +1,100 @@
-import React from "react";
+import axios from "axios";
+import React, { useContext, useEffect, useState } from "react";
 import { BsFillCheckCircleFill } from "react-icons/bs";
+import { Navigate } from "react-router-dom";
+import { UserContext } from "../../App";
+import Logout from "../auth/Logout";
+
+function loadScript(src) {
+ 
+
+  return new Promise((resolve) => {
+    const script = document.createElement("script");
+    script.src = src;
+    script.onload = () => {
+      resolve(true);
+    };
+    script.onerror = () => {
+      resolve(false);
+    };
+    document.body.appendChild(script);
+  });
+}
+
+const __DEV__ = document.domain === "localhost";
 
 function PricingMain() {
+  const  {  setLoggedIn,setSuperLoggedIn,setSubscribedLoggedIn } = useContext(UserContext)
+
+  const { profileData } = useContext(UserContext);
+  const [razoId, setRazorId] = useState(null);
+  const [amount, setAmount] = useState(null);
+console.log(profileData)
+
+const logout = () => {
+  setLoggedIn(false);
+  setSuperLoggedIn(false);
+  setSubscribedLoggedIn(false);
+  localStorage.removeItem("testObject");
+  console.log("7")
+  return <Navigate to="/auth/login" />;
+};
+  async function displayRazorpay() {
+    if (profileData === null) {
+      return alert("Please LogIn");
+    } else {
+      const res = await loadScript(
+        "https://checkout.razorpay.com/v1/checkout.js"
+      );
+
+      if (!res) {
+        alert("Razorpay SDK failed to load. Are you online?");
+        return;
+      }
+
+      const data = await axios.post("http://localhost:5000/api/razor/razorpay");
+
+      console.log(data);
+
+      const options = {
+        key: __DEV__ ? "rzp_test_woqjSrt5amEJuN" : "PRODUCTION_KEY",
+        currency: data.currency,
+        amount: 499900,
+        order_id: data.id,
+        name: "Donation",
+        description: "Thank you for nothing. Please give us some money",
+        handler: function (response) {
+          alert(response.razorpay_payment_id);
+          alert(response.razorpay_order_id);
+          alert(response.razorpay_signature);
+          setRazorId(response.razorpay_payment_id);
+          // if(response.razorpay_payment_id!==null){
+
+          // }
+        },
+        prefill: {
+          name: "Dhanesh",
+          email: "sdfdsjfh2@ndsfdf.com",
+          phone_number: "9899999999",
+        },
+      };
+      console.log("lll");
+      const paymentObject = new window.Razorpay(options);
+      paymentObject.open();
+    }
+    logout()
+  }
+
+  useEffect(() => {
+    if (razoId !== null) {
+      axios.put("http://localhost:5000/api/razor/database", {
+        amount: amount,
+        razorId: razoId,
+        id: profileData.id,
+      });
+    }
+  }, [razoId]);
+
   return (
     <div className="pricing-main-container">
       <div className="pricing-top">
@@ -145,9 +238,16 @@ function PricingMain() {
                 </div>
               </div>
             </div>
-            <div className="pricing-foot">
+            <a
+              target="_blank"
+              onClick={() => {
+                displayRazorpay();
+                setAmount(4999);
+              }}
+              className="pricing-foot"
+            >
               <p>Buy Now</p>
-            </div>
+            </a>
           </div>
           <div className="pbo" style={{ backgroundColor: `rgb(4, 64,102)` }}>
             <div className="pricing-offer">
@@ -276,9 +376,17 @@ function PricingMain() {
                 </div>
               </div>
             </div>
-            <div className="pricing-foot">
+            <a
+              target="_blank"
+              onClick={() => {
+                displayRazorpay();
+                setAmount(9999);
+              }}
+              className="pricing-foot"
+              rel="noopener noreferrer"
+            >
               <p>Buy Now</p>
-            </div>
+            </a>
           </div>
         </div>
       </div>

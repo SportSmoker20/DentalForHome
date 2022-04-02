@@ -11,7 +11,7 @@ function Booking(props) {
   if (props.superLoggedIn) {
     return (
       <div>
-        <Sidebar />
+        <Sidebar tab='booking' />
         <Navbar />
         <Banner />
         <div className="booking-head">My bookings</div>

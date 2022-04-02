@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
-import { BsCheckCircleFill, BsThreeDotsVertical } from "react-icons/bs";
+import { BsCalendarCheck, BsCheckCircleFill, BsThreeDotsVertical } from "react-icons/bs";
 import axios from "axios";
 import ReactModal from "react-modal";
 import NewBookingSelect from "./NewBookingSelect";
@@ -16,6 +16,7 @@ function NewBookingUpcoming(props) {
   const handleOpenModal = () => {
     setShowModal(true);
   };
+ 
   const startMeet = async (id) => {
     let result = "";
     let characters =
@@ -270,6 +271,7 @@ function NewBookingUpcoming(props) {
             <NewBookingSelect />
           </div>
         </ReactModal>
+        
       </div>
     );
   }

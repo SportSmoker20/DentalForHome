@@ -25,7 +25,7 @@ function FamilyPlan() {
   ];
   return (
     <div>
-      <Sidebar />
+      <Sidebar tab='patient' />
       <Navbar />
       <Banner />
       <div className="family-plan-card">

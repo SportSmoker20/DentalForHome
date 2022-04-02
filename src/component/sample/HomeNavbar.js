@@ -1,16 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 import { FiMenu } from "react-icons/fi";
 import { ImCross } from "react-icons/im";
-import { Link } from "react-router-dom";
+import { IoIosArrowDown } from "react-icons/io";
+import { Link, Navigate } from "react-router-dom";
+import { UserContext } from "../../App";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 function HomeNavbar(props) {
   const [sidebar, setSidebar] = useState(false);
-
+  const [drop, setDrop] = useState(false);
+  const [data,setData] = useState(JSON.parse(localStorage.getItem("testObject")));
+  console.log(data);
   const scrollFaq = () => {
     const anchor = document.querySelector("#home-faq");
     anchor.scrollIntoView({ behavior: "smooth", block: "center" });
     showSidebar();
   };
+  const { setLoggedIn, setSuperLoggedIn, setSubscribedLoggedIn } =
+    useContext(UserContext);
 
   const showSidebar = () => {
     setSidebar(!sidebar);
@@ -20,6 +28,15 @@ function HomeNavbar(props) {
   //   const anchor = document.querySelector("#home-service");
   //   anchor.scrollIntoView({ behavior: "smooth", block: "center" });
   // };
+
+  const logout = () => {
+    setLoggedIn(false);
+    setSuperLoggedIn(false);
+    setSubscribedLoggedIn(false);
+    setData(null)
+    localStorage.removeItem("testObject");
+    return <Navigate to="/auth/login" />;
+  };
 
   return (
     <div className="home-navbar">
@@ -96,11 +113,29 @@ function HomeNavbar(props) {
           </div>
         </div>
         <div className="navbar-right">
-          <Link to={`/auth/login`} style={{ textDecoration: `none` }}>
-            <div className="navbar-right-text">
-              <p style={{ color: `white` }}>Log In</p>
+          {data === null ? (
+            <Link to={`/auth/login`} style={{ textDecoration: `none` }}>
+              <div className="navbar-right-text">
+                <p style={{ color: `white` }}>Log In</p>
+              </div>
+            </Link>
+          ) : (
+            <div>
+              <div className="navbar-right-text" onClick={()=>setDrop(!drop)}>
+                <p style={{ color: `white` }}>Log Out</p>
+                <IoIosArrowDown />
+              </div>
+              {drop ?  <div className="navbar-dropdown">
+                
+                <div className="navbar-dropdown-list"><p>{data.name}</p></div>
+                <div className="navbar-dropdown-list id"><label>Customer #: </label><p>{data.id}</p></div>
+                <div className="navbar-dropdown-list logout"><p onClick={()=>logout()}>Log Out</p></div>
+              
+            </div> : null}
+              
             </div>
-          </Link>
+
+          )}
         </div>
       </div>
       <div className="home-navbar-container-small">
@@ -193,11 +228,17 @@ function HomeNavbar(props) {
                 <p onClick={() => scrollFaq()}>FAQ</p>
               </div>
               <div className="small-navbar-center-option login-bottm">
-                <Link to={`/auth/login`} style={{ textDecoration: `none` }}>
-                  <div className="navbar-right-text">
-                    <p style={{ color: `white` }}>Log In</p>
+                {data === null ? (
+                  <Link to={`/auth/login`} style={{ textDecoration: `none` }}>
+                    <div className="navbar-right-text">
+                      <p style={{ color: `white` }}>Log In</p>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="navbar-right-text" onClick={() => logout()}>
+                    <p style={{ color: `white` }}>Log Out</p>
                   </div>
-                </Link>
+                )}
               </div>
             </nav>
           </div>

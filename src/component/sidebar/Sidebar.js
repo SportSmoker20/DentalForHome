@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { AdminSidebarData, SidebarData } from "./SidebarData";
 import { IconContext } from "react-icons";
 
-function Sidebar() {
+function Sidebar(props) {
   const profile = JSON.parse(localStorage.getItem("testObject"));
 
   return (
@@ -23,6 +23,7 @@ function Sidebar() {
                     borderRadius: `12px`,
                   }}
                 >
+                  <a href='https://dentalforhome.com' target='_blank'>
                   <img
                     src="https://dentalforhome.s3.amazonaws.com/images/logoMain1.PNG"
                     style={{
@@ -32,10 +33,11 @@ function Sidebar() {
                     }}
                     alt={"Couldn't Load"}
                   />
+                  </a>
                 </div>
-                <p style={{ color: `black`, fontSize: `16.4px` }}>
+                <a href='https://dentalforhome.com' target='_blank' style={{marginLeft:`10px`,textDecoration:`none`, color: `black`, fontSize: `16.4px` }}>
                   Dental For Home
-                </p>
+                </a>
               </div>
               <div className="profile-image">
                 <img
@@ -55,7 +57,8 @@ function Sidebar() {
               <div>
                 {AdminSidebarData.map((item, index) => {
                   return (
-                    <li key={index} className={item.cName}>
+                    // style={props.tab === item.title ? {backgroundColor:'rgb(146, 191, 241)'}:null}
+                    <li key={index} className={item.cName} style={props.tab === item.title ? {backgroundColor:'rgb(146, 191, 241)'}:null}>
                       <Link to={item.path}>
                         {item.icon}
                         <span>{item.title}</span>
@@ -68,7 +71,7 @@ function Sidebar() {
               <div>
                 {SidebarData.map((item, index) => {
                   return (
-                    <li key={index} className={item.cName}>
+                    <li key={index} className={item.cName} style={props.tab === item.title ? {backgroundColor:'rgb(146, 191, 241)'}:null}>
                       <Link to={item.path}>
                         {item.icon}
                         <span>{item.title}</span>

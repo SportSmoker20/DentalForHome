@@ -18,7 +18,7 @@ function MyPlan() {
 
   return (
     <div>
-      <Sidebar />
+      <Sidebar tab='My Plan'/>
       <Navbar />
       <Banner />
       <MyPlanCard />

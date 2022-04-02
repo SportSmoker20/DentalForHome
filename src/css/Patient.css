@@ -90,3 +90,18 @@
     margin-left: -20px;
   }
 }
+.patient-profile-top-right{
+  display: flex;
+  flex-direction: row;
+}
+.patient-profile-top-right-name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  margin-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 39px;
+  border-radius: 5px;
+}

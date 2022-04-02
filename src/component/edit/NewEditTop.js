@@ -1,35 +1,63 @@
-import React from "react";
+import axios from "axios";
+import React, { useContext, useEffect, useState } from "react";
+import { FiLogOut } from "react-icons/fi";
+import { Navigate } from "react-router-dom";
+import { UserContext } from "../../App";
 
-function NewEditTop() {
+function NewEditTop(props) {
   const profile = JSON.parse(localStorage.getItem("testObject"));
+  // const memberData = [
+  //   {
+  //     name: profile.name,
+  //     bgc: "#F8FFE9",
+  //   },
+  //   {
+  //     name: "Sarthak Kapoor",
+  //     bgc: "#F2F1FF",
+  //   },
+  //   {
+  //     name: "Jayati Kapoor",
+  //     bgc: "#FEEEEF",
+  //   },
+  //   {
+  //     name: "Sameer Kapoor",
+  //     bgc: "#FFF9E9",
+  //   },
+  // ];
 
-  const memberData = [
-    {
-      name: profile.name,
-      bgc: "#F8FFE9",
-    },
-    {
-      name: "Sarthak Kapoor",
-      bgc: "#F2F1FF",
-    },
-    {
-      name: "Jayati Kapoor",
-      bgc: "#FEEEEF",
-    },
-    {
-      name: "Sameer Kapoor",
-      bgc: "#FFF9E9",
-    },
-  ];
+  const { setLoggedIn, setSuperLoggedIn, setSubscribedLoggedIn } =
+    useContext(UserContext);
 
+  const logout = () => {
+    setLoggedIn(false);
+    setSuperLoggedIn(false);
+    setSubscribedLoggedIn(false);
+    localStorage.removeItem("testObject");
+    console.log("7");
+    return <Navigate to="/auth/login" />;
+  };
+
+  // console.log(memberData)
   return (
     <div>
-      <div className="new-booking-top-container edit">
+      {/* <div className="new-booking-top-container edit">
         <div className="booking-top-container-title" style={{ height: `7vh` }}>
           <p>Your Profile</p>
         </div>
         <div className="booking-top-container-content">
           <p>Edit your personal details</p>
+        </div>
+      </div> */}
+      <div className="navbar-main">
+        <div className="navbar-text">
+          <p style={{ fontWeight: `bold`, height: `10px` }}>Your Profile</p>
+          <p>Edit your personal details</p>
+        </div>
+
+        <div className="navbar-icon">
+          {/* <RiMessage2Fill className="navbar-icon-inner" />
+            <FaBell className="navbar-icon-inner" /> */}
+          <FiLogOut className="navbar-icon-inner" onClick={() => logout()} />
         </div>
       </div>
       <div className="new-edit-top-container">
@@ -41,53 +69,83 @@ function NewEditTop() {
             alt="Coludn't Load"
           />
         </div>
-        <div className="new-edit-top-content">
-          <div className="new-edit-top-mid">
-            <div className="new-edit-top-mid-title">
-              <p>{profile.name}</p>
-            </div>
-            <div className="new-edit-top-mid-label">
-              <label>Gender : </label>
-              <p>Male</p>
-            </div>
-            <div className="new-edit-top-mid-label">
-              <label>DOB :</label>
-              <p>17th July, 1996</p>
-            </div>
-            <div className="new-edit-top-mid-email">
-              <p>Prakharkapoor@gmail.com</p>
-            </div>
-            <div className="new-edit-top-mid-mob">
-              <p>+91 8527474339</p>
-            </div>
-            <div className="new-edit-top-mid-edit">
-              <p>Edit Details</p>
-            </div>
-          </div>
-          <div className="new-edit-top-right">
-            <div className="new-edit-top-right-title">
-              <p>Members</p>
-            </div>
 
-            {memberData.map((data, key) => (
+        <div className="new-edit-top-right">
+          <div className="new-edit-top-right-title">
+            <p>Members</p>
+          </div>
+
+          <div className="new-edit-top-right-content">
+           
               <div
-                key={key}
+                // key={key}
                 className="new-edit-top-right-name"
-                style={{ backgroundColor: `${data.bgc}` }}
+                style={{ backgroundColor: `#F8FFE9` }}
+                onClick={() => props.setActive(profile)}
               >
-                <p>{data.name}</p>
+                <p>{profile.name}</p>
               </div>
-            ))}
-            {memberData.length < 4 ? (
-              <div className="new-edit-top-right-name">
-                <p>Add More (+)</p>
+           
+
+            {props.memberData[0] !== undefined ? (
+              <div
+                // key={key}
+                className="new-edit-top-right-name"
+                style={{ backgroundColor: `#F2F1FF` }}
+                onClick={() => props.setActive(props.memberData[0])}
+              >
+                <p>{props.memberData[0].name}</p>
               </div>
             ) : (
-              ""
+              <div
+                className="new-edit-top-right-name"
+                style={{ backgroundColor: `#F2F1FF` }}
+                onClick={() => props.setActive(0)}
+              >
+                <p>Add More (+)</p>
+              </div>
+            )}
+            {props.memberData[1] !== undefined ? (
+              <div
+                // key={key}
+                className="new-edit-top-right-name"
+                style={{ backgroundColor: `#FEEEEF` }}
+
+                onClick={() => props.setActive(props.memberData[1])}
+              >
+                <p>{props.memberData[1].name}</p>
+              </div>
+            ) : (
+              <div
+                className="new-edit-top-right-name"
+                style={{ backgroundColor: `#FEEEEF` }}
+                onClick={() => props.setActive(1)}
+              >
+                <p>Add More (+)</p>
+              </div>
+            )}
+            {props.memberData[3] !== undefined ? (
+              <div
+                // key={key}
+                className="new-edit-top-right-name"
+                style={{ backgroundColor: `#FFF9E9` }}
+                onClick={() => props.setActive(props.memberData[2])}
+              >
+                <p>{props.memberData[2].name}</p>
+              </div>
+            ) : (
+              <div
+                className="new-edit-top-right-name"
+                style={{ backgroundColor: `#FFF9E9` }}
+                onClick={() => props.setActive(2)}
+              >
+                <p>Add More (+)</p>
+              </div>
             )}
           </div>
         </div>
       </div>
+      {/* </div> */}
     </div>
   );
 }

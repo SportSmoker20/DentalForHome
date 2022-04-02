@@ -10,8 +10,7 @@ import { AdminSidebarData, SidebarData } from "../sidebar/SidebarData";
 import { UserContext } from "../../App";
 
 function Navbar() {
-  const { setLoggedIn, setSuperLoggedIn, setSubscribedLoggedIn } =
-    useContext(UserContext);
+
   const profile = JSON.parse(localStorage.getItem("testObject"));
 
   const [sidebar, setSidebar] = useState(false);
@@ -19,12 +18,13 @@ function Navbar() {
   const showSidebar = () => {
     setSidebar(!sidebar);
   };
-
+  const  {  setLoggedIn,setSuperLoggedIn,setSubscribedLoggedIn } = useContext(UserContext)
   const logout = () => {
     setLoggedIn(false);
     setSuperLoggedIn(false);
     setSubscribedLoggedIn(false);
     localStorage.removeItem("testObject");
+    console.log("7")
     return <Navigate to="/auth/login" />;
   };
   if (profile.type === "admin") {
@@ -45,9 +45,9 @@ function Navbar() {
             )}
           </div>
           <div className="navbar-icon">
-            <RiMessage2Fill className="navbar-icon-inner" />
-            <FaBell className="navbar-icon-inner" />
-            <FiLogOut className="navbar-icon-inner" onClick={logout} />
+            {/* <RiMessage2Fill className="navbar-icon-inner" />
+            <FaBell className="navbar-icon-inner" /> */}
+            <FiLogOut className="navbar-icon-inner" onClick={()=>logout()} />
           </div>
         </div>
         <nav
@@ -103,9 +103,9 @@ function Navbar() {
             )}
           </div>
           <div className="navbar-icon">
-            <RiMessage2Fill className="navbar-icon-inner" />
-            <FaBell className="navbar-icon-inner" />
-            <FiLogOut className="navbar-icon-inner" onClick={logout} />
+            {/* <RiMessage2Fill className="navbar-icon-inner" />
+            <FaBell className="navbar-icon-inner" /> */}
+            <FiLogOut className="navbar-icon-inner" onClick={()=>logout()} />
           </div>
         </div>
         <nav

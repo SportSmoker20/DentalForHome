@@ -89,7 +89,7 @@ function HistoryMain() {
 
   return (
     <div className="history-main-container">
-      {width > 800 ? <Sidebar /> : <Navbar />}
+      {width > 800 ? <Sidebar tab='History'/> : <Navbar />}
       <HistoryMainTop />
       <HistoryMainBottom
         past={past}

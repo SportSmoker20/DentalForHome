@@ -6,8 +6,9 @@ function ServiceCard(props) {
     <div
       style={{ backgroundColor: `${props.content.bg}` }}
       className="service-card-container"
+      onClick={()=>props.setService(props.content)}
     >
-      <Link
+      {/* <Link
         to={props.content.link}
         style={{
           textDecoration: `none`,
@@ -15,7 +16,7 @@ function ServiceCard(props) {
           flexDirection: `column`,
           alignItems: `center`,
         }}
-      >
+      > */}
         <img
           src={props.content.img}
           alt="Coludn't Load"
@@ -47,7 +48,7 @@ function ServiceCard(props) {
             </p>
           )}
         </div>
-      </Link>
+      {/* </Link/> */}
     </div>
   );
 }

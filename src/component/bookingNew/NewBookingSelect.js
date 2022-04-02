@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import DatePicker from "react-datepicker";
 import axios from "axios";
+import ReactModal from "react-modal";
+import { BsCalendarCheck } from "react-icons/bs";
+import '../../css/NewBooking.css'
+import Alert from "../other/Alert";
+
 
 const itemsToShow = 3;
 
@@ -15,12 +20,31 @@ function convert(date) {
 
 function NewBookingSelect(props) {
   const [startDate, setStartDate] = useState(new Date());
-  const [startTime, setStartTime] = useState(new Date());
+  const [time, setTime] = useState();
   const [date, setDate] = useState(convert(startDate));
   const [name, setName] = useState();
   const [location, setLocation] = useState();
   const [bookType, setBookType] = useState();
   const userData = JSON.parse(localStorage.getItem("testObject"));
+  const [showBookModal, setShowBookModal] = useState(false);
+  const[alertName,setAlertName] = useState({
+    msg: "",
+
+  })
+  const[alertLocation,setAlertLocation] = useState({
+    msg: "",
+
+  })
+  const[alertType,setAlertType] = useState({
+    msg: "",
+
+  })
+  const handleBookCloseModal = () => {
+    setShowBookModal(false);
+  };
+  const handleBookOpenModal = () => {
+    setShowBookModal(true);
+  };
 
   // const [midItemIndex, setMidItemIndex] = useState(getMid);
   const midItemIndex = getMid;
@@ -86,17 +110,23 @@ function NewBookingSelect(props) {
     { id: 47, title: "11:00 PM" },
     { id: 48, title: "11:30 PM" },
   ];
-
   const onBookAppointment = async () => {
     if (name === "Select Name" || name === undefined) {
-      alert("Please Select Name");
+      setAlertName({
+        msg: "Select Name"
+      })
     } else if (location === "Select Location" || location === undefined) {
-      alert("Please Select Location");
-    } else if (bookType === "Select Type") {
-      alert("Please Select Booking Type");
+      setAlertLocation({
+        msg: "Select Location"
+      })
+    } else if (bookType === "Select Type" || bookType === undefined) {
+      setAlertType({
+        msg: "Select Type"
+      })
     } else {
       const tempDate = date.split("T")[0];
-      const tempTime = items[midItemIndex].title.split(".")[0];
+      // const tempTime = items[midItemIndex].title.split(".")[0];
+      console.log(time)
       await axios
         .post(process.env.REACT_APP_BACKEND + "/api/appointment", {
           user_id: userData.id,
@@ -104,16 +134,18 @@ function NewBookingSelect(props) {
           dentist_name: "Mitali",
           location: location,
           date: tempDate,
-          time: tempTime,
+          time: time,
           type: bookType,
         })
         .then((res, err) => {
           if (err) {
             alert(err);
           } else {
+            handleBookOpenModal()
             props.setUpcoming((upcoming) => [...upcoming, res]);
           }
         });
+      
       props.setRefresh(true);
     }
   };
@@ -122,35 +154,55 @@ function NewBookingSelect(props) {
     <div className="new-booking-select">
       <div className="new-booking-top">
         <div className="new-booking-select-option">
-          <select name="name" onChange={(e) => setName(e.target.value)}>
+          <select name="name" onChange={(e) => {
+            setAlertName({
+              msg: ""
+            })
+            setName(e.target.value)
+          }}>
             <option value="Select Name">Select Name</option>
             <option value="Prakhar">Prakhar</option>
             <option value="Prakhar">Prakhar</option>
             <option value="Prakhar">Prakhar</option>
           </select>
+          {alertName.msg!=="" ? <div className="select-alert"><Alert alert={alertName}/></div>: null} 
         </div>
         <div className="new-booking-select-option">
-          <select name="Type" onChange={(e) => setLocation(e.target.value)}>
+          <select name="Type" onChange={(e) => {
+             setAlertLocation({
+              msg: ""
+            })
+            setLocation(e.target.value)
+          }}>
             <option value="Select Location">Select Location</option>
             <option value="Delhi">Delhi</option>
             <option value="Delhi">Delhi</option>
             <option value="Delhi">Delhi</option>
           </select>
+          {alertLocation.msg!=="" ? <div className="select-alert"><Alert alert={alertLocation}/></div>: null} 
+
         </div>
 
         <div className="new-booking-select-option type">
-          <select name="type" onChange={(e) => setBookType(e.target.value)}>
+          <select name="type" onChange={(e) => {
+            setAlertType({
+              msg: ""
+            })
+            setBookType(e.target.value)
+          }}>
             <option value="Select Type">Select Type</option>
             <option value="Home">Home</option>
             <option value="Video">Video</option>
             <option value="Clinic">Clinic</option>
             <option value="Visit">Visit</option>
           </select>
+          {alertType.msg!=="" ? <div className="select-alert"><Alert alert={alertType}/></div>: null} 
+
         </div>
       </div>
       <div className="new-booking-bottom">
         <div className="new-booking-top-bottom">
-          <div className="new-booking-date">
+          {/* <div className="new-booking-date">
             <DatePicker
               selected={startTime}
               onChange={(date) => setStartTime(date)}
@@ -160,13 +212,22 @@ function NewBookingSelect(props) {
               timeCaption="Time"
               dateFormat="h:mm aa"
             />
-          </div>
+          </div> */}
+          <div className="new-booking-select-option type">
+          <select name="time" onChange={(e) => setTime(e.target.value)}>
+            <option value="Select Type">Select Type</option>
+            {items.map((data)=>(
+              <option value={data.title}>{data.title}</option>
+            ))}
+          </select>
+        </div>
           <div className="new-booking-date">
             <ReactDatePicker
               selected={startDate}
               onChange={(date) => onDateChange(date)}
             />
           </div>
+         
           <div className="new-booking-book-outer">
             <div
               className="new-booking-book"
@@ -177,6 +238,45 @@ function NewBookingSelect(props) {
           </div>
         </div>
       </div>
+      <ReactModal
+        isOpen={showBookModal}
+        contentLabel="onRequestClose Example"
+        onRequestClose={handleBookCloseModal}
+        shouldCloseOnOverlayClick={true}
+        style={{
+          overlay: {
+            position: "fixed",
+            backgroundColor: "rgba(0, 0, 0, 0.28)",
+          },
+          content: {
+            position: "absolute",
+            
+            border: "1px solid #ccc",
+            background: "#fff",
+            overflow: "auto",
+            WebkitOverflowScrolling: "touch",
+            borderRadius: "20px",
+            outline: "none",
+            padding: "20px",
+            inset: "auto",
+            width: '20vw'
+          },
+        }}
+      >
+        <div className="modal-container">
+          <div className="modal-container-content-book">
+            
+            <div>
+              <BsCalendarCheck style={{height:`80px`,width:`80px`}}/>
+            </div>
+            <div>
+              <p>{userData.name},we've got you</p>
+              <p>confirmed for your appointment.</p>
+            </div>
+            
+          </div>
+        </div>
+      </ReactModal>
     </div>
   );
 }

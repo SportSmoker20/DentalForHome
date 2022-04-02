@@ -2,30 +2,44 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { UserContext } from "../../App";
+import validator from 'validator'
+import Alert from "../other/Alert";
 
 function UserRegister() {
+  
   const {
     superLoggedIn,
     setSuperLoggedIn,
     setSubscribedLoggedIn,
     subscribedLoggedIn,
   } = useContext(UserContext);
-
+  console.log(subscribedLoggedIn)
   const [name, setName] = useState();
   const [email, setEmail] = useState();
+  const[alert,setAlert] = useState({
+    msg: "",
+
+  })
+
+  
   const handleSubmit = () => {
     if (name === "" || email === "") {
       alert("Please Enter Details!!!");
     } else {
-      axios
+      if(validator.isEmail(email)){
+        axios
         .put(process.env.REACT_APP_BACKEND + "/api/user", {
           name: name,
-          mobile: JSON.parse(localStorage.getItem("testObject"))[0].mobile,
+          mobile: JSON.parse(localStorage.getItem("testObject")).mobile,
           email: email,
         })
         .then((res, err) => {
           if (!err) {
-            if (res.data[0].subscriber === 0) {
+            localStorage.setItem(
+              "testObject",
+              JSON.stringify(res.data[0])
+            );
+            if (res.data[0].subscriber === 1) {
               setSubscribedLoggedIn(true);
               return <Navigate to="/home" />;
             } else {
@@ -34,8 +48,14 @@ function UserRegister() {
             }
           }
         });
+      } else {
+        setAlert({
+          msg: "Invalid Email"
+        })
+      }
     }
   };
+  
   if (superLoggedIn) {
     return <Navigate to="/pricing" />;
   } else if (subscribedLoggedIn) {
@@ -81,12 +101,16 @@ function UserRegister() {
                 type="email"
                 placeholder="Email"
                 onChange={(e) => {
+                  setAlert({
+                    msg: ""
+                  })
                   setEmail(e.target.value);
                 }}
               />
             </div>
+            {alert.msg!=="" ? <Alert  alert={alert}/> : null} 
             <br />
-            <div className="login-get-otp" onClick={() => handleSubmit()}>
+            <div className="login-get-otp" onClick={handleSubmit}>
               <p>Sign Up</p>
             </div>
           </div>

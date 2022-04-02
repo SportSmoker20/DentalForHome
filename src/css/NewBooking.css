@@ -12,6 +12,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  margin-top: -20px;
 }
 .navbar-icon.icon-disable {
   float: right;
@@ -110,7 +111,7 @@
   color: black;
 }
 .new-booking-date {
-  width: 30.5%;
+  width: 32%;
   display: flex;
   flex-direction: row-reverse;
   /* justify-content: flex-end; */
@@ -129,7 +130,7 @@
   > .react-datepicker-wrapper
   > .react-datepicker__input-container
   > input {
-  width: 98%;
+  width: 23.5vw;
   height: 4.5vh;
   border: 1.5px solid rgb(4, 64, 102);
   box-shadow: 0px 1px 5px rgb(0 0 0 / 0.2);
@@ -573,7 +574,7 @@ h1 {
     margin-left: 0px;
   }
   .new-booking-top-container {
-    padding-top: 80px;
+    /* padding-top: 80px; */
   }
   .new-booking-select-option {
     flex: 1;
@@ -661,7 +662,7 @@ h1 {
 }
 @media screen and (max-width: 400px) {
   .new-booking-select-option {
-    min-width: 98vw;
+    min-width: 94vw;
     margin-left: 10px;
   }
   .new-booking-time {
@@ -682,3 +683,11 @@ h1 {
 /* .modal-title{
     
   } */
+.modal-container-content-book{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 70px;
+}
