@@ -22,6 +22,7 @@ function NewBookingSelect(props) {
   const [startDate, setStartDate] = useState(new Date());
   const [time, setTime] = useState();
   const [date, setDate] = useState(convert(startDate));
+  const[newDate,setNewDate] = useState()
   const [name, setName] = useState();
   const [location, setLocation] = useState();
   const [bookType, setBookType] = useState();
@@ -58,57 +59,55 @@ function NewBookingSelect(props) {
     const temp = convert(date);
     setDate(temp);
   };
-
   const items = [
-    { id: 1, title: "12:00 AM" },
-    { id: 2, title: "12:30 AM" },
-    { id: 3, title: "01:00 AM" },
-    { id: 4, title: "01:30 AM" },
-    { id: 5, title: "02:00 AM" },
-    { id: 6, title: "02:30 AM" },
-    { id: 7, title: "03:00 AM" },
-    { id: 8, title: "03:30 AM" },
-    { id: 9, title: "04:00 AM" },
-    { id: 10, title: "04:30 AM" },
-    { id: 11, title: "05:00 AM" },
-    { id: 12, title: "05:30 AM" },
-    { id: 13, title: "06:00 AM" },
-    { id: 14, title: "06:30 AM" },
-    { id: 15, title: "07:00 AM" },
-    { id: 16, title: "07:30 AM" },
-    { id: 17, title: "08:00 AM" },
-    { id: 18, title: "08:30 AM" },
-    { id: 19, title: "09:00 AM" },
-    { id: 20, title: "09:30 AM" },
-    { id: 21, title: "10:00 AM" },
-    { id: 22, title: "10:30 AM" },
-    { id: 23, title: "11:00 AM" },
-    { id: 24, title: "11:30 AM" },
-
-    { id: 25, title: "12:00 PM" },
-    { id: 26, title: "12:30 PM" },
-    { id: 27, title: "01:00 PM" },
-    { id: 28, title: "01:30 PM" },
-    { id: 29, title: "02:00 PM" },
-    { id: 30, title: "02:30 PM" },
-    { id: 31, title: "03:00 PM" },
-    { id: 32, title: "03:30 PM" },
-    { id: 33, title: "04:00 PM" },
-    { id: 34, title: "04:30 PM" },
-    { id: 35, title: "05:00 PM" },
-    { id: 36, title: "05:30 PM" },
-    { id: 37, title: "06:00 PM" },
-    { id: 38, title: "06:30 PM" },
-    { id: 39, title: "07:00 PM" },
-    { id: 40, title: "07:30 PM" },
-    { id: 41, title: "08:00 PM" },
-    { id: 42, title: "08:30 PM" },
-    { id: 43, title: "09:00 PM" },
-    { id: 44, title: "09:30 PM" },
-    { id: 45, title: "10:00 PM" },
-    { id: 46, title: "10:30 PM" },
-    { id: 47, title: "11:00 PM" },
-    { id: 48, title: "11:30 PM" },
+    { id: 1, title: "12:00 AM - 12:30 AM" },
+    { id: 2, title: "12:30 AM - 01:00 AM" },
+    { id: 3, title: "01:00 AM - 01:30 AM" },
+    { id: 4, title: "01:30 AM - 02:00 AM" },
+    { id: 5, title: "02:00 AM - 02:30 AM" },
+    { id: 6, title: "02:30 AM - 03:00 AM" },
+    { id: 7, title: "03:00 AM - 03:30 AM" },
+    { id: 8, title: "03:30 AM - 04:00 AM" },
+    { id: 9, title: "04:00 AM - 04:30 AM" },
+    { id: 10, title: "04:30 AM - 05:00 AM" },
+    { id: 11, title: "05:00 AM - 05:30 AM" },
+    { id: 12, title: "05:30 AM - 06:00 AM" },
+    { id: 13, title: "06:00 AM - 06:30 AM" },
+    { id: 14, title: "06:30 AM - 07:00 AM" },
+    { id: 15, title: "07:00 AM - 07:30 AM" },
+    { id: 16, title: "07:30 AM - 08:00 AM" },
+    { id: 17, title: "08:00 AM - 08:30 AM" },
+    { id: 18, title: "08:30 AM - 09:00 AM" },
+    { id: 19, title: "09:00 AM - 09:30 AM" },
+    { id: 20, title: "09:30 AM - 10:00 AM" },
+    { id: 21, title: "10:00 AM - 10:30 AM" },
+    { id: 22, title: "10:30 AM - 11:00 AM" },
+    { id: 23, title: "11:00 AM - 11:30 AM" },
+    { id: 24, title: "11:30 AM - 12:00 PM" },
+    { id: 25, title: "12:00 PM - 12:30 PM" },
+    { id: 26, title: "12:30 PM - 01:00 PM" },
+    { id: 27, title: "01:00 PM - 01:30 PM" },
+    { id: 28, title: "01:30 PM - 02:00 PM" },
+    { id: 29, title: "02:00 PM - 02:30 PM" },
+    { id: 30, title: "02:30 PM - 03:00 PM" },
+    { id: 31, title: "03:00 PM - 03:30 PM" },
+    { id: 32, title: "03:30 PM - 04:00 PM" },
+    { id: 33, title: "04:00 PM - 04:30 PM" },
+    { id: 34, title: "04:30 PM - 05:00 PM" },
+    { id: 35, title: "05:00 PM - 05:30 PM" },
+    { id: 36, title: "05:30 PM - 06:00 PM" },
+    { id: 37, title: "06:00 PM - 06:30 PM" },
+    { id: 38, title: "06:30 PM - 07:00 PM" },
+    { id: 39, title: "07:00 PM - 07:30 PM" },
+    { id: 40, title: "07:30 PM - 08:00 PM" },
+    { id: 41, title: "08:00 PM - 08:30 PM" },
+    { id: 42, title: "08:30 PM - 09:00 PM" },
+    { id: 43, title: "09:00 PM - 09:30 PM" },
+    { id: 44, title: "09:30 PM - 10:00 PM" },
+    { id: 45, title: "10:00 PM - 10:30 PM" },
+    { id: 46, title: "10:30 PM - 11:00 PM" },
+    { id: 47, title: "11:00 PM - 11:30 PM" },
+    { id: 48, title: "11:30 PM - 12:00 AM" },
   ];
   const onBookAppointment = async () => {
     if (name === "Select Name" || name === undefined) {
@@ -124,16 +123,13 @@ function NewBookingSelect(props) {
         msg: "Select Type"
       })
     } else {
-      const tempDate = date.split("T")[0];
-      // const tempTime = items[midItemIndex].title.split(".")[0];
-      console.log(time)
       await axios
         .post(process.env.REACT_APP_BACKEND + "/api/appointment", {
           user_id: userData.id,
           patient_name: name,
           dentist_name: "Mitali",
           location: location,
-          date: tempDate,
+          date: newDate,
           time: time,
           type: bookType,
         })
@@ -222,10 +218,11 @@ function NewBookingSelect(props) {
           </select>
         </div>
           <div className="new-booking-date">
-            <ReactDatePicker
+            {/* <ReactDatePicker
               selected={startDate}
               onChange={(date) => onDateChange(date)}
-            />
+            /> */}
+            <input type='date' name="newDate" onChange={(e)=>setNewDate(e.target.value)}/>
           </div>
          
           <div className="new-booking-book-outer">
