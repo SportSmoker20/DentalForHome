@@ -1,9 +1,9 @@
 import React from "react";
 import "../../css/DashBoard.css";
-import { Slide } from "react-slideshow-image";
+// import { Slide } from "react-slideshow-image";
 import "../../css/DashBoard.css";
 
-import "react-slideshow-image/dist/styles.css";
+// import "react-slideshow-image/dist/styles.css";
 function Banner() {
   const slideImages = [
     {
@@ -13,34 +13,33 @@ function Banner() {
       src: "https://dental-for-home.s3.us-west-2.amazonaws.com/banner2.jpg",
     },
   ];
-  const properties = {
-    duration: 2000,
-    autoplay: true,
-    transitionDuration: 1000,
-    arrows: false,
-    infinite: true,
-    easing: "ease",
-    indicators: false,
-  };
+  // const properties = {
+  //   duration: 2000,
+  //   autoplay: true,
+  //   transitionDuration: 1000,
+  //   arrows: false,
+  //   infinite: true,
+  //   easing: "ease",
+  //   indicators: false,
+  // };
 
   return (
     <div className="banner-main">
-      <Slide {...properties} className="ban-slide">
-        {slideImages.map((slideImage, index) => (
+      {/* <Slide {...properties} className="ban-slide">
+        {slideImages.map((slideImage, index) => ( */}
           <div
             className="silderimg-container"
-            key={index}
             alt="Coludn't Load"
             style={{ borderRadius: `20px` }}
           >
             <img
               className="sliderimg"
-              src={slideImage.src}
+              src={slideImages[0].src}
               alt="Coludn't Load"
             />
           </div>
-        ))}
-      </Slide>
+        {/* ))}
+      </Slide> */}
     </div>
   );
 }
