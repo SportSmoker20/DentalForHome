@@ -5,13 +5,13 @@ import { Slide } from "react-slideshow-image";
 function HomeBanner() {
   const slideImages = [
     {
-      src: "https://dentalforhome.s3.amazonaws.com/images/benyamin-bohlouli-vVKh9xeLub4-unsplash.jpg",
+      src: "https://dental-for-home.s3.us-west-2.amazonaws.com/banner1.jpg",
     },
     {
-      src: "https://dentalforhome.s3.amazonaws.com/images/vivek-kumar-a-_1PPjnbUg-unsplash.jpg",
+      src: "https://dental-for-home.s3.us-west-2.amazonaws.com/banner2.jpg",
     },
     {
-      src: "https://dentalforhome.s3.amazonaws.com/images/portrait-family-reading-book-together-sitting-sofa.jpg",
+      src: "https://dental-for-home.s3.us-west-2.amazonaws.com/banner3.jpg",
     },
   ];
   const properties = {

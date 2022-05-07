@@ -198,7 +198,7 @@ function HomeFooter() {
         <div className="footer-bottom">
           <div className="footer-bottom-text">
             <img
-              src='https://dentalforhome.s3.amazonaws.com/images/logoMain1.PNG'
+              src='https://dental-for-home.s3.us-west-2.amazonaws.com/logoMain1.PNG'
               style={{ height: `40px`, width: `40px`,borderRadius:`10px` }}
               alt={"Couldn't Load"}
             />

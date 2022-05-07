@@ -46,7 +46,7 @@ function HomeNavbar(props) {
             {/* <p>DENTAL FOR HOME</p> */}
             <Link to={`/`} style={{ textDecoration: `none` }}>
               <img
-                src="https://dentalforhome.s3.amazonaws.com/images/logoMain.png"
+                src="https://dental-for-home.s3.us-west-2.amazonaws.com/logoMain.png"
                 alt="Coludn't Load"
                 style={{ height: `100px`, width: `max-content` }}
               />
@@ -144,7 +144,7 @@ function HomeNavbar(props) {
           <div className="navbar-small-close">
             <div className="navbar-small-img">
               <img
-                src="https://dentalforhome.s3.amazonaws.com/images/logoMain.png"
+                src="https://dental-for-home.s3.us-west-2.amazonaws.com/logoMain.png"
                 alt="Coludn't Load"
                 style={{ height: `100px`, width: `max-content` }}
               />
@@ -163,7 +163,7 @@ function HomeNavbar(props) {
             >
               <div className="navbar-small-img">
                 <img
-                  src="https://dentalforhome.s3.amazonaws.com/images/logoMain.png"
+                  src="https://dental-for-home.s3.us-west-2.amazonaws.com/logoMain.png"
                   alt="Coludn't Load"
                   style={{ height: `100px`, width: `max-content` }}
                 />

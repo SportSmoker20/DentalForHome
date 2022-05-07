@@ -11,7 +11,7 @@ function Service() {
   const serviceData = [
     {
       text: "Root Canal",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ4.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ4.png",
       table: "root_canal",
       bg: "rgb(255,249,233)",
       color: "rgb(254,83,98)",
@@ -19,7 +19,7 @@ function Service() {
     },
     {
       text: "Dental Filling",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ3.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ3.png",
       bg: "rgb(242,241,255)",
       color: "rgb(122,110,253)",
       link: "/serviceHistory",
@@ -27,7 +27,7 @@ function Service() {
     },
     {
       text: "Teeth Whitening",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ6.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ6.png",
       bg: "rgb(254,258,239)",
       color: "rgb(255,199,1)",
       link: "/serviceHistory",
@@ -35,7 +35,7 @@ function Service() {
     },
     {
       text: "Tooth Extraction",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ11.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ11.png",
       bg: "rgb(244,251,255)",
       color: "rgb(36,168,251)",
       link: "/serviceHistory",
@@ -43,7 +43,7 @@ function Service() {
     },
     {
       text: "Bridge & Crown",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ8.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ8.png",
       bg: "rgb(248,255,233)",
       color: "rgb(155,221,16)",
       link: "/serviceHistory",
@@ -51,7 +51,7 @@ function Service() {
     },
     {
       text: "Dental Implants",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ9.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ9.png",
       bg: "rgb(248,255,233)",
       color: "rgb(155,221,16)",
       link: "/serviceHistory",
@@ -59,7 +59,7 @@ function Service() {
     },
     {
       text: "Root Canal",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ12.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ12.png",
       bg: "rgb(244,251,255)",
       color: "rgb(36,168,251)",
       link: "/serviceHistory",
@@ -67,7 +67,7 @@ function Service() {
     },
     {
       text: "Teeth Extraction",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ1.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ@.png",
       bg: "rgb(242,241,255)",
       color: "rgb(122,110,253)",
       link: "/serviceHistory",
@@ -75,7 +75,7 @@ function Service() {
     },
     {
       text: "Dental Filling",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ7.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ7.png",
       bg: "rgb(254,258,239)",
       color: "rgb(255,199,1)",
       link: "/serviceHistory",
@@ -83,7 +83,7 @@ function Service() {
     },
     {
       text: "Teeth Pain First-Aid",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ5.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ5.png",
       bg: "rgb(255,249,233)",
       color: "rgb(254,83,98)",
       link: "/serviceHistory",

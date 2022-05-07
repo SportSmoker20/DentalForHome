@@ -403,7 +403,7 @@ tbody > td {
   right: 40px;
 }
 .react-datepicker__day--keyboard-selected {
-  background-image: url("https://dentalforhome.s3.amazonaws.com/images/calendar1.svg");
+  background-image: url("https://dental-for-home.s3.us-west-2.amazonaws.com/calendar1.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

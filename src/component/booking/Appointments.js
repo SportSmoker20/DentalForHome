@@ -78,7 +78,7 @@ function Appointments() {
               <td>
                 <div className="table-name">
                   <img
-                    src="https://dentalforhome.s3.amazonaws.com/images/character1.svg"
+                    src="https://dental-for-home.s3.us-west-2.amazonaws.com/character1.svg"
                     alt="Coludn't Load"
                     className="table-image"
                   />

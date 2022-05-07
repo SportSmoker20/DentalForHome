@@ -11,7 +11,7 @@ function EditCard() {
     <div className="edit-card-main">
       <div className="edit-card-top">
         <img
-          src="https://dentalforhome.s3.amazonaws.com/images/character.svg"
+          src="https://dental-for-home.s3.us-west-2.amazonaws.com/character1.svg"
           className="edit-card-image"
         />
         <div className="edit-top-container">

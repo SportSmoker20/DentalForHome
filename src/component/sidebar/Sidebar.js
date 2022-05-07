@@ -25,7 +25,7 @@ function Sidebar(props) {
                 >
                   <a href='https://dentalforhome.com' target='_blank'>
                   <img
-                    src="https://dentalforhome.s3.amazonaws.com/images/logoMain1.PNG"
+                    src="https://dental-for-home.s3.us-west-2.amazonaws.com/logoMain1.PNG"
                     style={{
                       height: `40px`,
                       width: `40px`,
@@ -41,7 +41,7 @@ function Sidebar(props) {
               </div>
               <div className="profile-image">
                 <img
-                  src="https://dentalforhome.s3.amazonaws.com/images/character1.svg"
+                  src="https://dental-for-home.s3.us-west-2.amazonaws.com/character1.svg"
                   className="profile-image-inner"
                   alt="Coludn't Load"
                 />

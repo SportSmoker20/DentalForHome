@@ -21,7 +21,7 @@ function HomeMap() {
         </div>
       </div>
       <div className="map-right">
-        <img className="map-right-img" src='https://dentalforhome.s3.amazonaws.com/images/images-removebg-preview.png' alt={"Couldn't Load"} />
+        <img className="map-right-img" src='https://dental-for-home.s3.us-west-2.amazonaws.com/images-removebg-preview.png' alt={"Couldn't Load"} />
       </div>
     </div>
   );

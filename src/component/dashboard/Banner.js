@@ -7,10 +7,10 @@ import "react-slideshow-image/dist/styles.css";
 function Banner() {
   const slideImages = [
     {
-      src: "https://dentalforhome.s3.amazonaws.com/images/banner1.png",
+      src: "https://dental-for-home.s3.us-west-2.amazonaws.com/banner1.jpg",
     },
     {
-      src: "https://dentalforhome.s3.amazonaws.com/images/banner2.png",
+      src: "https://dental-for-home.s3.us-west-2.amazonaws.com/banner2.jpg",
     },
   ];
   const properties = {

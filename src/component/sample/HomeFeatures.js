@@ -5,27 +5,27 @@ function HomeFeatures() {
   const featureData = [
     {
       id: 0,
-      img: "https://dentalforhome.s3.amazonaws.com/images/feature1.jpeg",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/feature1.jpeg",
       content: "Video Consultancy",
     },
     {
       id: 1,
-      img: "https://dentalforhome.s3.amazonaws.com/images/feature2.jpeg",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/feature2.jpeg",
       content: "Check Up",
     },
     {
       id: 2,
-      img: "https://dentalforhome.s3.amazonaws.com/images/feature3.jpeg",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/feature3.jpeg",
       content: "Diagnosis",
     },
     {
       id: 3,
-      img: "https://dentalforhome.s3.amazonaws.com/images/feature4.jpeg",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/feature4.jpeg",
       content: "Dental Aids",
     },
     {
       id: 4,
-      img: "https://dentalforhome.s3.amazonaws.com/images/feature5.jpeg",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/feature5.jpeg",
       content: "Free Pick and Drop",
     },
   ];

@@ -13,7 +13,7 @@ function ContactMain() {
           <div className="contact-left-left">
             <div className="contact-left-right-top-img">
               <img
-                src="https://dentalforhome.s3.amazonaws.com/images/contact.png"
+                src="https://dental-for-home.s3.us-west-2.amazonaws.com/contact.png"
                 alt="Couldn't Load!"
                 style={{ height: `300px`, width: `375px` }}
               />
@@ -36,7 +36,7 @@ function ContactMain() {
           <div className="contact-left-right">
             <div className="contact-left-right-top">
               <img
-                src="https://dentalforhome.s3.amazonaws.com/images/contact.png"
+                src="https://dental-for-home.s3.us-west-2.amazonaws.com/contact.png"
                 alt="Couldn't Load!"
                 style={{ height: `300px`, width: `375px` }}
               />

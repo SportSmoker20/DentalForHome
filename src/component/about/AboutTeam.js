@@ -5,7 +5,7 @@ function AboutTeam() {
   const teamData = [
     {
       id: 0,
-      img: "https://dentalforhome.s3.amazonaws.com/images/character1.svg",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/character1.svg",
       name: "Sachin Soni",
       title: "Jobless at jobless",
       content:
@@ -14,7 +14,7 @@ function AboutTeam() {
     },
     {
       id: 1,
-      img: "https://dentalforhome.s3.amazonaws.com/images/character1.svg",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/character1.svg",
       name: "Bhupesh Sarangal",
       title: "Jobless at jobless",
       content:
@@ -23,7 +23,7 @@ function AboutTeam() {
     },
     {
       id: 2,
-      img: "https://dentalforhome.s3.amazonaws.com/images/character1.svg",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/character1.svg",
       name: "Prakhar Kulshrestha",
       title: "Jobless at jobless",
       content:
@@ -32,7 +32,7 @@ function AboutTeam() {
     },
     {
       id: 3,
-      img: "https://dentalforhome.s3.amazonaws.com/images/character1.svg",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/character1.svg",
       name: "Aditya Sharma",
       title: "Jobless at jobless",
       content:

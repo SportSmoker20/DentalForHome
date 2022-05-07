@@ -32,6 +32,7 @@ import HistoryMain from "./component/history/HistoryMain";
 import DentistBooking from "./component/bookingNew/DentistBooking";
 import PatientProfile from "./component/patientProfile/PatientProfile";
 import Logout from "./component/auth/Logout";
+import React from 'react'
 
 export const UserContext = createContext();
 

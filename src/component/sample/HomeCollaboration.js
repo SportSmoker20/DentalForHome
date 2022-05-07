@@ -14,7 +14,7 @@ function HomeCollaboration() {
         </div>
       </div>
       <div className="collaboration-right">
-        <img src='https://dentalforhome.s3.amazonaws.com/images/biocoin.png' alt="Couldn't Load!" />
+        <img src='https://dental-for-home.s3.us-west-2.amazonaws.com/biocoin.png' alt="Couldn't Load!" />
       </div>
     </div>
   );

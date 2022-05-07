@@ -22,7 +22,7 @@ function DentistDashBoard() {
     {
       text: "Patients",
       count: "78",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ4.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ4.png",
       bg: "rgb(255,249,233)",
       color: "rgb(254,83,98)",
       link: "/serviceHistory",
@@ -30,7 +30,7 @@ function DentistDashBoard() {
     {
       text: "Services",
       count: "345",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ4.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ4.png",
       bg: "rgb(242,241,255)",
       color: "rgb(122,110,253)",
       link: "/serviceHistory",
@@ -38,21 +38,21 @@ function DentistDashBoard() {
     {
       text: "Hours",
       count: "4678",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ4.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ4.png",
       bg: "rgb(254,258,239)",
       color: "rgb(255,199,1)",
       link: "/serviceHistory",
     },
     {
       text: "Root Canal",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ4.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ4.png",
       bg: "rgb(244,251,255)",
       color: "rgb(36,168,251)",
       link: "/serviceHistory",
     },
     {
       text: "Root Canal",
-      img: "https://dentalforhome.s3.amazonaws.com/images/QQ4.png",
+      img: "https://dental-for-home.s3.us-west-2.amazonaws.com/QQ4.png",
       bg: "rgb(248,255,233)",
       color: "rgb(155,221,16)",
       link: "/serviceHistory",

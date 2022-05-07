@@ -14,7 +14,7 @@ function PatientProfileBottom() {
       <div className="new-edit-top-container">
         <div className="new-edit-top-left">
           <img
-            src="https://dentalforhome.s3.amazonaws.com/images/character1.svg"
+            src="https://dental-for-home.s3.us-west-2.amazonaws.com/character1.svg"
             style={{ height: `110px`, width: `110px` }}
             className="profile-image-inner"
             alt="Coludn't Load"

@@ -66,7 +66,7 @@ function UserRegister() {
         <div className="login-left">
           <div>
             <img
-              src="https://dentalforhome.s3.amazonaws.com/images/logoMain.png"
+              src="https://dental-for-home.s3.us-west-2.amazonaws.com/logoMain.png"
               alt="Coludn't Load"
               style={{
                 height: `110px`,
